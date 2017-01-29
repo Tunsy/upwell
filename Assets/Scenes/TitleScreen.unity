@@ -91,18 +91,18 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &652737090
+--- !u!1 &1458419767
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 652737095}
-  - component: {fileID: 652737094}
-  - component: {fileID: 652737093}
-  - component: {fileID: 652737092}
-  - component: {fileID: 652737091}
+  - component: {fileID: 1458419772}
+  - component: {fileID: 1458419771}
+  - component: {fileID: 1458419770}
+  - component: {fileID: 1458419769}
+  - component: {fileID: 1458419768}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -110,33 +110,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &652737091
+--- !u!81 &1458419768
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 652737090}
+  m_GameObject: {fileID: 1458419767}
   m_Enabled: 1
---- !u!124 &652737092
+--- !u!124 &1458419769
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 652737090}
+  m_GameObject: {fileID: 1458419767}
   m_Enabled: 1
---- !u!92 &652737093
+--- !u!92 &1458419770
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 652737090}
+  m_GameObject: {fileID: 1458419767}
   m_Enabled: 1
---- !u!20 &652737094
+--- !u!20 &1458419771
 Camera:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 652737090}
+  m_GameObject: {fileID: 1458419767}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -165,12 +165,12 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
---- !u!4 &652737095
+--- !u!4 &1458419772
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 652737090}
+  m_GameObject: {fileID: 1458419767}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -178,45 +178,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &837690161
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4318502667446156, guid: 5bb4119459248294fa15baa5c893bd53, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.3237872
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318502667446156, guid: 5bb4119459248294fa15baa5c893bd53, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.1332544
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318502667446156, guid: 5bb4119459248294fa15baa5c893bd53, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318502667446156, guid: 5bb4119459248294fa15baa5c893bd53, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318502667446156, guid: 5bb4119459248294fa15baa5c893bd53, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318502667446156, guid: 5bb4119459248294fa15baa5c893bd53, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318502667446156, guid: 5bb4119459248294fa15baa5c893bd53, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318502667446156, guid: 5bb4119459248294fa15baa5c893bd53, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5bb4119459248294fa15baa5c893bd53, type: 2}
-  m_IsPrefabParent: 0
