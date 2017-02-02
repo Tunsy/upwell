@@ -91,6 +91,73 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &575644231 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1233535664520716, guid: 5bb4119459248294fa15baa5c893bd53,
+    type: 2}
+  m_PrefabInternal: {fileID: 1722587716}
+--- !u!61 &575644233
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575644231}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.95, y: 1.75}
+--- !u!1 &681145098 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1289772489317422, guid: e63d86fe59bd5f149941e2e32debd9df,
+    type: 2}
+  m_PrefabInternal: {fileID: 1609136407}
+--- !u!114 &681145099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 681145098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a86bc856999f74f82184da07a757c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upSpeed: 2.5
+--- !u!50 &681145102
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 681145098}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!114 &681145103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 681145098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02396b429332e8f408549291e4c27a88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1609136407
 Prefab:
   m_ObjectHideFlags: 0
@@ -259,6 +326,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61968531343038542, guid: 5bb4119459248294fa15baa5c893bd53,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61968531343038542, guid: 5bb4119459248294fa15baa5c893bd53,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114322806466879552, guid: 5bb4119459248294fa15baa5c893bd53,
+        type: 2}
+      propertyPath: upSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 61968531343038542, guid: 5bb4119459248294fa15baa5c893bd53, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5bb4119459248294fa15baa5c893bd53, type: 2}
   m_IsPrefabParent: 0

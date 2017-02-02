@@ -8,6 +8,7 @@ public class MoveUp : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        transform.position = new Vector2(transform.position.x, transform.position.y + (upSpeed * Time.deltaTime));
+        if (Input.GetKeyDown(KeyCode.W))
+            transform.position = new Vector2(transform.position.x, transform.position.y + (upSpeed * Time.deltaTime));
 	}
 }
