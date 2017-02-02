@@ -23,7 +23,7 @@ public class PlatformGenerator : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log(camera.transform.position);
+        //Debug.Log(camera.transform.position);
         if (platformList[platformList.Count-1].transform.position.y - camera.transform.position.y <= verticalSpacing * 2)
         {
             Generate(10);

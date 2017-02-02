@@ -75,7 +75,8 @@ public class PlayerController : MonoBehaviour
     public float shortJump = 5;
 
     private GroundState groundState;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
+    public SpriteRenderer sprite;
 
     void Start()
     {
@@ -90,13 +91,21 @@ public class PlayerController : MonoBehaviour
     {
         // Handle input
         if (Input.GetKey(KeyCode.A))
+        {
             input.x = -1;
+            sprite.flipX = true;
+        }
         else if (Input.GetKey(KeyCode.D))
+        {
             input.x = 1;
+            sprite.flipX = false;
+        }
         else
             input.x = 0;
 
         // HandleSprint()
+
+        //Debug.Log(Input.GetAxis("Jump"));
 
         if (Input.GetKey(KeyCode.Space))
             input.y = 1;
@@ -104,7 +113,7 @@ public class PlayerController : MonoBehaviour
             input.y = 0;
 
         // Reverse player if going different direction
-        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, (input.x == 0) ? transform.localEulerAngles.y : (input.x + 1) * 90, transform.localEulerAngles.z);
+        //transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, (input.x == 0) ? transform.localEulerAngles.y : (input.x + 1) * 90, transform.localEulerAngles.z);
     }
 
     // Sprint functionality
