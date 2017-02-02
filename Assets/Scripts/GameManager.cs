@@ -2,39 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
-    
-    private static GameManager instance = new GameManager();
 
-    private GameManager()
-    {
-        
-    }
+    public static GameManager instance = new GameManager();
 
     //copied this thing from forum
-    public static GameManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                instance = new GameManager();
-            }
+    //public static GameManager Instance
+    //{
+    //    get
+    //    {
+    //        if (instance == null)
+    //        {
+    //            instance = new GameManager();
+    //        }
 
-            return instance;
-        }
-    }
+    //        return instance;
+    //    }
+    //}
+
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (!is_alive){
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!is_alive)
+        {
             endGame();
-        } 
+        }
         update_time();
         if (time >= time_interval)
         {
@@ -44,8 +52,8 @@ public class GameManager : MonoBehaviour {
         }
 
 
-		
-	}
+
+    }
 
     //member variables
     private float time = START_TIME;
@@ -90,7 +98,7 @@ public class GameManager : MonoBehaviour {
         current_level += 1;
         Debug.Log("starting level" + current_level.ToString());
     }
-    
+
 
     public void resetTimer()
     {

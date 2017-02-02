@@ -7,6 +7,9 @@ public class DestroyPlayer : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         //other.SendMessage("here");
-        Destroy(other.gameObject);
+        if(other.gameObject.tag != "Wall")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
