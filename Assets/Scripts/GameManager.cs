@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            player = GameObject.Find("Player");
         }
         else if (instance != this)
         {
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!is_alive)
+        if (!isAlive())
         {
             endGame();
         }
@@ -57,9 +58,11 @@ public class GameManager : MonoBehaviour
 
     //member variables
     private float time = START_TIME;
+    private GameObject player;
     private int current_level = START_LEVEL;
     private bool is_alive = DEFAULT_ALIVE_STATE;
     private float time_interval = STARTING_INTERVAL;
+    public delegate void 
     //static variables
     private static float START_TIME = 0;
     private static int START_LEVEL = 0;
@@ -70,7 +73,7 @@ public class GameManager : MonoBehaviour
 
     public bool isAlive()
     {
-        return this.is_alive;
+        return is_alive;
     }
 
     public float timeElapsed()
