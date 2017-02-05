@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
     private int current_level = START_LEVEL;
     private bool is_alive = DEFAULT_ALIVE_STATE;
     private float time_interval = STARTING_INTERVAL;
+    
 
    
     //static variables
