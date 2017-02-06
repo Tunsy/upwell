@@ -140,6 +140,6 @@ public class GameManager : MonoBehaviour
 
     public void resumeMain()
     {
-        SceneManager.LoadScene(sceneIndexes["maintscene"]);
+        SceneManager.LoadScene(sceneIndexes["mainscene"]);
     }
 }
