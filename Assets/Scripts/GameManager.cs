@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            player = GameObject.Find("Player");
+            
         }
         else if (instance != this)
         {
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         if (!isAlive())
         {
             endGame();
@@ -63,6 +65,7 @@ public class GameManager : MonoBehaviour
     private bool is_alive = DEFAULT_ALIVE_STATE;
     private float time_interval = STARTING_INTERVAL;
     
+   
 
    
     //static variables
@@ -70,6 +73,14 @@ public class GameManager : MonoBehaviour
     private static int START_LEVEL = 0;
     private static bool DEFAULT_ALIVE_STATE = true;
     private static float STARTING_INTERVAL = 1;
+    private static  Dictionary<string, int> sceneIndexes = new Dictionary<string, int>()
+    {
+        {"PauseMenu", 2 },
+        {"TitleScreen", 0 },
+        {"mainscene", 1 }
+
+    };
+
 
     //return methods
 
@@ -92,6 +103,7 @@ public class GameManager : MonoBehaviour
     public void endGame()
     {
         Debug.Log("game is over");
+        SceneManager.LoadScene(sceneIndexes["TitleScreen"]);
     }
     public void update_time()
     {
@@ -118,5 +130,16 @@ public class GameManager : MonoBehaviour
     public void killPlayer()
     {
         is_alive = false;
+    }
+
+    public void pauseScene()
+    {
+        SceneManager.LoadScene(sceneIndexes["PauseMenu"]);
+        
+    }
+
+    public void resumeMain()
+    {
+        SceneManager.LoadScene(sceneIndexes["maintest"]);
     }
 }
