@@ -161,7 +161,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameObject Manager = GameObject.Find("GameManagerLoader").GetComponent<GameManagerLoader>().gameManager;
-        Manager.GetComponent<GameManager>().killPlayer();
+        //GameObject Manager = GameObject.Find("GameManagerLoader").GetComponent<GameManagerLoader>().gameManager;
+        //Manager.GetComponent<GameManager>().killPlayer();
+        GameManager.instance.killPlayer();
     }
 }
