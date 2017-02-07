@@ -5,34 +5,41 @@ using UnityEngine;
 public class TrapPlayer : MonoBehaviour
 {
     private Collider2D trap;
-    //private GameObject player;
-    float timeLeft = 10.0f;
+    float timeLeft = 1.0f;
+    bool timerCheck = false;
 
     void Start()
     {
         trap = GetComponent<Collider2D>();
-        //player = GetComponent<GameObject>();
+        Debug.Log("trap");
     }
 
     void Update()
     {
-        //if (trap.IsTouching(player.GetComponent<Collider2D>()))
+        //if (trap.IsTouching(GetComponent<Collider2D>()))
         //{
+        if (timerCheck) 
+        {
             timeLeft -= Time.deltaTime;
-            if (timeLeft < 0)
-            {
-                //modSpeed(player.GetComponent<PlayerController>(), 14f);
-                //modJump(player.GetComponent<PlayerController>(), 14f);
-            }
+        }
+        if (timeLeft < 0)
+        {
+            Debug.Log("out of time");
+            //modSpeed(GetComponent<PlayerController>(), 14f);
+            //modJump(GetComponent<PlayerController>(), 14f);
+            timerCheck = false;
+        }
         //}
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D coll)
     {
-        if (other.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "Player")
         {
-            modSpeed(other.GetComponent<PlayerController>(), 0);
-            modJump(other.GetComponent<PlayerController>(), 0); 
+            modSpeed(coll.GetComponent<PlayerController>(), 0);
+            modJump(coll.GetComponent<PlayerController>(), 0);
+            timeLeft = 1.0f;
+            timerCheck = true;
         }
     }
 
