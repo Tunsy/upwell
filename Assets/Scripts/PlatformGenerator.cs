@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlatformGenerator : MonoBehaviour {
-    public GameObject platform;
+    public List<GameObject> platformList;
     new Camera camera;
     public float horizontalNoise = 0.5f;
     public float verticalSpacing = 5f;
-    List<GameObject> platformList = new List<GameObject>();
+    float yPos = 0;
+    List<GameObject> currentPlatforms = new List<GameObject>();
     GameObject player;
 
     void Awake()
@@ -24,9 +25,14 @@ public class PlatformGenerator : MonoBehaviour {
     void Update()
     {
         //Debug.Log(camera.transform.position);
-        if (platformList[platformList.Count-1].transform.position.y - camera.transform.position.y <= verticalSpacing * 2)
+        if (currentPlatforms[currentPlatforms.Count-1].transform.position.y - camera.transform.position.y <= verticalSpacing * 2)
         {
-            Generate(10);
+            Generate(10);   
+        }
+        Debug.Log(camera.transform.position.y + currentPlatforms[0].transform.position.y);
+        if (camera.transform.position.y - currentPlatforms[0].transform.position.y > verticalSpacing * 11)
+        {
+            DeletePlatforms(10);
         }
         //Debug.Log(platformList.Count)
     }
@@ -36,9 +42,25 @@ public class PlatformGenerator : MonoBehaviour {
         for (int i = 0; i < numOfPlatforms; i++)
         {
             float xPos = Random.Range(-horizontalNoise, horizontalNoise);
-            float yPos = verticalSpacing * platformList.Count;
-            GameObject newPlatform = (GameObject)Instantiate(platform, new Vector2(xPos, yPos), Quaternion.identity);
-            platformList.Add(newPlatform);
+            //float yPos = verticalSpacing * currentPlatforms.Count;
+            yPos += verticalSpacing;
+            GameObject randomPlatform = platformList[Random.Range(0, platformList.Count)];
+            GameObject newPlatform = (GameObject)Instantiate(randomPlatform, new Vector2(xPos, yPos), Quaternion.identity);
+            PlatformInterface newPlatformScript = newPlatform.GetComponent<PlatformInterface>();
+            if (newPlatformScript != null)
+                newPlatformScript.Initialize();
+
+            currentPlatforms.Add(newPlatform);
+        }
+    }
+
+    public void DeletePlatforms(int numOfPlatforms)
+    {
+        for (int i = 0; i < numOfPlatforms; i++)
+        {
+            Debug.Log("Call");
+            Destroy(currentPlatforms[0]);
+            currentPlatforms.RemoveAt(0);
         }
     }
 }
