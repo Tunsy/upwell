@@ -9,6 +9,7 @@ public class GroundState : MonoBehaviour
     private float width;
     private float height;
     private float length;
+    private bool enableJumpField;
 
     public void Start()
     {
@@ -19,7 +20,7 @@ public class GroundState : MonoBehaviour
     }
 
     // Returns whether or not player is touching wall.
-    public bool isWall()
+    public bool IsWall()
     {
         bool left = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y), -Vector2.right, length);
         bool right = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y), Vector2.right, length);
@@ -31,7 +32,7 @@ public class GroundState : MonoBehaviour
     }
 
     // Returns whether or not player is touching ground.
-    public bool isGround()
+    public bool IsGround()
     {
         bool bottom1 = Physics2D.Raycast(new Vector2(player.transform.position.x, player.transform.position.y - height), -Vector2.up, length);
         bool bottom2 = Physics2D.Raycast(new Vector2(player.transform.position.x + (width - 0.2f), player.transform.position.y - height), -Vector2.up, length);
@@ -43,16 +44,16 @@ public class GroundState : MonoBehaviour
     }
 
     // Returns whether or not player is touching wall or ground.
-    public bool isTouching()
+    public bool IsTouching()
     {
-        if (isGround() || isWall())
+        if (IsGround() || IsWall())
             return true;
         else
             return false;
     }
 
     // Returns direction of wall.
-    public int wallDirection()
+    public int WallDirection()
     {
         bool left = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y), -Vector2.right, length);
         bool right = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y), Vector2.right, length);
@@ -63,6 +64,28 @@ public class GroundState : MonoBehaviour
             return 1;
         else
             return 0;
+    }
+
+
+    public void EnterJumpField()
+    {
+        enableJumpField = true;
+    }
+
+    public void ExitJumpField()
+    {
+        enableJumpField = false;
+    }
+
+    public bool CanWallFieldJump()
+    {
+        if (enableJumpField)
+        {
+            enableJumpField = false;
+            return true;
+        }
+
+        return false;
     }
 
 }

@@ -81,13 +81,13 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Player physics
-        rb.AddForce(new Vector2(((input.x * speed) - rb.velocity.x) * (groundState.isGround() ? accel : airAccel), 0)); // Accelerate the player.
-        rb.velocity = new Vector2((input.x == 0 && groundState.isGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && groundState.isTouching()) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
+        rb.AddForce(new Vector2(((input.x * speed) - rb.velocity.x) * (groundState.IsGround() ? accel : airAccel), 0)); // Accelerate the player.
+        rb.velocity = new Vector2((input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && (groundState.IsTouching() || groundState.CanWallFieldJump())) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
 
         // Wall jumping
-        if (groundState.isWall() && !groundState.isGround() && holdingJumpCheck)
+        if (groundState.IsWall() && !groundState.IsGround() && holdingJumpCheck)
         {
-            rb.velocity = new Vector2(-1 * groundState.wallDirection() * speed * 0.75f, rb.velocity.y); //Add force negative to wall direction (with speed reduction)
+            rb.velocity = new Vector2(-1 * groundState.WallDirection() * speed * 0.75f, rb.velocity.y); //Add force negative to wall direction (with speed reduction)
         }
 
         // Variable jump height
