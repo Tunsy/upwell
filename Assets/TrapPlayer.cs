@@ -11,25 +11,19 @@ public class TrapPlayer : MonoBehaviour
     void Start()
     {
         trap = GetComponent<Collider2D>();
-        Debug.Log("trap");
+        //Debug.Log("trap");
     }
 
     void Update()
     {
-        //if (trap.IsTouching(GetComponent<Collider2D>()))
-        //{
         if (timerCheck) 
         {
             timeLeft -= Time.deltaTime;
         }
         if (timeLeft < 0)
         {
-            Debug.Log("out of time");
-            //modSpeed(GetComponent<PlayerController>(), 14f);
-            //modJump(GetComponent<PlayerController>(), 14f);
             timerCheck = false;
         }
-        //}
     }
 
     void OnTriggerStay2D(Collider2D coll)
@@ -38,8 +32,13 @@ public class TrapPlayer : MonoBehaviour
         {
             modSpeed(coll.GetComponent<PlayerController>(), 0);
             modJump(coll.GetComponent<PlayerController>(), 0);
-            timeLeft = 1.0f;
             timerCheck = true;
+            timeLeft = 3.0f;
+            if (timeLeft < 0)
+            {
+                modSpeed(coll.GetComponent<PlayerController>(), 14f);
+                modJump(coll.GetComponent<PlayerController>(), 14f);
+            }
         }
     }
 
