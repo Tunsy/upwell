@@ -47,12 +47,13 @@ public class GameManager : MonoBehaviour
             endGame();
         }
         update_time();
-        if (time >= time_interval)
+
+        /*if (time >= time_interval)
         {
             resetTimer();
             updateLevel();
             setNextInterval();
-        }
+        } */
 
 
 
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
 
     //member variables
     private float time = START_TIME;
+    private int pickup_score = 0;
     private GameObject player;
     private int current_level = START_LEVEL;
     private bool is_alive = DEFAULT_ALIVE_STATE;
@@ -73,6 +75,8 @@ public class GameManager : MonoBehaviour
     private static int START_LEVEL = 0;
     private static bool DEFAULT_ALIVE_STATE = true;
     private static float STARTING_INTERVAL = 1;
+    private static int TIME_SCORE_COEFFICIENT = 10;
+    private static int PICKUP_SCORE_COEFFICIENT = 4;
     private static  Dictionary<string, int> sceneIndexes = new Dictionary<string, int>()
     {
         {"PauseMenu", 2 },
@@ -94,12 +98,22 @@ public class GameManager : MonoBehaviour
         return this.time;
     }
 
+    /*
     public int currentLevel()
     {
         return this.current_level;
     }
+    */
+    public int getPlayerScore()
+    {
+        return ( int)(time * TIME_SCORE_COEFFICIENT) + pickup_score;
+    }
 
-    //void methods and others
+    public void updatePickupScore(int points)
+    {
+        pickup_score += points * PICKUP_SCORE_COEFFICIENT;
+    }
+    //void methods and others, to be called from other scripts
     public void endGame()
     {
         Debug.Log("game is over");
@@ -110,7 +124,7 @@ public class GameManager : MonoBehaviour
         time += Time.deltaTime;
     }
 
-    public void updateLevel()
+   /* public void updateLevel()
     {
         current_level += 1;
         Debug.Log("starting level" + current_level.ToString());
@@ -120,12 +134,12 @@ public class GameManager : MonoBehaviour
     public void resetTimer()
     {
         time = 0;
-    }
+    } 
 
     public void setNextInterval()
     {
         time_interval *= 2;
-    }
+    } */
 
     public void killPlayer()
     {
