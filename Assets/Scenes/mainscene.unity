@@ -253,6 +253,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuCanvas: {fileID: 2017635613}
+--- !u!1 &810646366 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1522942165932210, guid: 38351e1b5d62fd145bd778ed307d0eaf,
+    type: 2}
+  m_PrefabInternal: {fileID: 2017635612}
+--- !u!114 &810646367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810646366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6ddd6b6a10a074bbf863e8eff7bd03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &837690161
 Prefab:
   m_ObjectHideFlags: 0
@@ -633,6 +649,10 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136618268440400, guid: 38351e1b5d62fd145bd778ed307d0eaf, type: 2}
+      propertyPath: m_Name
+      value: Scoretotal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38351e1b5d62fd145bd778ed307d0eaf, type: 2}
