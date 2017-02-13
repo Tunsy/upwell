@@ -23,25 +23,11 @@ public class EnemyScript : MonoBehaviour {
             else*/ if (Player.x > Enemy.x && Player.y < Enemy.y + Height / 2)
             {
                 GameObject.Find("Player").GetComponent<Rigidbody2D>().AddForce(Vector2.right * 2000);
-                while (x > 0)
-                new WaitForSeconds(1);
-                {
-                    GameObject.Find("Player").GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                    Debug.Log(x);
-                    x -= 1;
-                }
-                x = 200;
             }
             else if (Player.x < Enemy.x && Player.y < Enemy.y + Height / 2)
             {
                 GameObject.Find("Player").GetComponent<Rigidbody2D>().AddForce(Vector2.left * 2000);
-                while (x > 0)
-                {
-                    GameObject.Find("Player").GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                    Debug.Log(x);
-                    x -= 1;
-                }
-                x = 200;
+
             }
         }
     }

@@ -14,6 +14,8 @@ public class Score : MonoBehaviour {
 
 	void Update ()
     {
+        /*var script = GameObject.Find("GameManagerLoader").GetComponent<GameManager>();
+        score = script.getPlayerScore();*/
         score += 1;
         if(GameObject.Find("Scoretotal") == true)
         {
