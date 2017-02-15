@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float jump = 14f;
     public float shortJump = 5;
     private bool holdingJumpCheck;
+    public bool isKnockedback;
 
     private GroundState groundState;
     private Rigidbody2D rb;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         groundState = GetComponent<GroundState>();
         holdingJumpCheck = false;
+        isKnockedback = false;
     }
 
     private Vector2 input;
@@ -77,31 +79,59 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Knockback(DealDamageToPlayer enemy)
+    {
+        if(isKnockedback == false)
+        {
+            isKnockedback = true;
+            int direction = groundState.WallDirection();
+            StartCoroutine(HandleKnockback(enemy.KnockDuration, enemy.KnockPower, direction));
+        }
+    }
+
+    public IEnumerator HandleKnockback(float duration, float power, float direction)
+    {
+        float timer = 0;
+
+        while(isKnockedback)
+        {
+            timer += Time.deltaTime;
+            rb.AddForce(new Vector2(-1 * direction * power, power));
+            if (timer > duration)
+            {
+                isKnockedback = false;
+            }
+            yield return null;
+        }
+
+        Debug.Log(timer);
+    }
+
 
     void FixedUpdate()
     {
         // Player physics
-        rb.AddForce(new Vector2(((input.x * speed) - rb.velocity.x) * (groundState.IsGround() ? accel : airAccel), 0)); // Accelerate the player.
-        rb.velocity = new Vector2((input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && (groundState.IsTouching() || groundState.CanWallFieldJump())) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
-
-        // Wall jumping
-        if (groundState.IsWall() && !groundState.IsGround() && holdingJumpCheck)
+        if (!isKnockedback)
         {
-            rb.velocity = new Vector2(-1 * groundState.WallDirection() * speed * 0.75f, rb.velocity.y); //Add force negative to wall direction (with speed reduction)
-        }
+            rb.AddForce(new Vector2(((input.x * speed) - rb.velocity.x) * (groundState.IsGround() ? accel : airAccel), 0)); // Accelerate the player.
+            rb.velocity = new Vector2((input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && (groundState.IsTouching() || groundState.CanWallFieldJump())) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
 
-        // Variable jump height
-        if(input.y == 0)
-        {
-            if(rb.velocity.y > shortJump)
+            // Wall jumping
+            if (groundState.IsWall() && !groundState.IsGround() && holdingJumpCheck)
             {
-                rb.velocity = new Vector2(rb.velocity.x, shortJump);
+                rb.velocity = new Vector2(-1 * groundState.WallDirection() * speed * 0.75f, rb.velocity.y); //Add force negative to wall direction (with speed reduction)
+            }
+
+            // Variable jump height
+            if (input.y == 0)
+            {
+                if (rb.velocity.y > shortJump)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, shortJump);
+                }
             }
         }
     }
-
-
-
 
     private void OnDestroy()
     {
