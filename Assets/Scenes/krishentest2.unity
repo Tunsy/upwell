@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d044cd9db6332a840a29299eaf3e695e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platform: {fileID: 1805646104080394, guid: aae8044fe7605d54bae677731f79950f, type: 2}
+  platformList: []
   horizontalNoise: 0.5
   verticalSpacing: 3
 --- !u!1001 &717974503
