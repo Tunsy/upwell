@@ -29,7 +29,7 @@ public class PlatformGenerator : MonoBehaviour {
         {
             Generate(10);   
         }
-        Debug.Log(camera.transform.position.y + currentPlatforms[0].transform.position.y);
+
         if (camera.transform.position.y - currentPlatforms[0].transform.position.y > verticalSpacing * 11)
         {
             DeletePlatforms(10);
