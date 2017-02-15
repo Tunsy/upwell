@@ -6,10 +6,13 @@ public class CameraFollow : MonoBehaviour {
     public PlayerController player;
     public Vector2 focusAreaSize;
     public float verticalOffset;
+    public float verticalSmoothTime;
     public bool showFocusArea = false;
 
     BoxCollider2D playerCollider;
     FocusArea focusArea;
+
+    float smoothVelocityY;
 
     struct FocusArea
     {
@@ -71,6 +74,7 @@ public class CameraFollow : MonoBehaviour {
         focusArea.Update(playerCollider.bounds);
 
         Vector2 focusPosition = focusArea.center + Vector2.up * verticalOffset;
+        focusPosition.y = Mathf.SmoothDamp(this.transform.position.y, focusPosition.y, ref smoothVelocityY, verticalSmoothTime);
         this.transform.position = (Vector3)focusPosition + Vector3.forward * -10;
     }
 	
