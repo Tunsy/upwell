@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class LaserCannon : MonoBehaviour 
 {
-    public Transform spawn;
+    public GameObject laser;
+    private GameObject shot;
+    private float timer = 0;
+    public float shootInterval;
 
 	void Start() 
     {
@@ -13,16 +16,16 @@ public class LaserCannon : MonoBehaviour
 	
 	void Update()
     {
-        //if ((Time.time % 1) == 0)
-        //{
-            
-            //Debug.Log("message");
-        //}
+        timer += Time.deltaTime;
+        if (timer > shootInterval)
+        {
+            Generate();
+            timer = 0;
+        }
 	}
 
     void Generate()
     {
-        //GameObject shoot;
-       // GameObject laser = (GameObject)Instantiate(shoot, new Vector2(1, 1), Quaternion.identity);
+        shot = (GameObject)Instantiate(laser, new Vector2(transform.position.x + 1.75f, transform.position.y), transform.rotation);
     }
 }
