@@ -10,6 +10,7 @@ public class GroundState : MonoBehaviour
     private float height;
     private float length;
     private bool enableJumpField;
+    public int facing;
     public LayerMask platforms;
 
     public void Start()
@@ -17,7 +18,7 @@ public class GroundState : MonoBehaviour
         player = GetComponent<PlayerController>();
         width = player.GetComponent<Collider2D>().bounds.extents.x + 0.1f;
         height = player.GetComponent<Collider2D>().bounds.extents.y + 0.2f;
-        length = 0.05f;
+        length = 0.03f;
         //platforms = LayerMask.NameToLayer("Wall");
     }
 

@@ -33,11 +33,13 @@ public class PlayerController : MonoBehaviour
         {
             input.x = -1;
             sprite.flipX = true;
+            groundState.facing = -1;
         }
         else if (Input.GetKey(KeyCode.D))
         {
             input.x = 1;
             sprite.flipX = false;
+            groundState.facing = 1;
         }
         else
             input.x = 0;
@@ -84,27 +86,34 @@ public class PlayerController : MonoBehaviour
         if(isKnockedback == false)
         {
             isKnockedback = true;
-            int direction = groundState.WallDirection();
-            StartCoroutine(HandleKnockback(enemy.KnockDuration, enemy.KnockPower, direction));
+            int direction = -1 * groundState.WallDirection();
+            direction = direction == 0f ? -1 * groundState.facing : direction;
+            StartCoroutine(HandleKnockback(enemy.knockDuration, enemy.horizontalKnockPower, enemy.verticalKnockPower, direction));
         }
     }
 
-    public IEnumerator HandleKnockback(float duration, float power, float direction)
+    public IEnumerator HandleKnockback(float duration, float horizontalPower, float verticalPower, float direction)
     {
         float timer = 0;
+        rb.velocity = new Vector2(direction * horizontalPower, verticalPower);
+        Debug.Log(rb.velocity + " " + horizontalPower);
+        yield return new WaitForSeconds(0.03f);
 
-        while(isKnockedback)
+        while (isKnockedback)
         {
             timer += Time.deltaTime;
-            rb.AddForce(new Vector2(-1 * direction * power, power));
-            if (timer > duration)
+
+            if (rb.velocity.y == 0)
+            {
+                rb.velocity = new Vector2(0, 0);
+            }
+
+            if ((timer > duration) && groundState.IsGround())
             {
                 isKnockedback = false;
             }
             yield return null;
         }
-
-        Debug.Log(timer);
     }
 
 
