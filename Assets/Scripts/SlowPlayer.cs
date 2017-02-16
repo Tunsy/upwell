@@ -9,7 +9,7 @@ public class SlowPlayer : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             modSpeed(other.GetComponent<PlayerController>(), 4f);
-            modJump(other.GetComponent<PlayerController>(), 0);
+            modJump(other.GetComponent<PlayerController>(), 4f);
         }
     }
 
