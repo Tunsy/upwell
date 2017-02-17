@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
+    public float speed;
+    private Rigidbody2D rb;
+
+
     void Start()
     {
-        this.GetComponent<Rigidbody2D>().velocity = new Vector2(4, 0);
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    public void SetDirection(Vector2 direction)
     {
-        
+        rb.velocity = direction;
+        rb.velocity = new Vector2(rb.velocity.x * speed, rb.velocity.y * speed);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-        {
-            Destroy(other.gameObject);
-        }
+        DestroySelf();
+    }
+
+    private void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 }
