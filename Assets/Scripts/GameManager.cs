@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
         {
             endGame();
         }
+        Debug.Log(score);
+        score += Time.deltaTime * TIME_SCORE_COEFFICIENT;
         update_time();
 
         /*if (time >= time_interval)
@@ -61,7 +63,7 @@ public class GameManager : MonoBehaviour
 
     //member variables
     private float time = START_TIME;
-    private int pickup_score = 0;
+    private float score = 0;
     private GameObject player;
     private int current_level = START_LEVEL;
     private bool is_alive = DEFAULT_ALIVE_STATE;
@@ -75,7 +77,7 @@ public class GameManager : MonoBehaviour
     private static int START_LEVEL = 0;
     private static bool DEFAULT_ALIVE_STATE = true;
     private static float STARTING_INTERVAL = 1;
-    private static int TIME_SCORE_COEFFICIENT = 10;
+    private static int TIME_SCORE_COEFFICIENT = 1;
     private static int PICKUP_SCORE_COEFFICIENT = 4;
     private static  Dictionary<string, int> sceneIndexes = new Dictionary<string, int>()
     {
@@ -92,13 +94,13 @@ public class GameManager : MonoBehaviour
     {
         return is_alive;
     }
-
+    /*
     public float timeElapsed()
     {
         return this.time;
     }
 
-    /*
+   
     public int currentLevel()
     {
         return this.current_level;
@@ -106,12 +108,12 @@ public class GameManager : MonoBehaviour
     */
     public int getPlayerScore()
     {
-        return ( int)(time * TIME_SCORE_COEFFICIENT) + pickup_score;
+        return (int)score;
     }
 
     public void updatePickupScore(int points)
     {
-        pickup_score += points * PICKUP_SCORE_COEFFICIENT;
+        score += points * PICKUP_SCORE_COEFFICIENT;
     }
     //void methods and others, to be called from other scripts
     public void endGame()
