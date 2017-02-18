@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
         {
             endGame();
         }
-        Debug.Log(score);
         score += Time.deltaTime * TIME_SCORE_COEFFICIENT;
         update_time();
 
@@ -119,7 +118,7 @@ public class GameManager : MonoBehaviour
     public void endGame()
     {
         Debug.Log("game is over");
-        SceneManager.LoadScene(sceneIndexes["TitleScreen"]);
+        SceneManager.LoadScene("TitleScreen");
     }
     public void update_time()
     {
@@ -150,7 +149,7 @@ public class GameManager : MonoBehaviour
 
     public void pauseScene()
     {
-        SceneManager.LoadScene(sceneIndexes["PauseMenu"]);
+        SceneManager.LoadScene("PauseMenu");
         
     }
 
