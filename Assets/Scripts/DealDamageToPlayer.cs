@@ -4,14 +4,28 @@ using UnityEngine;
 
 public class DealDamageToPlayer : MonoBehaviour {
 
-    public float KnockDuration;
-    public float KnockPower;
+    public float knockDuration;
+    public float verticalKnockPower;
+    public float horizontalKnockPower;
+    public int damage;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
+            PlayerController player = collision.GetComponent<PlayerController>();
+
             collision.GetComponent<PlayerController>().Knockback(this);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+
+            collision.gameObject.GetComponent<PlayerController>().Knockback(this);
         }
     }
 }

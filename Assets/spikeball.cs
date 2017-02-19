@@ -16,24 +16,10 @@ public class spikeball : MonoBehaviour {
         Collider2D collider = collision.collider;
         if (collider.name == "Player")
         {
-            GameObject.Find("Player").GetComponent<Rigidbody2D>().velocity = Vector2.down * 10;
             switchfunction();
-            if (stun == false)
-            {
-                stun = true;
-                GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
-                Invoke("timer", 3f);
-            }
         }
     }
 
-    void timer()
-    {
-        GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
-        Debug.Log("Time");
-        stun = false;
-        CancelInvoke("timer");
-    }
 
     void switchfunction()
     {

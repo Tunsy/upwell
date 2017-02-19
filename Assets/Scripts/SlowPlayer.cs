@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class SlowPlayer : MonoBehaviour {
 
+    public float slowSpeed;
+    public float slowJump;
+    private float originalSpeed;
+    private float originalJump;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            modSpeed(other.GetComponent<PlayerController>(), 4f);
-            modJump(other.GetComponent<PlayerController>(), 4f);
+            PlayerController player = other.GetComponent<PlayerController>();
+            originalSpeed = player.speed;
+            originalJump = player.jump;
+            modSpeed(player, slowSpeed);
+            modJump(player, slowJump);
         }
     }
 
@@ -17,8 +25,8 @@ public class SlowPlayer : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            modSpeed(other.GetComponent<PlayerController>(), 14f);
-            modJump(other.GetComponent<PlayerController>(), 14f);
+            modSpeed(other.GetComponent<PlayerController>(), originalSpeed);
+            modJump(other.GetComponent<PlayerController>(), originalJump);
         }
     }
 

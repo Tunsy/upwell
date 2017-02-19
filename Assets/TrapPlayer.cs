@@ -5,42 +5,56 @@ using UnityEngine;
 public class TrapPlayer : MonoBehaviour
 {
     private Collider2D trap;
-    float timeLeft = 1.0f;
-    bool timerCheck = false;
+    private float timeStunned;
+    float timeLeft;
+    bool isActivated;
 
     void Start()
     {
+        timeStunned = GetComponent<DealDamageToPlayer>().knockDuration;
         trap = GetComponent<Collider2D>();
-        //Debug.Log("trap");
     }
 
     void Update()
     {
-        if (timerCheck) 
+        // Only start the timer if the player has entered the trap
+        if (isActivated)
         {
-            timeLeft -= Time.deltaTime;
-        }
-        if (timeLeft < 0)
-        {
-            timerCheck = false;
-        }
-    }
+            timeStunned -= Time.deltaTime;
 
-    void OnTriggerStay2D(Collider2D coll)
-    {
-        if (coll.gameObject.tag == "Player")
-        {
-            modSpeed(coll.GetComponent<PlayerController>(), 0);
-            modJump(coll.GetComponent<PlayerController>(), 0);
-            timerCheck = true;
-            timeLeft = 3.0f;
-            if (timeLeft < 0)
+            if (timeStunned <= 0)
             {
-                modSpeed(coll.GetComponent<PlayerController>(), 14f);
-                modJump(coll.GetComponent<PlayerController>(), 14f);
+                DestroySelf();
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            ActivateTrap();
+        }
+    }
+
+    private void ActivateTrap()
+    {
+        isActivated = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            DestroySelf();
+        }
+    }
+
+    private void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
+
 
     void modSpeed(PlayerController player, float newSpeed)
     {
