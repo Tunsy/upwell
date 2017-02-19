@@ -333,6 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec487bfb026719408766f3a9b0cb43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  facing: 0
   platforms:
     serializedVersion: 2
     m_Bits: 0
@@ -1565,6 +1566,21 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114259198678533916, guid: 38351e1b5d62fd145bd778ed307d0eaf,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988534172646736, guid: 38351e1b5d62fd145bd778ed307d0eaf,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988534172646736, guid: 38351e1b5d62fd145bd778ed307d0eaf,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988534172646736, guid: 38351e1b5d62fd145bd778ed307d0eaf,
         type: 2}
       propertyPath: m_Color.b
       value: 0
