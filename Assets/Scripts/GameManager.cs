@@ -41,20 +41,23 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        if (!isAlive())
+       //Debug.Log(SceneManager.GetActiveScene().name);
+       if(gameRunning())
         {
-            endGame();
+            if (!isAlive())
+            {
+                endGame();
+            }
+            score += Time.deltaTime * TIME_SCORE_COEFFICIENT;
+            update_time();
+            //Debug.Log(time);
+            
         }
-        score += Time.deltaTime * TIME_SCORE_COEFFICIENT;
-        update_time();
 
-        /*if (time >= time_interval)
-        {
-            resetTimer();
-            updateLevel();
-            setNextInterval();
-        } */
+       
+        
+
+      
 
 
 
@@ -67,8 +70,9 @@ public class GameManager : MonoBehaviour
     private int current_level = START_LEVEL;
     private bool is_alive = DEFAULT_ALIVE_STATE;
     private float time_interval = STARTING_INTERVAL;
-    
-   
+
+    //change this to name of the scene you are running on currently, 
+    public string mainscene = "maintest";
 
    
     //static variables
@@ -78,13 +82,7 @@ public class GameManager : MonoBehaviour
     private static float STARTING_INTERVAL = 1;
     private static int TIME_SCORE_COEFFICIENT = 1;
     private static int PICKUP_SCORE_COEFFICIENT = 4;
-    private static  Dictionary<string, int> sceneIndexes = new Dictionary<string, int>()
-    {
-        {"PauseMenu", 2 },
-        {"TitleScreen", 0 },
-        {"mainscene", 1 }
-
-    };
+    
 
 
     //return methods
@@ -105,6 +103,11 @@ public class GameManager : MonoBehaviour
         return this.current_level;
     }
     */
+
+    public bool gameRunning()
+    {
+        return SceneManager.GetActiveScene().name == mainscene;
+    }
     public int getPlayerScore()
     {
         return (int)score;
@@ -118,6 +121,7 @@ public class GameManager : MonoBehaviour
     public void endGame()
     {
         Debug.Log("game is over");
+        resetTimer();
         SceneManager.LoadScene("TitleScreen");
     }
     public void update_time()
@@ -131,12 +135,12 @@ public class GameManager : MonoBehaviour
         Debug.Log("starting level" + current_level.ToString());
     }
 
-
+*/
     public void resetTimer()
     {
         time = 0;
     } 
-
+/*
     public void setNextInterval()
     {
         time_interval *= 2;
@@ -155,6 +159,6 @@ public class GameManager : MonoBehaviour
 
     public void resumeMain()
     {
-        SceneManager.LoadScene(sceneIndexes["mainscene"]);
+        SceneManager.LoadScene(mainscene);
     }
 }
