@@ -15,6 +15,7 @@ public class pickupSuperclass : MonoBehaviour {
     public void onStart()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, GameObject.FindGameObjectWithTag(tag).transform.position.z);
+    
     }
 
     public void pickupTrigger(Collider2D collision)
