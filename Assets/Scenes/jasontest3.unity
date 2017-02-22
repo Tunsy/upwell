@@ -368,7 +368,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -14.3
+      value: -12.01
       objectReference: {fileID: 0}
     - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -400,71 +400,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.72
+      value: 3.9
       objectReference: {fileID: 0}
     - target: {fileID: 1805646104080394, guid: aae8044fe7605d54bae677731f79950f, type: 2}
       propertyPath: m_Name
       value: SolidPlatform (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 61028508743771436, guid: aae8044fe7605d54bae677731f79950f,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 61028508743771436, guid: aae8044fe7605d54bae677731f79950f,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: aae8044fe7605d54bae677731f79950f, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &388456492
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -9.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 7.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
-      propertyPath: m_RootOrder
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 1805646104080394, guid: aae8044fe7605d54bae677731f79950f, type: 2}
-      propertyPath: m_Name
-      value: SolidPlatform (14)
       objectReference: {fileID: 0}
     - target: {fileID: 61028508743771436, guid: aae8044fe7605d54bae677731f79950f,
         type: 2}
@@ -840,7 +780,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
       propertyPath: m_LocalScale.x
@@ -1433,7 +1373,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4963949246032156, guid: aae8044fe7605d54bae677731f79950f, type: 2}
       propertyPath: m_LocalScale.x
