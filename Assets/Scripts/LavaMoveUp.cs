@@ -20,7 +20,8 @@ public class LavaMoveUp : MonoBehaviour
     {
         Vector2 destroyerPos = transform.position;
         Vector2 playerPos = player.transform.position;
-        if ((destroyerPos - playerPos).magnitude > maxDistance)
+        //Debug.Log(playerPos.y - destroyerPos.y);
+        if ((playerPos.y - destroyerPos.y) > maxDistance)
         {
             Debug.Log("catch up");
             transform.position = new Vector2(transform.position.x, transform.position.y + (catchUp * Time.deltaTime));
