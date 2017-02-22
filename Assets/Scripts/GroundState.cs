@@ -25,10 +25,16 @@ public class GroundState : MonoBehaviour
     // Returns whether or not player is touching wall.
     public bool IsWall()
     {
-        bool left = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y), -Vector2.right, length, platforms);
-        bool right = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y), Vector2.right, length, platforms);
+        //TODO: IMPLEMENT A BETTER SOLUTION
+        bool leftMid = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y), -Vector2.right, length, platforms);
+        bool leftTop = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y + height), -Vector2.right, length, platforms);
+        bool leftBottom = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y - height), -Vector2.right, length, platforms);
 
-        if (left || right)
+        bool rightMid = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y), Vector2.right, length, platforms);
+        bool rightTop = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y + height), Vector2.right, length, platforms);
+        bool rightBottom = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y - height), Vector2.right, length, platforms);
+
+        if (leftMid || leftTop || leftBottom || rightMid || rightTop || rightBottom)
             return true;
         else
             return false;
@@ -58,12 +64,17 @@ public class GroundState : MonoBehaviour
     // Returns direction of wall.
     public int WallDirection()
     {
-        bool left = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y), -Vector2.right, length);
-        bool right = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y), Vector2.right, length);
+        bool leftMid = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y), -Vector2.right, length, platforms);
+        bool leftTop = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y + height), -Vector2.right, length, platforms);
+        bool leftBottom = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y - height), -Vector2.right, length, platforms);
 
-        if (left)
+        bool rightMid = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y), Vector2.right, length, platforms);
+        bool rightTop = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y + height), Vector2.right, length, platforms);
+        bool rightBottom = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y - height), Vector2.right, length, platforms);
+
+        if (leftMid || leftTop || leftBottom)
             return -1;
-        else if (right)
+        else if (rightMid || rightTop || rightBottom)
             return 1;
         else
             return 0;

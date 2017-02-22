@@ -29,15 +29,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Handle input
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetAxis("Horizontal") < 0)
         {
-            input.x = -1;
+            input.x = Input.GetAxis("Horizontal");
             sprite.flipX = true;
             groundState.facing = -1;
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetAxis("Horizontal") > 0)
         {
-            input.x = 1;
+            input.x = Input.GetAxis("Horizontal");
             sprite.flipX = false;
             groundState.facing = 1;
         }

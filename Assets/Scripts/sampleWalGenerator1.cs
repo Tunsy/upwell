@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class sampleWalGenerator1 : MonoBehaviour {
-
     public int wallNum;
 	// Use this for initialization
 	void Start () {

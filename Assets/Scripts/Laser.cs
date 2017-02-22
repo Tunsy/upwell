@@ -19,7 +19,7 @@ public class Laser : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x * speed, rb.velocity.y * speed);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         DestroySelf();
     }
