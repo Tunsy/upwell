@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickupTrigger : MonoBehaviour {
     private string tag = "Player";
     public int value = 5;
+    public AudioClip pickupSound;
     // Use this for initialization
     void onStart()
     {
@@ -15,6 +16,9 @@ public class PickupTrigger : MonoBehaviour {
         if(collision.gameObject.tag == tag)
         {
             GameManager.instance.updatePickupScore(value);
+            if(pickupSound != null)
+                AudioSource.PlayClipAtPoint(pickupSound, Camera.main.transform.position);
+            
             Debug.Log(GameManager.instance.getPlayerScore());
         }
         Destroy(gameObject);

@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4975841811038706}
   - component: {fileID: 212924494713219000}
-  - component: {fileID: 61964760739707022}
   - component: {fileID: 114330933708918512}
+  - component: {fileID: 58268329357580990}
   m_Layer: 2
   m_Name: JumpField
   m_TagString: Untagged
@@ -35,15 +35,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1667247283256038}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.9744844, y: 7.155434, z: -1.6160984}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.0033274, y: 1.0980716, z: -3.9442234}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61964760739707022
-BoxCollider2D:
+--- !u!58 &58268329357580990
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -55,7 +55,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Radius: 0.87
 --- !u!114 &114330933708918512
 MonoBehaviour:
   m_ObjectHideFlags: 1

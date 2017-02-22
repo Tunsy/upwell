@@ -83,6 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 1608599943258588, guid: 053d6c20daa26b14a942964df2e145ef, type: 2}
   shootInterval: 4
+  shootSound: {fileID: 8300000, guid: 8299d67767d47e745b5a0cba36f8bbca, type: 3}
 --- !u!212 &212074674861409670
 SpriteRenderer:
   m_ObjectHideFlags: 1

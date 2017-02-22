@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     private bool holdingJumpCheck;
     public bool isKnockedback;
 
+    public AudioClip jumpSound;
+    public AudioClip hurtSound;
+    public AudioSource audio;
+
     private GroundState groundState;
     private Rigidbody2D rb;
     public SpriteRenderer sprite;
@@ -20,6 +24,7 @@ public class PlayerController : MonoBehaviour
         //Create an object to check if player is grounded or touching wall
         rb = GetComponent<Rigidbody2D>();
         groundState = GetComponent<GroundState>();
+        audio = GetComponent<AudioSource>();
         holdingJumpCheck = false;
         isKnockedback = false;
     }
@@ -85,6 +90,10 @@ public class PlayerController : MonoBehaviour
     {
         if(isKnockedback == false)
         {
+            if(hurtSound != null)
+            {
+                audio.PlayOneShot(hurtSound);
+            }
             isKnockedback = true;
             int direction = -1 * groundState.WallDirection();
             direction = direction == 0f ? -1 * groundState.facing : direction;
@@ -96,7 +105,6 @@ public class PlayerController : MonoBehaviour
     {
         float timer = 0;
         rb.velocity = new Vector2(direction * horizontalPower, verticalPower);
-        Debug.Log(rb.velocity + " " + horizontalPower);
         yield return new WaitForSeconds(0.03f);
 
         while (isKnockedback)
@@ -124,10 +132,20 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(new Vector2(((input.x * speed) - rb.velocity.x) * (groundState.IsGround() ? accel : airAccel), 0)); // Accelerate the player.
             rb.velocity = new Vector2((input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && (groundState.IsTouching() || groundState.CanWallFieldJump())) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
+            if (holdingJumpCheck && (groundState.IsTouching() || groundState.CanWallFieldJump())){
+                if (jumpSound != null)
+                {
+                    audio.PlayOneShot(jumpSound);
+                }
+            }
 
             // Wall jumping
             if (groundState.IsWall() && !groundState.IsGround() && holdingJumpCheck)
             {
+                if (jumpSound != null)
+                {
+                    audio.PlayOneShot(jumpSound);
+                }
                 rb.velocity = new Vector2(-1 * groundState.WallDirection() * speed * 0.75f, rb.velocity.y); //Add force negative to wall direction (with speed reduction)
             }
 

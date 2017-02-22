@@ -95,6 +95,8 @@ MonoBehaviour:
   jump: 11
   shortJump: 5
   isKnockedback: 0
+  jumpSound: {fileID: 8300000, guid: b186587830234a34683266d3e6b4255d, type: 3}
+  hurtSound: {fileID: 8300000, guid: aca00c3309f08f441a5d0eee93d2c76d, type: 3}
   sprite: {fileID: 212570180802281618}
 --- !u!114 &114969509844057990
 MonoBehaviour:
