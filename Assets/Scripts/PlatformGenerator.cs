@@ -41,8 +41,9 @@ public class PlatformGenerator : MonoBehaviour {
     {
         for (int i = 0; i < numOfPlatforms; i++)
         {
-            float xPos = Random.Range(-horizontalNoise, horizontalNoise);
+            //float xPos = Random.Range(-horizontalNoise, horizontalNoise);
             //float yPos = verticalSpacing * currentPlatforms.Count;
+            float xPos = 0f;
             yPos += verticalSpacing;
             GameObject randomPlatform = platformList[Random.Range(0, platformList.Count)];
             GameObject newPlatform = (GameObject)Instantiate(randomPlatform, new Vector2(xPos, yPos), Quaternion.identity);
@@ -58,7 +59,6 @@ public class PlatformGenerator : MonoBehaviour {
     {
         for (int i = 0; i < numOfPlatforms; i++)
         {
-            Debug.Log("Call");
             Destroy(currentPlatforms[0]);
             currentPlatforms.RemoveAt(0);
         }
