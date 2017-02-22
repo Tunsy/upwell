@@ -51,3 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc64de66cb2ea74ab3e142a37e26500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainscene: maintest
+  canvas: {fileID: 1522942165932210, guid: 38351e1b5d62fd145bd778ed307d0eaf, type: 2}
+  gameOverScreen: {fileID: 1543156221354548, guid: 38351e1b5d62fd145bd778ed307d0eaf,
+    type: 2}
+  pauseScreen: {fileID: 1188498143181726, guid: 38351e1b5d62fd145bd778ed307d0eaf,
+    type: 2}
+  gameActiveScreen: {fileID: 0}

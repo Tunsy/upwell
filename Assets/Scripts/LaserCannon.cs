@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserCannon : MonoBehaviour 
+public class LaserCannon : MonoBehaviour
 {
     public GameObject laser;
     private Transform spawnPoint;
@@ -16,14 +16,14 @@ public class LaserCannon : MonoBehaviour
 
     public AudioClip shootSound;
 
-	void Start() 
+    void Start()
     {
         player = FindObjectOfType<PlayerController>().transform;
         spawnPoint = transform.GetChild(0);
         timer -= startOffset;
-	}
-	
-	void Update()
+    }
+
+    void Update()
     {
         timer += Time.deltaTime;
         if (timer > shootInterval)
@@ -31,25 +31,29 @@ public class LaserCannon : MonoBehaviour
             Generate();
             timer = 0;
         }
-	}
+    }
 
     void Generate()
     {
-        GameObject shot = (GameObject)Instantiate(laser, spawnPoint.position, transform.rotation);
-        ShootSound();
-        // Convert the angle of the player to the velocity of the bullet and shoot it forward
-        Vector2 angle = Quaternion.AngleAxis(transform.rotation.eulerAngles.z, Vector3.forward) * Vector3.up;
-        shot.GetComponent<Rigidbody2D>().velocity = angle * shot.GetComponent<Laser>().speed;
+        if (GameManager.instance.isAlive())
+        {
+            GameObject shot = (GameObject)Instantiate(laser, spawnPoint.position, transform.rotation);
+            ShootSound();
+            // Convert the angle of the player to the velocity of the bullet and shoot it forward
+            Vector2 angle = Quaternion.AngleAxis(transform.rotation.eulerAngles.z, Vector3.forward) * Vector3.up;
+            shot.GetComponent<Rigidbody2D>().velocity = angle * shot.GetComponent<Laser>().speed;
+        }
     }
 
     void ShootSound()
     {
         if ((player.position - transform.position).magnitude <= 18)
         {
-            if(shootSound != null)
+            if (shootSound != null)
             {
                 AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
             }
+
         }
     }
 }

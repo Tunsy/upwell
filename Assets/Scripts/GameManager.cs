@@ -54,13 +54,6 @@ public class GameManager : MonoBehaviour
             
         }
 
-       
-        
-
-      
-
-
-
     }
 
     //member variables
@@ -73,6 +66,10 @@ public class GameManager : MonoBehaviour
 
     //change this to name of the scene you are running on currently, 
     public string mainscene = "maintest";
+    public GameObject canvas;
+    public GameObject gameOverScreen;
+    public GameObject pauseScreen;
+    public GameObject gameActiveScreen;
 
    
     //static variables
@@ -122,7 +119,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("game is over");
         resetTimer();
-        SceneManager.LoadScene("TitleScreen");
+        GameOverScreen();
+        // SceneManager.LoadScene("TitleScreen");
     }
     public void update_time()
     {
@@ -154,7 +152,17 @@ public class GameManager : MonoBehaviour
     public void pauseScene()
     {
         SceneManager.LoadScene("PauseMenu");
-        
+    }
+
+    public void GameOverScreen()
+    {
+        gameOverScreen.SetActive(true);
+        gameActiveScreen.SetActive(false);
+    }
+
+    public void PauseScreen()
+    {
+
     }
 
     public void resumeMain()

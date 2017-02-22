@@ -19,17 +19,20 @@ public class LavaMoveUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 destroyerPos = transform.position;
-        Vector2 playerPos = player.transform.position;
-        //Debug.Log(playerPos.y - destroyerPos.y);
-        if ((playerPos.y - destroyerPos.y) > maxDistance)
+        if(GameManager.instance.isAlive())
         {
-            //Debug.Log("catch up");
-            transform.position = new Vector2(transform.position.x, transform.position.y + (catchUp * Time.deltaTime));
-        }
-        else
-        {
-            transform.position = new Vector2(transform.position.x, transform.position.y + (upSpeed * Time.deltaTime));
+            Vector2 destroyerPos = transform.position;
+            Vector2 playerPos = player.transform.position;
+            //Debug.Log(playerPos.y - destroyerPos.y);
+            if ((playerPos.y - destroyerPos.y) > maxDistance)
+            {
+                //Debug.Log("catch up");
+                transform.position = new Vector2(transform.position.x, transform.position.y + (catchUp * Time.deltaTime));
+            }
+            else
+            {
+                transform.position = new Vector2(transform.position.x, transform.position.y + (upSpeed * Time.deltaTime));
+            }
         }
     }
 }

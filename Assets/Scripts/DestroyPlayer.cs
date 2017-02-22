@@ -11,5 +11,10 @@ public class DestroyPlayer : MonoBehaviour {
         {
             Destroy(other.gameObject);
         }
+
+        if(other.gameObject.tag == "Player")
+        {
+            GameManager.instance.killPlayer();
+        }
     }
 }

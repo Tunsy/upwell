@@ -71,11 +71,14 @@ public class CameraFollow : MonoBehaviour {
 
     void LateUpdate()
     {
-        focusArea.Update(playerCollider.bounds);
+        if (GameManager.instance.isAlive())
+        {
+            focusArea.Update(playerCollider.bounds);
 
-        Vector2 focusPosition = focusArea.center + Vector2.up * verticalOffset;
-        focusPosition.y = Mathf.SmoothDamp(this.transform.position.y, focusPosition.y, ref smoothVelocityY, verticalSmoothTime);
-        this.transform.position = (Vector3)focusPosition + Vector3.forward * -10;
+            Vector2 focusPosition = focusArea.center + Vector2.up * verticalOffset;
+            focusPosition.y = Mathf.SmoothDamp(this.transform.position.y, focusPosition.y, ref smoothVelocityY, verticalSmoothTime);
+            this.transform.position = (Vector3)focusPosition + Vector3.forward * -10;
+        }
     }
 	
 	void OnDrawGizmos()
