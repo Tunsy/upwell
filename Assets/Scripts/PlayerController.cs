@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public bool isKnockedback;
 
     public AudioClip jumpSound;
+    public AudioClip laserJump;
     public AudioClip hurtSound;
     public AudioSource audio;
 
@@ -58,7 +59,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             holdingJumpCheck = true;
-        }else
+        }
+        else
         {
             holdingJumpCheck = false;
         }
@@ -88,9 +90,9 @@ public class PlayerController : MonoBehaviour
 
     public void Knockback(DealDamageToPlayer enemy)
     {
-        if(isKnockedback == false)
+        if (isKnockedback == false)
         {
-            if(hurtSound != null)
+            if (hurtSound != null)
             {
                 audio.PlayOneShot(hurtSound);
             }
@@ -131,11 +133,16 @@ public class PlayerController : MonoBehaviour
         if (!isKnockedback)
         {
             rb.AddForce(new Vector2(((input.x * speed) - rb.velocity.x) * (groundState.IsGround() ? accel : airAccel), 0)); // Accelerate the player.
-            rb.velocity = new Vector2((input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && (groundState.IsTouching() || groundState.CanWallFieldJump())) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
-            if (holdingJumpCheck && (groundState.IsTouching() || groundState.CanWallFieldJump())){
-                if (jumpSound != null)
+            rb.velocity = new Vector2((input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && (groundState.IsTouching() || groundState.IsJumpField())) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
+            if (holdingJumpCheck && (groundState.IsTouching() || groundState.IsJumpField()))
+            {
+                if (groundState.IsTouching() && jumpSound != null)
                 {
                     audio.PlayOneShot(jumpSound);
+                }
+                else if (groundState.WallFieldJump())
+                {
+                    audio.PlayOneShot(laserJump);
                 }
             }
 

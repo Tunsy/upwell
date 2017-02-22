@@ -11,6 +11,7 @@ public class GroundState : MonoBehaviour
     private float length;
     private bool enableJumpField;
     public int facing;
+    private float skinWidth;
     public LayerMask platforms;
 
     public void Start()
@@ -19,6 +20,7 @@ public class GroundState : MonoBehaviour
         width = player.GetComponent<Collider2D>().bounds.extents.x + 0.1f;
         height = player.GetComponent<Collider2D>().bounds.extents.y + 0.2f;
         length = 0.03f;
+        skinWidth = 0.25f;
         //platforms = LayerMask.NameToLayer("Wall");
     }
 
@@ -27,12 +29,12 @@ public class GroundState : MonoBehaviour
     {
         //TODO: IMPLEMENT A BETTER SOLUTION
         bool leftMid = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y), -Vector2.right, length, platforms);
-        bool leftTop = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y + height), -Vector2.right, length, platforms);
-        bool leftBottom = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y - height), -Vector2.right, length, platforms);
+        bool leftTop = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y + height - skinWidth), -Vector2.right, length, platforms);
+        bool leftBottom = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y - height + skinWidth), -Vector2.right, length, platforms);
 
         bool rightMid = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y), Vector2.right, length, platforms);
-        bool rightTop = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y + height), Vector2.right, length, platforms);
-        bool rightBottom = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y - height), Vector2.right, length, platforms);
+        bool rightTop = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y + height - skinWidth), Vector2.right, length, platforms);
+        bool rightBottom = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y - height + skinWidth), Vector2.right, length, platforms);
 
         if (leftMid || leftTop || leftBottom || rightMid || rightTop || rightBottom)
             return true;
@@ -91,7 +93,12 @@ public class GroundState : MonoBehaviour
         enableJumpField = false;
     }
 
-    public bool CanWallFieldJump()
+    public bool IsJumpField()
+    {
+        return enableJumpField;
+    }
+
+    public bool WallFieldJump()
     {
         if (enableJumpField)
         {

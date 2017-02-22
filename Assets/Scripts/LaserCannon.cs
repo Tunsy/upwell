@@ -7,9 +7,12 @@ public class LaserCannon : MonoBehaviour
     public GameObject laser;
     private Transform spawnPoint;
     private GameObject shot;
+    private Transform player;
+
     private float timer = 0;
     public float shootInterval;
-    private Transform player;
+    public float startOffset;
+
 
     public AudioClip shootSound;
 
@@ -17,6 +20,7 @@ public class LaserCannon : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>().transform;
         spawnPoint = transform.GetChild(0);
+        timer -= startOffset;
 	}
 	
 	void Update()

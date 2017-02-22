@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4963753224110670}
   - component: {fileID: 114343827300185622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GapPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 212606966372770366}
   - component: {fileID: 61820180396419740}
   - component: {fileID: 114683491767278408}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: JumpField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4533553207621372}
   - component: {fileID: 212741010114228296}
   - component: {fileID: 61474885857761840}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightPlatform
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4528568208112290}
   - component: {fileID: 212813591884909346}
   - component: {fileID: 61869381081094660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftPlatform
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -124,8 +124,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1050153608698410}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.6, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.093825, y: -2.9364662, z: -0.359375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4528568208112290}

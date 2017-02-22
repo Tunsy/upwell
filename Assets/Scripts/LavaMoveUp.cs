@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LavaMoveUp : MonoBehaviour
 {
-    public GameObject player;
+    private PlayerController player;
     //private Rigidbody2D rb;
     public float upSpeed;
     public float maxDistance;
@@ -13,6 +13,7 @@ public class LavaMoveUp : MonoBehaviour
     void Start()
     {
         //rb = GetComponent<Rigidbody2D>(); //might use this later for smoother destroyer accel/decel
+        player = FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class LavaMoveUp : MonoBehaviour
         //Debug.Log(playerPos.y - destroyerPos.y);
         if ((playerPos.y - destroyerPos.y) > maxDistance)
         {
-            Debug.Log("catch up");
+            //Debug.Log("catch up");
             transform.position = new Vector2(transform.position.x, transform.position.y + (catchUp * Time.deltaTime));
         }
         else
