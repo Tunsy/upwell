@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - Gel
   - Laser
+  - DestroyerHitBox
   layers:
   - Default
   - TransparentFX
