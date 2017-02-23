@@ -35,7 +35,22 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        DontDestroyOnLoad(this.gameObject);
+        
+        //DontDestroyOnLoad(this.gameObject);
+    }
+
+    private void Start()
+    {
+        //canvas = GameObject.Find("Canvas");
+        StartGame();
+    }
+
+    public void StartGame()
+    {
+        gameOverScreen = GameObject.Find("GameOverScreen");
+        gameActiveScreen = GameObject.Find("Gamescreen");
+        gameOverScreen.SetActive(false);
+        gameActiveScreen.SetActive(true);
     }
 
     // Update is called once per frame
@@ -48,10 +63,11 @@ public class GameManager : MonoBehaviour
             {
                 endGame();
             }
-            score += Time.deltaTime * TIME_SCORE_COEFFICIENT;
-            update_time();
-            //Debug.Log(time);
-            
+            else
+            {
+                score += Time.deltaTime * TIME_SCORE_COEFFICIENT;
+                update_time();
+            }
         }
 
     }
@@ -65,7 +81,7 @@ public class GameManager : MonoBehaviour
     private float time_interval = STARTING_INTERVAL;
 
     //change this to name of the scene you are running on currently, 
-    public string mainscene = "maintest";
+    public string mainscene = "gametest";
     public GameObject canvas;
     public GameObject gameOverScreen;
     public GameObject pauseScreen;
@@ -103,7 +119,9 @@ public class GameManager : MonoBehaviour
 
     public bool gameRunning()
     {
-        return SceneManager.GetActiveScene().name == mainscene;
+        //return SceneManager.GetActiveScene().name == mainscene;
+        gameActiveScreen.SetActive(true);
+        return true;
     }
     public int getPlayerScore()
     {
@@ -124,7 +142,10 @@ public class GameManager : MonoBehaviour
     }
     public void update_time()
     {
-        time += Time.deltaTime;
+        if (isAlive())
+        {
+            time += Time.deltaTime;
+        }
     }
 
    /* public void updateLevel()

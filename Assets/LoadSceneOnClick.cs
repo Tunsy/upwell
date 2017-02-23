@@ -10,4 +10,10 @@ public class LoadSceneOnClick : MonoBehaviour {
     {
         SceneManager.LoadScene(sceneIndex);
     }
+
+    public void LoadMainLevel()
+    {
+        SceneManager.LoadScene("gametest");
+        GameManager.instance.StartGame();
+    }
 }
