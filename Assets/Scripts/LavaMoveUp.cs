@@ -12,8 +12,8 @@ public class LavaMoveUp : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        maxDistance = 6.7f;
-        catchUp = 6;
+        //maxDistance = 6.7f;
+        //catchUp = 6;
     }
 
     // Update is called once per frame
