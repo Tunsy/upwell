@@ -1237,6 +1237,10 @@ MonoBehaviour:
   jump: 12
   shortJump: 5
   isKnockedback: 0
+  jumpSound: {fileID: 0}
+  laserJump: {fileID: 0}
+  hurtSound: {fileID: 0}
+  audio: {fileID: 0}
   sprite: {fileID: 1278749122}
 --- !u!61 &1278749124
 BoxCollider2D:
@@ -1601,34 +1605,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114134655892751968, guid: e63d86fe59bd5f149941e2e32debd9df,
-        type: 2}
-      propertyPath: upSpeed
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114134655892751968, guid: e63d86fe59bd5f149941e2e32debd9df,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1278749119}
-    - target: {fileID: 114134655892751968, guid: e63d86fe59bd5f149941e2e32debd9df,
-        type: 2}
-      propertyPath: maxDistance
-      value: 6.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114134655892751968, guid: e63d86fe59bd5f149941e2e32debd9df,
-        type: 2}
-      propertyPath: catchUp
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 4891274430867896, guid: e63d86fe59bd5f149941e2e32debd9df, type: 2}
       propertyPath: m_LocalScale.x
-      value: 10.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 114134655892751968, guid: e63d86fe59bd5f149941e2e32debd9df,
-        type: 2}
-      propertyPath: timerInterval
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e63d86fe59bd5f149941e2e32debd9df, type: 2}

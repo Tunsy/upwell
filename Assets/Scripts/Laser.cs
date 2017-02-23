@@ -11,6 +11,7 @@ public class Laser : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Invoke("DestroySelf", 10.0f);
     }
 
     public void SetDirection(Vector2 direction)
