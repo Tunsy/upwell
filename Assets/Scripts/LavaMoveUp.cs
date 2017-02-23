@@ -14,15 +14,13 @@ public class LavaMoveUp : MonoBehaviour
     {
         //rb = GetComponent<Rigidbody2D>(); //might use this later for smoother destroyer accel/decel
         player = FindObjectOfType<PlayerController>();
-        maxDistance = 6.7f;
-        catchUp = 6;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if(GameManager.instance.isAlive())
-        //{
+        if(GameManager.instance.isAlive())
+        {
             Vector2 destroyerPos = transform.position;
             Vector2 playerPos = player.transform.position;
             //Debug.Log(playerPos.y - destroyerPos.y);
@@ -35,6 +33,6 @@ public class LavaMoveUp : MonoBehaviour
             {
                 transform.position = new Vector2(transform.position.x, transform.position.y + (upSpeed * Time.deltaTime));
             }
-        //}
+        }
     }
 }
