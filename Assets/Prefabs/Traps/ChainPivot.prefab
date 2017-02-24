@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segments: 2
   seg: {fileID: 1994782293545144, guid: cb1f3c76937479146bab0b05b3380e73, type: 2}
-  radialSpeed: 3
+  radialSpeed: 20
 --- !u!212 &212010457247340654
 SpriteRenderer:
   m_ObjectHideFlags: 1

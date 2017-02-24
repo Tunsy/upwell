@@ -323,6 +323,11 @@ Prefab:
       propertyPath: segments
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114835934576119352, guid: e0837f19911d8544eb2c06c66c5d97e8,
+        type: 2}
+      propertyPath: radialSpeed
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0837f19911d8544eb2c06c66c5d97e8, type: 2}
   m_IsPrefabParent: 0
