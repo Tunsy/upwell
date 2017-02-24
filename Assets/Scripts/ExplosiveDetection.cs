@@ -2,21 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SegmentDamage : DealDamageToPlayer {
+public class ExplosiveDetection : DealDamageToPlayer {
+    public float radius;
+	// Use this for initialization
+	void Start () {
+        GetComponent<CircleCollider2D>().radius *= radius;
+	}
 
     private void OnCollisionEnter2D(Collider2D collision)
     {
-        
-        if(collision.tag == "Player")
+
+        if (collision.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerController>().Knockback(this);
         }
 
-        else
-        {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.gameObject.GetComponent<Collider2D>());
-        }
+       
 
 
     }
+
+
 }
