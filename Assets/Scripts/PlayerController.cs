@@ -158,13 +158,13 @@ public class PlayerController : MonoBehaviour
             }
 
             // Variable jump height
-            if (input.y == 0)
-            {
-                if (rb.velocity.y > shortJump)
-                {
-                    rb.velocity = new Vector2(rb.velocity.x, shortJump);
-                }
-            }
+            //if (input.y == 0)
+            //{
+            //    if (rb.velocity.y > shortJump)
+            //    {
+            //        rb.velocity = new Vector2(rb.velocity.x, shortJump);
+            //    }
+            //}
         }
     }
 
