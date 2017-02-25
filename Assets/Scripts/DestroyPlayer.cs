@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyPlayer : MonoBehaviour {
+    private Collider2D hitbox;
+
+    void Start()
+    {
+        //hitbox = FindObjectOfType<DestroyerHitBox>();
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //other.SendMessage("here");
         if(other.gameObject.tag != "Wall")
         {
             Destroy(other.gameObject);
