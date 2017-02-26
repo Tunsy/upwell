@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlatformGenerator : MonoBehaviour {
-    public List<GameObject> platformList;
-    new Camera camera;
+    enum SpawningState
+    {
+        ROOMS,
+        PLATFORMS
+    }
+
+    public List<GameObject> roomList;   //A list of prefabs of pre-defined collections of platforms
+    public List<GameObject> platformList;   //A list of a la carte platforms used for "sprinkling" between rooms
+    List<GameObject> currentPlatforms = new List<GameObject>();
     public float horizontalNoise = 0.5f;
     public float verticalSpacing = 5f;
     float yPos = 0;
-    List<GameObject> currentPlatforms = new List<GameObject>();
     GameObject player;
+    new Camera camera;
 
     void Awake()
     {
