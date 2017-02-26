@@ -19,6 +19,7 @@ public class LavaMoveUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        upSpeed *= GameManager.instance.currentLevel();
         //if(GameManager.instance.isAlive())
         //{
             Vector2 destroyerPos = transform.position;

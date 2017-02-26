@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
     {
         return is_alive;
     }
-    /*
+    
     public float timeElapsed()
     {
         return this.time;
@@ -113,9 +113,9 @@ public class GameManager : MonoBehaviour
    
     public int currentLevel()
     {
-        return this.current_level;
+        return (int)Mathf.Log(time * 10);
     }
-    */
+    
 
     public bool gameRunning()
     {
