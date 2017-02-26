@@ -47,10 +47,11 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        gameOverScreen = GameObject.Find("GameOverScreen");
-        gameActiveScreen = GameObject.Find("Gamescreen");
-        gameOverScreen.SetActive(false);
-        gameActiveScreen.SetActive(true);
+        uiManager = GameObject.FindObjectOfType<UIManager>();
+        //gameOverScreen = GameObject.Find("GameOverScreen");
+        //gameActiveScreen = GameObject.Find("Gamescreen");
+        //gameOverScreen.SetActive(false);
+        //gameActiveScreen.SetActive(true);
     }
 
     // Update is called once per frame
@@ -76,6 +77,7 @@ public class GameManager : MonoBehaviour
     private float time = START_TIME;
     private float score = 0;
     private GameObject player;
+    private UIManager uiManager;
     private int current_level = START_LEVEL;
     private bool is_alive = DEFAULT_ALIVE_STATE;
     private float time_interval = STARTING_INTERVAL;
@@ -83,9 +85,9 @@ public class GameManager : MonoBehaviour
     //change this to name of the scene you are running on currently, 
     public string mainscene = "gametest";
     public GameObject canvas;
-    public GameObject gameOverScreen;
-    public GameObject pauseScreen;
-    public GameObject gameActiveScreen;
+    //public GameObject gameOverScreen;
+    //public GameObject pauseScreen;
+    //public GameObject gameActiveScreen;
 
    
     //static variables
@@ -120,7 +122,8 @@ public class GameManager : MonoBehaviour
     public bool gameRunning()
     {
         //return SceneManager.GetActiveScene().name == mainscene;
-        gameActiveScreen.SetActive(true);
+        //gameActiveScreen.SetActive(true);
+        uiManager.ShowGameActiveScreen(true);
         return true;
     }
     public int getPlayerScore()
@@ -177,8 +180,10 @@ public class GameManager : MonoBehaviour
 
     public void GameOverScreen()
     {
-        gameOverScreen.SetActive(true);
-        gameActiveScreen.SetActive(false);
+        uiManager.ShowGameOverScreen(true);
+        uiManager.ShowGameActiveScreen(false);
+        //gameOverScreen.SetActive(true);
+        //gameActiveScreen.SetActive(false);
     }
 
     public void PauseScreen()

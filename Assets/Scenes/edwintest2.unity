@@ -310,6 +310,10 @@ MonoBehaviour:
   jump: 12
   shortJump: 5
   isKnockedback: 0
+  jumpSound: {fileID: 0}
+  laserJump: {fileID: 0}
+  hurtSound: {fileID: 0}
+  audio: {fileID: 0}
   sprite: {fileID: 1320530930}
 --- !u!61 &1320530932
 BoxCollider2D:
@@ -595,10 +599,6 @@ Prefab:
     - target: {fileID: 224053278541821172, guid: 38351e1b5d62fd145bd778ed307d0eaf,
         type: 2}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1543156221354548, guid: 38351e1b5d62fd145bd778ed307d0eaf, type: 2}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
