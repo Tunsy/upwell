@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Room : MonoBehaviour {
 
+    public List<Room> nextRoomList = new List<Room>();
+
     /// <summary>
     /// Returns y-position of the highest child object
     /// </summary>

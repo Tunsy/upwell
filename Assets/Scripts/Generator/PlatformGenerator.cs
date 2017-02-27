@@ -42,30 +42,19 @@ public class PlatformGenerator : MonoBehaviour {
     {
         firstPlatform = this.transform.Find("FirstPlatform").gameObject;
         generatedObjects.Enqueue(firstPlatform);
-        Generate(10);
+        Generate();
     }
 
     void Update()
     {
         //If the distance between the top and the camera position is less than twice the camera's height AKA if the top is less than two screens away.
         //Start generating a new chunk.
-        if (this._topY - camera.transform.position.y <= 2 * cameraHeight)
-            Generate(10);
+        if (this._DistanceFromTop <= 2 * cameraHeight)
+            Generate();
 
-        //If the lowest point is 3 screens away from the camera's current pos, start deleting objects
-        if (camera.transform.position.y - this._bottomY > 3 * cameraHeight)
+        //If the lowest point is 5 screens away from the camera's current pos, start deleting objects
+        if (this._DistanceFromBottom > 5 * cameraHeight)
             _DespawnObjects();
-        //Debug.Log(camera.transform.position);
-        //if (currentPlatforms[currentPlatforms.Count-1].transform.position.y - camera.transform.position.y <= verticalSpacing * 2)
-        //{
-        //    Generate(10);   
-        //}
-
-        //if (camera.transform.position.y - currentPlatforms[0].transform.position.y > verticalSpacing * 11)
-        //{
-        //    DeletePlatforms(10);
-        //}
-        //Debug.Log(platformList.Count)
     }
 
     /// <summary>
@@ -122,36 +111,114 @@ public class PlatformGenerator : MonoBehaviour {
             return SpawnType.NONE;
     }
 
-    private void _DespawnObjects()
+    /// <summary>
+    /// Tries to delete the bottom most object. Returns false if the object is a room that the player is still in.
+    /// </summary>
+    private bool _DespawnOne()
     {
+        GameObject bottomObject = generatedObjects.First();
+        SpawnType objectType = _CheckObject(bottomObject);
+        if (objectType == SpawnType.PLATFORM)
+        {
+            generatedObjects.Dequeue();
+            Destroy(bottomObject);
+        }
+        else if (objectType == SpawnType.ROOM)
+        {
+            float padSpace = cameraHeight / 2;
+            Room roomScript = bottomObject.GetComponent<Room>();
+            if (roomScript.topY + padSpace >= player.transform.position.y)
+            {
+                return false;
+            }
+            else
+            {
+                generatedObjects.Dequeue();
+                Destroy(bottomObject);
+            }
+        }
 
+        return true;
     }
 
-    public void Generate(int numOfPlatforms)
+    /// <summary>
+    /// Delete objects at the bottom more than 3 screens away. Stop after the bottom-most object is 3 screens away.
+    /// </summary>
+    private void _DespawnObjects()
     {
-        for (int i = 0; i < numOfPlatforms; i++)
+        while (this._DistanceFromBottom > 3 * cameraHeight)
         {
-            //float xPos = Random.Range(-horizontalNoise, horizontalNoise);
-            //float yPos = verticalSpacing * currentPlatforms.Count;
-            float xPos = 0f;
+            bool tryDelete = _DespawnOne();
+            if (tryDelete == false)
+                break;
+        }
+    }
+
+    public void Generate()
+    {
+        while (this._DistanceFromTop < 5 * cameraHeight)
+        {
             float yPos = this._topY + verticalSpacing;
             GameObject randomPlatform = platformList[Random.Range(0, platformList.Count)];
-            GameObject newPlatform = (GameObject)Instantiate(randomPlatform, new Vector2(xPos, yPos), Quaternion.identity);
+            GameObject newPlatform = (GameObject)Instantiate(randomPlatform, new Vector2(0, yPos), Quaternion.identity);
             PlatformInterface newPlatformScript = newPlatform.GetComponent<PlatformInterface>();
             if (newPlatformScript != null)
                 newPlatformScript.Initialize();
 
-            //currentPlatforms.Add(newPlatform);
             generatedObjects.Enqueue(newPlatform);
+        }
+        //for (int i = 0; i < numOfPlatforms; i++)
+        //{
+        //    //float xPos = Random.Range(-horizontalNoise, horizontalNoise);
+        //    //float yPos = verticalSpacing * currentPlatforms.Count;
+        //    float xPos = 0f;
+        //    float yPos = this._topY + verticalSpacing;
+        //    GameObject randomPlatform = platformList[Random.Range(0, platformList.Count)];
+        //    GameObject newPlatform = (GameObject)Instantiate(randomPlatform, new Vector2(xPos, yPos), Quaternion.identity);
+        //    PlatformInterface newPlatformScript = newPlatform.GetComponent<PlatformInterface>();
+        //    if (newPlatformScript != null)
+        //        newPlatformScript.Initialize();
+
+        //    //currentPlatforms.Add(newPlatform);
+        //    generatedObjects.Enqueue(newPlatform);
+        //}
+    }
+
+    private SpawnType _ChooseRoomOrPlatform(float roomWeight=50, float platformWeight=50)
+    {
+        SpawnType higherWeight = SpawnType.ROOM;
+        SpawnType lowerWeight = SpawnType.PLATFORM;
+        if (roomWeight >= platformWeight)
+        {
+            higherWeight = SpawnType.ROOM;
+            lowerWeight = SpawnType.PLATFORM;
+        }
+        else
+        {
+            higherWeight = SpawnType.PLATFORM;
+            lowerWeight = SpawnType.ROOM;
+        }
+
+        float randFloat = Random.Range(0, roomWeight + platformWeight);
+        if (randFloat <= Mathf.Max(roomWeight, platformWeight))
+            return higherWeight;
+        else
+            return lowerWeight;
+    }
+
+    float _DistanceFromTop
+    {
+        get
+        {
+            return this._topY - camera.transform.position.y;
         }
     }
 
-    //public void DeletePlatforms(int numOfPlatforms)
-    //{
-    //    for (int i = 0; i < numOfPlatforms; i++)
-    //    {
-    //        Destroy(currentPlatforms[0]);
-    //        currentPlatforms.RemoveAt(0);
-    //    }
-    //}
+    float _DistanceFromBottom
+    {
+        get
+        {
+            return camera.transform.position.y - this._bottomY;
+        }
+    }
 }
