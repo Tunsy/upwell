@@ -19,7 +19,7 @@ public class LavaMoveUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        upSpeed *= GameManager.instance.currentLevel();
+        float currentUpSpeed = upSpeed * GameManager.instance.getLevel();
         //if(GameManager.instance.isAlive())
         //{
             Vector2 destroyerPos = transform.position;
@@ -32,8 +32,10 @@ public class LavaMoveUp : MonoBehaviour
             }
             else
             {
-                transform.position = new Vector2(transform.position.x, transform.position.y + (upSpeed * Time.deltaTime));
+                transform.position = new Vector2(transform.position.x, transform.position.y + (currentUpSpeed * Time.deltaTime));
             }
         //}
     }
+
+    
 }
