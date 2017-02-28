@@ -74,6 +74,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4285876270033014}
+  - component: {fileID: 114978352379835212}
   m_Layer: 11
   m_Name: Room2
   m_TagString: Untagged
@@ -342,6 +343,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6abe4b2b0845f26469eb458bde98f995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114978352379835212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932223205271696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b0f3b11530e470408bf7dcca06c9669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextRoomList:
+  - {fileID: 114209789090323796, guid: cc1ba637d245aa942ae20a24e4f4f16c, type: 2}
+  - {fileID: 114887896714230164, guid: 5ea5a4cf0343bed469b91f078fa17f6c, type: 2}
+  - {fileID: 114913022820017514, guid: 7865c213d862f374293bc6a99685b747, type: 2}
 --- !u!212 &212153477972213600
 SpriteRenderer:
   m_ObjectHideFlags: 1

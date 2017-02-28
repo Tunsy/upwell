@@ -154,11 +154,32 @@ public class PlatformGenerator : MonoBehaviour {
         }
     }
 
-    public void Generate()
+    void _GenerateRoom()
     {
-        while (this._DistanceFromTop < 5 * cameraHeight)
+        GameObject topObject = generatedObjects.Last();
+        GameObject nextRoom = null;
+        if (_CheckObject(topObject) == SpawnType.ROOM)
+        {
+            List<Room> neighboringRooms = topObject.GetComponent<Room>().nextRoomList;
+            nextRoom = neighboringRooms[Random.Range(0, neighboringRooms.Count)].gameObject;
+        }
+        else
+        {
+            nextRoom = roomList[Random.Range(0, roomList.Count)];
+        }
+        float yPos = this._topY + verticalSpacing;
+        GameObject newRoom = Instantiate(nextRoom, new Vector2(0, yPos), Quaternion.identity);
+        
+        generatedObjects.Enqueue(newRoom);
+    }
+
+    void _GeneratePlatforms(int minAmount, int maxAmount)
+    {
+        float numOfPlatforms = Random.Range(minAmount, maxAmount);
+        for (int i = 0; i < numOfPlatforms; i++)
         {
             float yPos = this._topY + verticalSpacing;
+
             GameObject randomPlatform = platformList[Random.Range(0, platformList.Count)];
             GameObject newPlatform = (GameObject)Instantiate(randomPlatform, new Vector2(0, yPos), Quaternion.identity);
             PlatformInterface newPlatformScript = newPlatform.GetComponent<PlatformInterface>();
@@ -167,6 +188,27 @@ public class PlatformGenerator : MonoBehaviour {
 
             generatedObjects.Enqueue(newPlatform);
         }
+
+        GameObject transitionPlatform = (GameObject)Instantiate(this.transitionPlatform, new Vector2(0, this._topY + verticalSpacing), Quaternion.identity);
+        generatedObjects.Enqueue(transitionPlatform);
+    }
+
+    public void Generate()
+    {
+        while (this._DistanceFromTop < 5 * cameraHeight)
+        {
+            SpawnType roomOrPlatforms = _ChooseRoomOrPlatform(50, 50);
+
+            if (roomOrPlatforms == SpawnType.PLATFORM)
+            {
+                _GeneratePlatforms(3, 5);
+            }
+            else if (roomOrPlatforms == SpawnType.ROOM)
+            {
+                _GenerateRoom();
+            }
+        }
+
         //for (int i = 0; i < numOfPlatforms; i++)
         //{
         //    //float xPos = Random.Range(-horizontalNoise, horizontalNoise);
@@ -178,7 +220,6 @@ public class PlatformGenerator : MonoBehaviour {
         //    PlatformInterface newPlatformScript = newPlatform.GetComponent<PlatformInterface>();
         //    if (newPlatformScript != null)
         //        newPlatformScript.Initialize();
-
         //    //currentPlatforms.Add(newPlatform);
         //    generatedObjects.Enqueue(newPlatform);
         //}
