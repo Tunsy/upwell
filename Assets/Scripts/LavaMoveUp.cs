@@ -32,7 +32,7 @@ public class LavaMoveUp : MonoBehaviour
             }
             else
             {
-                transform.position = new Vector2(transform.position.x, transform.position.y + (currentUpSpeed * Time.deltaTime));
+                transform.position = new Vector2(transform.position.x, transform.position.y + (upSpeed * Time.deltaTime));
             }
         //}
     }
