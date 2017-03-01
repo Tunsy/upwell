@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class FlyingEnemy : MonoBehaviour {
 
-    Vector3 start;
-    Vector3 End;
     public int x;
     public int y;
 
-    void Start()
-    {
-        start = transform.position;
-        End = new Vector3(start.x + x, start.y + y, 0);
-    }
     void Update()
     {
-        if (transform.position == start)
+        if (x == 0)
         {
-            transform.Translate(End);
+            transform.position = new Vector3(transform.position.x, Mathf.PingPong(Time.time, y));
         }
-        else if(transform.position == End)
+        else if(y == 0)
         {
-            transform.Translate(start.x, start.y, 0);
+            transform.position = new Vector3(Mathf.PingPong(Time.time, x), transform.position.y);
+        }
+        else
+        {
+            transform.position = new Vector3(Mathf.PingPong(Time.time, x), Mathf.PingPong(Time.time, y));
         }
     }
 }
