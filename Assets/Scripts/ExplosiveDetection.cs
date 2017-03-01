@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ExplosiveDetection : DealDamageToPlayer {
     public float radius;
+    public float delay;
 	// Use this for initialization
 	void Start () {
         GetComponent<CircleCollider2D>().radius *= radius;
@@ -20,6 +21,16 @@ public class ExplosiveDetection : DealDamageToPlayer {
        
 
 
+    }
+
+    void selfDestruct()
+    {
+        Destroy(gameObject);
+    }
+
+    private void Update()
+    {
+        Invoke("selfDestruct", delay);
     }
 
 
