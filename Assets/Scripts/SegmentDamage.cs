@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SegmentDamage : DealDamageToPlayer {
 
-    private void OnCollisionEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if(collision.tag == "Player")
+        if(collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerController>().Knockback(this);
         }

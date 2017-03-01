@@ -11,8 +11,9 @@ public class LaserExploder : MonoBehaviour
 
     void Start()
     {
+        Destroy(gameObject);
         rb = GetComponent<Rigidbody2D>();
-        
+        rb.velocity = new Vector2(rb.velocity.x * speed, rb.velocity.y + speed);
     }
 
     public void SetDirection(Vector2 direction)
@@ -26,10 +27,11 @@ public class LaserExploder : MonoBehaviour
         Destroy(gameObject);
 
     }
-
-    void onDestory()
+    
+    void OnDestory()
     {
-        Instantiate(exploder, transform);
+       
+        Instantiate(exploder);
     }
 
     
