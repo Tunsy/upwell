@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Moleman : MonoBehaviour {
+public class BasicEnemy : MonoBehaviour {
     public float speed;
     public float interval;
     private float timer;
@@ -49,18 +49,10 @@ public class Moleman : MonoBehaviour {
                 sprite.flipX = false;
                 break;
             case 2:
-                this.GetComponent<Rigidbody2D>().velocity = new Vector2(-10, 0).normalized * speed;
-                sprite.flipX = false;
+                this.GetComponent<Rigidbody2D>().velocity = new Vector2(10, 0).normalized * speed;
+                sprite.flipX = true;
                 break;
             case 3:
-                this.GetComponent<Rigidbody2D>().velocity = new Vector2(10, 0).normalized * speed;
-                sprite.flipX = true;
-                break;
-            case 4:
-                this.GetComponent<Rigidbody2D>().velocity = new Vector2(10, 0).normalized * speed;
-                sprite.flipX = true;
-                break;
-            case 5:
                 this.GetComponent<Rigidbody2D>().velocity = new Vector2(10, 0).normalized * speed;
                 sprite.flipX = true;
                 break;

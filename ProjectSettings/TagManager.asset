@@ -9,6 +9,7 @@ TagManager:
   - Gel
   - Laser
   - DestroyerHitBox
+  - Enemy
   layers:
   - Default
   - TransparentFX
