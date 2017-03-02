@@ -16,11 +16,8 @@ public class ChainPivot : MonoBehaviour {
         {
             GameObject segment = GameObject.Instantiate(seg);
             segment.transform.position = new Vector2(this.transform.position.x,  this.transform.position.y-segment.transform.localScale.y);
-            Debug.Log(seg.transform.localScale.y);
             segment.transform.RotateAround(this.transform.position, Vector3.forward, (float)i );
             segment.transform.SetParent(this.transform);
-            Debug.Log(seg.transform.localScale.y);
-            
 
         }
 	}

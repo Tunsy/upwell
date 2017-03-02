@@ -24,19 +24,26 @@ public class LaserExploder : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag != transform.parent.tag)
-        {
 
 
-            Instantiate(exploder, transform);
-            Destroy(gameObject);
-        }
+
+        GameObject expl = GameObject.Instantiate(exploder);
+        expl.transform.position = new Vector2(this.transform.position.x, this.transform.position.y);
+        Destroy(gameObject);
+        
 
     }
-    
-    
 
-    
+    private void OnDestroy()
+    {
 
-    
+        
+        Debug.Log("new expl");
+    }
+
+
+
+
+
+
 }

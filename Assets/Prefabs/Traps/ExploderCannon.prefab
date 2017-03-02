@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 1835860690218164, guid: 3696b2f9ca6e282429f82d04ae09f426, type: 2}
-  shootInterval: 4
+  shootInterval: 10
   startOffset: 0
   shootSound: {fileID: 8300000, guid: 8299d67767d47e745b5a0cba36f8bbca, type: 3}
 --- !u!212 &212253201491104074

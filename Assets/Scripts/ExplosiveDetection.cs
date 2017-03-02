@@ -7,6 +7,7 @@ public class ExplosiveDetection : DealDamageToPlayer {
     public float delay;
 	// Use this for initialization
 	void Start () {
+        
         GetComponent<CircleCollider2D>().radius *= radius;
 	}
 
