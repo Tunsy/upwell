@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float jump = 14f;
     public float shortJump = 5;
     private bool holdingJumpCheck;
+    private bool isInverted = false;
     public bool isKnockedback;
 
     public AudioClip jumpSound;
@@ -35,20 +36,40 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Handle input
-        if (Input.GetAxis("Horizontal") < 0)
+        if (!isInverted)
         {
-            input.x = Input.GetAxis("Horizontal");
-            sprite.flipX = true;
-            groundState.facing = -1;
-        }
-        else if (Input.GetAxis("Horizontal") > 0)
-        {
-            input.x = Input.GetAxis("Horizontal");
-            sprite.flipX = false;
-            groundState.facing = 1;
+            if (Input.GetAxis("Horizontal") < 0)
+            {
+                input.x = Input.GetAxis("Horizontal");
+                sprite.flipX = true;
+                groundState.facing = -1;
+            }
+            else if (Input.GetAxis("Horizontal") > 0)
+            {
+                input.x = Input.GetAxis("Horizontal");
+                sprite.flipX = false;
+                groundState.facing = 1;
+            }
+            else
+                input.x = 0;
         }
         else
-            input.x = 0;
+        {
+            if (Input.GetAxis("Horizontal") < 0)
+            {
+                input.x = -1 * Input.GetAxis("Horizontal");
+                sprite.flipX = true;
+                groundState.facing = -1;
+            }
+            else if (Input.GetAxis("Horizontal") > 0)
+            {
+                input.x = -1 * Input.GetAxis("Horizontal");
+                sprite.flipX = false;
+                groundState.facing = 1;
+            }
+            else
+                input.x = 0;
+        }
 
         // HandleSprint()
         if (Input.GetKey(KeyCode.Space))
@@ -86,6 +107,11 @@ public class PlayerController : MonoBehaviour
             airAccel = 6f;
             accel = 12f;
         }
+    }
+
+    public void SetInvert(bool setting)
+    {
+        isInverted = setting;
     }
 
     public void Knockback(DealDamageToPlayer enemy)

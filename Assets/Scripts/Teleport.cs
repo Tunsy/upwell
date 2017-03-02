@@ -3,22 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Teleport : MonoBehaviour {
-    public GameObject door2;
-    //public GameObject destroyer;
+    public GameObject destination;
+    public SpriteRenderer playerSprite;
+    public PlayerController player;
+    public bool onEnterInvert; //always set BOTH the entrance door AND the destination door to true when inverting physics.
     private Transform spawnPoint;
-
-	// Use this for initialization
-	void Start () 
-    {
-        
-	}
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.transform.position = door2.transform.position;
-            other.gameObject.transform.rotation = door2.transform.rotation;
+            other.gameObject.transform.position = destination.transform.position;
+            other.gameObject.transform.rotation = destination.transform.rotation;
+            if (onEnterInvert)
+            {
+                playerSprite.flipY = true;
+                player.GetComponent<PlayerController>().SetInvert(true);
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (!onEnterInvert)
+            {
+                playerSprite.flipY = false;
+                player.GetComponent<PlayerController>().SetInvert(false);
+            }
         }
     }
 }
