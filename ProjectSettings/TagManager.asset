@@ -10,6 +10,7 @@ TagManager:
   - Laser
   - DestroyerHitBox
   - Enemy
+  - Box
   layers:
   - Default
   - TransparentFX
