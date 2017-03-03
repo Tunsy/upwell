@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour {
     public GameObject destination;
-    public SpriteRenderer playerSprite;
-    public PlayerController player;
+    private SpriteRenderer playerSprite;
+    private PlayerController player;
     public bool onEnterInvert; //always set BOTH the entrance door AND the destination door to true when inverting physics.
     private Transform spawnPoint;
+
+    void Start()
+    {
+        player = FindObjectOfType<PlayerController>();
+        playerSprite = player.GetComponent<SpriteRenderer>();
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
