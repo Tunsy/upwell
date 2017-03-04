@@ -27,15 +27,12 @@ public class pickupSuperclass : MonoBehaviour {
                 AudioSource.PlayClipAtPoint(pickupSound, Camera.main.transform.position);
 
             Debug.Log(GameManager.instance.getPlayerScore());
-            onPlayerDestroy();
+           
         }
         
-        Destroy(gameObject);
+       
     }
 
-    void onPlayerDestroy()
-    {
-
-    }
+    
 }
 

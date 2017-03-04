@@ -9,11 +9,9 @@ public class FlyPowerPickup : pickupSuperclass
     private void OnTriggerEnter2D(Collider2D collision)
     {
         base.pickupTrigger(collision);
-
-    }
-
-    void onPlayerDestroy()
-    {
         GameObject.Find("Player").GetComponent<PlayerController>().giveFlyPower(flyTime);
+        Destroy(gameObject);
     }
+
+    
 }

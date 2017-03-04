@@ -153,18 +153,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (isFlying && collision.gameObject.layer.ToString() != "wall")
-        {
-            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-        }
-    }
+    
     void FixedUpdate()
     {
         if (isFlying)
         {
-            rb.velocity = new Vector2(0, 100);
+            rb.velocity = new Vector2(0, (float) 1);
         }
         // Player physics
         if (!isKnockedback &&!isFlying)
@@ -214,11 +208,22 @@ public class PlayerController : MonoBehaviour
 
     void removeFlyPower()
     {
+       
         isFlying = false;
     }
     public void giveFlyPower(float duration)
     {
+        Debug.Log("!");
         isFlying = true;
+      
         Invoke("removeFlyPower", duration);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(isFlying && collision.gameObject.tag != "wall")
+        {
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
+        }
     }
 }

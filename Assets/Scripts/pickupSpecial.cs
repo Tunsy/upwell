@@ -19,5 +19,6 @@ public class pickupSpecial : pickupSuperclass {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         base.pickupTrigger(collision);
+        Destroy(gameObject);
     }
 }
