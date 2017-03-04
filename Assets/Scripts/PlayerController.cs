@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float shortJump = 5;
     private bool holdingJumpCheck;
     private bool isInverted = false;
+    private bool isFlying = false;
     public bool isKnockedback;
 
     public AudioClip jumpSound;
@@ -152,11 +153,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (isFlying && collision.gameObject.layer.ToString() != "wall")
+        {
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
+    }
     void FixedUpdate()
     {
+        if (isFlying)
+        {
+            rb.velocity = new Vector2(0, 100);
+        }
         // Player physics
-        if (!isKnockedback)
+        if (!isKnockedback &&!isFlying)
         {
             rb.AddForce(new Vector2(((input.x * speed) - rb.velocity.x) * (groundState.IsGround() ? accel : airAccel), 0)); // Accelerate the player.
             rb.velocity = new Vector2((input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && (groundState.IsTouching() || groundState.IsJumpField())) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
@@ -199,5 +210,15 @@ public class PlayerController : MonoBehaviour
         //GameObject Manager = GameObject.Find("GameManagerLoader").GetComponent<GameManagerLoader>().gameManager;
         //Manager.GetComponent<GameManager>().killPlayer();
         GameManager.instance.killPlayer();
+    }
+
+    void removeFlyPower()
+    {
+        isFlying = false;
+    }
+    public void giveFlyPower(float duration)
+    {
+        isFlying = true;
+        Invoke("removeFlyPower", duration);
     }
 }
