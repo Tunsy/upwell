@@ -158,10 +158,10 @@ public class PlayerController : MonoBehaviour
     {
         if (isFlying)
         {
-            rb.velocity = new Vector2(0, (float) 1);
+            rb.AddForce(new Vector2(0, (float) 30));
         }
         // Player physics
-        if (!isKnockedback &&!isFlying)
+        if (!isKnockedback )
         {
             rb.AddForce(new Vector2(((input.x * speed) - rb.velocity.x) * (groundState.IsGround() ? accel : airAccel), 0)); // Accelerate the player.
             rb.velocity = new Vector2((input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && (groundState.IsTouching() || groundState.IsJumpField())) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
@@ -221,7 +221,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(isFlying && collision.gameObject.tag != "wall")
+        Debug.Log(collision.gameObject.layer.ToString());
+        if(isFlying && collision.gameObject.layer.ToString() != "9")
         {
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
         }
