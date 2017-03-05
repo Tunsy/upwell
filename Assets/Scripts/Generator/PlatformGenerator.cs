@@ -18,18 +18,14 @@ public class PlatformGenerator : MonoBehaviour {
 
     /// <summary>
     /// A queue of all objects that have been spawned. Used for state tracking and destroy objects.
-    /// .front() returns the highest (most recently spawned) 
+    /// .front() returns the highest (most recently spawned)
+    /// .last() returns the lowest (oldest object spawned)
     /// </summary>
     Queue<GameObject> generatedObjects = new Queue<GameObject>();
     GameObject firstPlatform;
     GameObject player;
     new Camera camera;
     float cameraHeight;
-
-    //float topY = 0, bottomY = 0;   //Floats used to keep track where the y-positions of ends of the queue are at.
-    //List<GameObject> currentPlatforms = new List<GameObject>();
-    //public float horizontalNoise = 0.5f;
-    //float yPos = 0;
 
     void Awake()
     {
@@ -154,6 +150,10 @@ public class PlatformGenerator : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Spawns a random room. If the most recent object is currently also a room, spawn only elligible rooms that connect to that room.
+    /// Otherwise, spawn any random room.
+    /// </summary>
     void _GenerateRoom()
     {
         GameObject topObject = generatedObjects.Last();
@@ -173,6 +173,10 @@ public class PlatformGenerator : MonoBehaviour {
         generatedObjects.Enqueue(newRoom);
     }
 
+    /// <summary>
+    /// Generates a random number of platforms between minAmount and maxAmount.
+    /// Always tops it off with a transition platform afterwards.
+    /// </summary>
     void _GeneratePlatforms(int minAmount, int maxAmount)
     {
         float numOfPlatforms = Random.Range(minAmount, maxAmount);
@@ -193,6 +197,9 @@ public class PlatformGenerator : MonoBehaviour {
         generatedObjects.Enqueue(transitionPlatform);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void Generate()
     {
         while (this._DistanceFromTop < 5 * cameraHeight)
@@ -208,23 +215,12 @@ public class PlatformGenerator : MonoBehaviour {
                 _GenerateRoom();
             }
         }
-
-        //for (int i = 0; i < numOfPlatforms; i++)
-        //{
-        //    //float xPos = Random.Range(-horizontalNoise, horizontalNoise);
-        //    //float yPos = verticalSpacing * currentPlatforms.Count;
-        //    float xPos = 0f;
-        //    float yPos = this._topY + verticalSpacing;
-        //    GameObject randomPlatform = platformList[Random.Range(0, platformList.Count)];
-        //    GameObject newPlatform = (GameObject)Instantiate(randomPlatform, new Vector2(xPos, yPos), Quaternion.identity);
-        //    PlatformInterface newPlatformScript = newPlatform.GetComponent<PlatformInterface>();
-        //    if (newPlatformScript != null)
-        //        newPlatformScript.Initialize();
-        //    //currentPlatforms.Add(newPlatform);
-        //    generatedObjects.Enqueue(newPlatform);
-        //}
     }
 
+    /// <summary>
+    /// Randomly chooses between "Room" or "Platform" used for spawning.
+    /// Paramters allow the choices to be weighted (e.g. if rooms are desired to spawn more frequently)
+    /// </summary>
     private SpawnType _ChooseRoomOrPlatform(float roomWeight=50, float platformWeight=50)
     {
         SpawnType higherWeight = SpawnType.ROOM;
@@ -247,6 +243,9 @@ public class PlatformGenerator : MonoBehaviour {
             return lowerWeight;
     }
 
+    /// <summary>
+    /// Returns the camera's vertical distance to the highest generated object.
+    /// </summary>
     float _DistanceFromTop
     {
         get
@@ -255,6 +254,9 @@ public class PlatformGenerator : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Returns the camera's vertical distance to the lowest generated object.
+    /// </summary>
     float _DistanceFromBottom
     {
         get

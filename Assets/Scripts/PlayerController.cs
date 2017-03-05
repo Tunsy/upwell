@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             holdingJumpCheck = true;
+            rb.velocity = new Vector2((input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && (groundState.IsTouching() || groundState.IsJumpField())) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
         }
         else
         {
@@ -165,7 +166,7 @@ public class PlayerController : MonoBehaviour
         if (!isKnockedback )
         {
             rb.AddForce(new Vector2(((input.x * speed) - rb.velocity.x) * (groundState.IsGround() ? accel : airAccel), 0)); // Accelerate the player.
-            rb.velocity = new Vector2((input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && (groundState.IsTouching() || groundState.IsJumpField())) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
+            //rb.velocity = new Vector2((input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && (groundState.IsTouching() || groundState.IsJumpField())) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
 
             if (holdingJumpCheck && (groundState.IsTouching() || groundState.IsJumpField()))
             {

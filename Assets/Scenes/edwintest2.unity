@@ -223,6 +223,19 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1320530931}
+    - target: {fileID: 20885764891661272, guid: d0722c9488982f7409412eb9e0d8fb5a,
+        type: 2}
+      propertyPath: orthographic size
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608095358758830, guid: d0722c9488982f7409412eb9e0d8fb5a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362866599886888, guid: d0722c9488982f7409412eb9e0d8fb5a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 22
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0722c9488982f7409412eb9e0d8fb5a, type: 2}
   m_IsPrefabParent: 0
