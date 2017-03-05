@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private bool holdingJumpCheck;
     private bool isInverted = false;
     private bool isFlying = false;
+    private float verticalFlySpeed = 5;
     public bool isKnockedback;
 
     public AudioClip jumpSound;
@@ -158,7 +159,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isFlying)
         {
-            rb.AddForce(new Vector2(0, (float) 30));
+            rb.velocity = new Vector2(input.x, verticalFlySpeed);
         }
         // Player physics
         if (!isKnockedback )
@@ -213,7 +214,7 @@ public class PlayerController : MonoBehaviour
     }
     public void giveFlyPower(float duration)
     {
-        Debug.Log("!");
+        
         isFlying = true;
       
         Invoke("removeFlyPower", duration);
