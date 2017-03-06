@@ -67,12 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e84b310e4779043894307b39743516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockDuration: 1
-  verticalKnockPower: 10
-  horizontalKnockPower: 10
-  damage: 0
-  radius: 1.2
-  delay: 30
+  radius: 1.4
+  despawnTime: 0.4
 --- !u!212 &212481910162428516
 SpriteRenderer:
   m_ObjectHideFlags: 1

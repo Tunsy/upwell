@@ -41,7 +41,8 @@ public class LaserCannon : MonoBehaviour
             ShootSound();
             // Convert the angle of the player to the velocity of the bullet and shoot it forward
             Vector2 angle = Quaternion.AngleAxis(transform.rotation.eulerAngles.z, Vector3.forward) * Vector3.up;
-            shot.GetComponent<Rigidbody2D>().velocity = angle * shot.GetComponent<Laser>().speed;
+            Debug.Log("Angle" + angle + "speed" + shot.GetComponent<Projectile>().speed);
+            shot.GetComponent<Rigidbody2D>().velocity = angle * shot.GetComponent<Projectile>().speed;
         }
     }
 

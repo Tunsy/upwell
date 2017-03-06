@@ -2,37 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplosiveDetection : DealDamageToPlayer {
+public class ExplosiveDetection:MonoBehaviour {
+
     public float radius;
-    public float delay;
+    public float despawnTime;
+
 	// Use this for initialization
-	void Start () {
-        
-        GetComponent<CircleCollider2D>().radius *= radius;
-	}
-
-    private void OnCollisionEnter2D(Collision2D collision)
+	void Start ()
     {
-
-        if (collision.gameObject.tag == "Player")
-        {
-            collision.gameObject.GetComponent<PlayerController>().Knockback(this);
-        }
-
-       
-
-
+        GetComponent<CircleCollider2D>().radius *= radius;
+        Invoke("selfDestruct", despawnTime);
     }
+
 
     void selfDestruct()
     {
         Destroy(gameObject);
     }
-
-    private void Update()
-    {
-        Invoke("selfDestruct", delay);
-    }
-
 
 }
