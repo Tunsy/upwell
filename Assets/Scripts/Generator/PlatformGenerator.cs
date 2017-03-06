@@ -11,7 +11,7 @@ public class PlatformGenerator : MonoBehaviour {
         PLATFORM
     }
 
-    public List<Room> roomList;   //A list of prefabs of pre-defined collections of platforms
+    public List<Room> easyRoomList, intRoomList, advRoomList;   //A list of prefabs of pre-defined collections of platforms
     public List<Spawnable> platformList;   //A list of a la carte platforms used for "sprinkling" between rooms
     public Spawnable transitionPlatform; //A platform used to transitioning from random sprinkling back to pre-defined rooms.
     public float verticalSpacing = 5f;  //A public float dictating how far to spread platforms from each other.
@@ -151,14 +151,22 @@ public class PlatformGenerator : MonoBehaviour {
     }
 
     /// <summary>
+    /// Depending on the current level of the gamestate, determine which list of rooms to draw from.
     /// Spawns a random room. If the most recent object is currently also a room, spawn only elligible rooms that connect to that room.
     /// Otherwise, spawn any random room.
     /// </summary>
     void _GenerateRoom()
     {
+        /* TODO : Determine if the level calculation for the game is correct */
+        List<Room> roomList = easyRoomList;
+        if (GameManager.instance.getLevel() == 2)
+            roomList = intRoomList;
+        else if (GameManager.instance.getLevel() >= 3)
+            roomList = advRoomList;
+
         Spawnable topObject = generatedObjects.Last();
         Room nextRoom = null;
-        if (_CheckObject(topObject) == SpawnType.ROOM)
+        if (_CheckObject(topObject) == SpawnType.ROOM && topObject.GetComponent<Room>().nextRoomList.Count > 0)
         {
             List<Room> neighboringRooms = topObject.GetComponent<Room>().nextRoomList;
             nextRoom = neighboringRooms[Random.Range(0, neighboringRooms.Count)];
