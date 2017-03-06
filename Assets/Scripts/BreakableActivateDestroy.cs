@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class BreakableActivateDestroy : MonoBehaviour {
     public GameObject other;
+    public int durability;
+    private int count = 0;
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            count++;
+            if (count == durability)
+            {
                 Destroy(other);
+            }
         }
     }
 }
