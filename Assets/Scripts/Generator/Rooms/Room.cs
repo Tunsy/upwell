@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Room : MonoBehaviour {
+public class Room : Spawnable {
 
     public List<Room> nextRoomList = new List<Room>();
 

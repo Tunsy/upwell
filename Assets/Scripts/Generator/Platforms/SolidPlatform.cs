@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SolidPlatform : MonoBehaviour, PlatformInterface {
+public class SolidPlatform : Spawnable, PlatformInterface {
 
 	public void Initialize()
     {

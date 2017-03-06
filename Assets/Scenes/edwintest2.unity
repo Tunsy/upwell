@@ -139,25 +139,47 @@ Prefab:
         type: 2}
       propertyPath: roomList.Array.data[0]
       value: 
-      objectReference: {fileID: 1853912512575660, guid: cc1ba637d245aa942ae20a24e4f4f16c,
+      objectReference: {fileID: 114209789090323796, guid: cc1ba637d245aa942ae20a24e4f4f16c,
         type: 2}
     - target: {fileID: 114413153657110084, guid: dc1634e2f7e56a04fbc0966436e3ac6c,
         type: 2}
       propertyPath: roomList.Array.data[1]
       value: 
-      objectReference: {fileID: 1932223205271696, guid: bf83c9d28df2f06438f56008000b0395,
+      objectReference: {fileID: 114978352379835212, guid: bf83c9d28df2f06438f56008000b0395,
         type: 2}
     - target: {fileID: 114413153657110084, guid: dc1634e2f7e56a04fbc0966436e3ac6c,
         type: 2}
       propertyPath: roomList.Array.data[2]
       value: 
-      objectReference: {fileID: 1809059524266948, guid: 5ea5a4cf0343bed469b91f078fa17f6c,
+      objectReference: {fileID: 114887896714230164, guid: 5ea5a4cf0343bed469b91f078fa17f6c,
         type: 2}
     - target: {fileID: 114413153657110084, guid: dc1634e2f7e56a04fbc0966436e3ac6c,
         type: 2}
       propertyPath: roomList.Array.data[3]
       value: 
-      objectReference: {fileID: 1677900633801062, guid: 7865c213d862f374293bc6a99685b747,
+      objectReference: {fileID: 114913022820017514, guid: 7865c213d862f374293bc6a99685b747,
+        type: 2}
+    - target: {fileID: 4005540198506816, guid: dc1634e2f7e56a04fbc0966436e3ac6c, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 114413153657110084, guid: dc1634e2f7e56a04fbc0966436e3ac6c,
+        type: 2}
+      propertyPath: platformList.Array.data[1]
+      value: 
+      objectReference: {fileID: 114343827300185622, guid: b1b7728c84e62354ba3034d35beadb2f,
+        type: 2}
+    - target: {fileID: 114413153657110084, guid: dc1634e2f7e56a04fbc0966436e3ac6c,
+        type: 2}
+      propertyPath: platformList.Array.data[0]
+      value: 
+      objectReference: {fileID: 114697739162596308, guid: aae8044fe7605d54bae677731f79950f,
+        type: 2}
+    - target: {fileID: 114413153657110084, guid: dc1634e2f7e56a04fbc0966436e3ac6c,
+        type: 2}
+      propertyPath: transitionPlatform
+      value: 
+      objectReference: {fileID: 114697739162596308, guid: bb526d46f164c944dbb04d55ec8d0c2d,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc1634e2f7e56a04fbc0966436e3ac6c, type: 2}
@@ -201,41 +223,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114367151962443446, guid: d0722c9488982f7409412eb9e0d8fb5a,
-        type: 2}
-      propertyPath: PauseMenuCanvas
-      value: 
-      objectReference: {fileID: 1848246891}
-    - target: {fileID: 1138962024989526, guid: d0722c9488982f7409412eb9e0d8fb5a, type: 2}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1699115172738492, guid: d0722c9488982f7409412eb9e0d8fb5a, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1802913564034558, guid: d0722c9488982f7409412eb9e0d8fb5a, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 114056223658481448, guid: d0722c9488982f7409412eb9e0d8fb5a,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 1320530931}
-    - target: {fileID: 20885764891661272, guid: d0722c9488982f7409412eb9e0d8fb5a,
+    - target: {fileID: 114367151962443446, guid: d0722c9488982f7409412eb9e0d8fb5a,
         type: 2}
-      propertyPath: orthographic size
-      value: 12.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4608095358758830, guid: d0722c9488982f7409412eb9e0d8fb5a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4362866599886888, guid: d0722c9488982f7409412eb9e0d8fb5a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 22
-      objectReference: {fileID: 0}
+      propertyPath: PauseMenuCanvas
+      value: 
+      objectReference: {fileID: 1848246891}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0722c9488982f7409412eb9e0d8fb5a, type: 2}
   m_IsPrefabParent: 0

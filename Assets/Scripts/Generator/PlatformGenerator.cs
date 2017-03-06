@@ -11,9 +11,9 @@ public class PlatformGenerator : MonoBehaviour {
         PLATFORM
     }
 
-    public List<GameObject> roomList;   //A list of prefabs of pre-defined collections of platforms
-    public List<GameObject> platformList;   //A list of a la carte platforms used for "sprinkling" between rooms
-    public GameObject transitionPlatform; //A platform used to transitioning from random sprinkling back to pre-defined rooms.
+    public List<Room> roomList;   //A list of prefabs of pre-defined collections of platforms
+    public List<Spawnable> platformList;   //A list of a la carte platforms used for "sprinkling" between rooms
+    public Spawnable transitionPlatform; //A platform used to transitioning from random sprinkling back to pre-defined rooms.
     public float verticalSpacing = 5f;  //A public float dictating how far to spread platforms from each other.
 
     /// <summary>
@@ -21,8 +21,8 @@ public class PlatformGenerator : MonoBehaviour {
     /// .front() returns the highest (most recently spawned)
     /// .last() returns the lowest (oldest object spawned)
     /// </summary>
-    Queue<GameObject> generatedObjects = new Queue<GameObject>();
-    GameObject firstPlatform;
+    Queue<Spawnable> generatedObjects = new Queue<Spawnable>();
+    Spawnable firstPlatform;
     GameObject player;
     new Camera camera;
     float cameraHeight;
@@ -36,7 +36,7 @@ public class PlatformGenerator : MonoBehaviour {
 
     void Start()
     {
-        firstPlatform = this.transform.Find("FirstPlatform").gameObject;
+        firstPlatform = this.transform.Find("FirstPlatform").GetComponent<Spawnable>();
         generatedObjects.Enqueue(firstPlatform);
         Generate();
     }
@@ -60,7 +60,7 @@ public class PlatformGenerator : MonoBehaviour {
     {
         get
         {
-            GameObject topObject = generatedObjects.Last(); //Newest object in the queue
+            Spawnable topObject = generatedObjects.Last(); //Newest object in the queue
             SpawnType objectType = _CheckObject(topObject);
             if (objectType == SpawnType.ROOM)   //If it's a room, return the highest child object.
             {
@@ -86,7 +86,7 @@ public class PlatformGenerator : MonoBehaviour {
     {
         get
         {
-            GameObject bottomObject = generatedObjects.First(); //Oldest object in the queue
+            Spawnable bottomObject = generatedObjects.First(); //Oldest object in the queue
             /* Regardless if the object is a room or a platform, the y-position should be the lowest point
             If it's a platform - just return it's position
             If it's a room - the location of the parent of the room object should also be the world location of the lowest child. */
@@ -97,7 +97,7 @@ public class PlatformGenerator : MonoBehaviour {
     /// <summary>
     /// Returns whether the object is a room or a platform
     /// </summary>
-    private SpawnType _CheckObject(GameObject spawnableObject)
+    private SpawnType _CheckObject(Spawnable spawnableObject)
     {
         if (spawnableObject.GetComponent<PlatformInterface>() != null)
             return SpawnType.PLATFORM;
@@ -112,7 +112,7 @@ public class PlatformGenerator : MonoBehaviour {
     /// </summary>
     private bool _DespawnOne()
     {
-        GameObject bottomObject = generatedObjects.First();
+        Spawnable bottomObject = generatedObjects.First();
         SpawnType objectType = _CheckObject(bottomObject);
         if (objectType == SpawnType.PLATFORM)
         {
@@ -156,19 +156,19 @@ public class PlatformGenerator : MonoBehaviour {
     /// </summary>
     void _GenerateRoom()
     {
-        GameObject topObject = generatedObjects.Last();
-        GameObject nextRoom = null;
+        Spawnable topObject = generatedObjects.Last();
+        Room nextRoom = null;
         if (_CheckObject(topObject) == SpawnType.ROOM)
         {
             List<Room> neighboringRooms = topObject.GetComponent<Room>().nextRoomList;
-            nextRoom = neighboringRooms[Random.Range(0, neighboringRooms.Count)].gameObject;
+            nextRoom = neighboringRooms[Random.Range(0, neighboringRooms.Count)];
         }
         else
         {
             nextRoom = roomList[Random.Range(0, roomList.Count)];
         }
         float yPos = this._topY + verticalSpacing;
-        GameObject newRoom = Instantiate(nextRoom, new Vector2(0, yPos), Quaternion.identity);
+        Room newRoom = Instantiate(nextRoom, new Vector2(0, yPos), Quaternion.identity);
         
         generatedObjects.Enqueue(newRoom);
     }
@@ -184,16 +184,16 @@ public class PlatformGenerator : MonoBehaviour {
         {
             float yPos = this._topY + verticalSpacing;
 
-            GameObject randomPlatform = platformList[Random.Range(0, platformList.Count)];
+            GameObject randomPlatform = platformList[Random.Range(0, platformList.Count)].gameObject;
             GameObject newPlatform = (GameObject)Instantiate(randomPlatform, new Vector2(0, yPos), Quaternion.identity);
             PlatformInterface newPlatformScript = newPlatform.GetComponent<PlatformInterface>();
             if (newPlatformScript != null)
                 newPlatformScript.Initialize();
 
-            generatedObjects.Enqueue(newPlatform);
+            generatedObjects.Enqueue(newPlatform.GetComponent<Spawnable>());
         }
 
-        GameObject transitionPlatform = (GameObject)Instantiate(this.transitionPlatform, new Vector2(0, this._topY + verticalSpacing), Quaternion.identity);
+        Spawnable transitionPlatform = Instantiate(this.transitionPlatform, new Vector2(0, this._topY + verticalSpacing), Quaternion.identity);
         generatedObjects.Enqueue(transitionPlatform);
     }
 

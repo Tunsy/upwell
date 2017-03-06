@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GapPlatform : MonoBehaviour, PlatformInterface {
+public class GapPlatform : Spawnable, PlatformInterface {
     public float minGapWidth, maxGapWidth;
     public GameObject leftPlatform, rightPlatform;
     float gapWidth;
