@@ -69,7 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupscore: 5
   pickupSound: {fileID: 0}
-  flyTime: 30
+  flyTime: 3
 --- !u!212 &212366101263798628
 SpriteRenderer:
   m_ObjectHideFlags: 1

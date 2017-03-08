@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private bool holdingJumpCheck;
     private bool isInverted = false;
     private bool isFlying = false;
+    private bool isPhasable = false;
     private float verticalFlySpeed = 5;
     public bool isKnockedback;
     public float wallClingTimer;
@@ -128,7 +129,7 @@ public class PlayerController : MonoBehaviour
 
     public void Knockback(DealDamageToPlayer enemy)
     {
-        if (isKnockedback == false)
+        if (isKnockedback == false && !phasingUp())
         {
             if (hurtSound != null)
             {
@@ -205,7 +206,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Player physics
-        if (!isKnockedback && !isFlying)
+        if (!isKnockedback)
         {
             float xVel;
 
@@ -246,22 +247,29 @@ public class PlayerController : MonoBehaviour
 
     void removeFlyPower()
     {
-       
+        isPhasable = false;
         isFlying = false;
     }
     public void giveFlyPower(float duration)
     {
         
+        isPhasable = true;
         isFlying = true;
-      
         Invoke("removeFlyPower", duration);
+    }
+
+    bool phasingUp()
+    {
+        return isPhasable && rb.velocity.y > 0  ;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         Debug.Log(collision.gameObject.layer.ToString());
-        if(isFlying && collision.gameObject.layer.ToString() != "9")
+        if(phasingUp() && collision.gameObject.layer.ToString() != "9")
         {
+            Debug.Log('2');
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
         }
     }
