@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private GroundState groundState;
     public Rigidbody2D rb;
     public SpriteRenderer sprite;
+    private PlayerAnimationController pc;
 
     void Start()
     {
@@ -31,9 +32,11 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         groundState = GetComponent<GroundState>();
         audio = GetComponent<AudioSource>();
+        pc = GetComponent<PlayerAnimationController>();
         holdingJumpCheck = false;
         isKnockedback = false;
         wallClingTimer = 0;
+
     }
 
     private Vector2 input;
@@ -113,6 +116,7 @@ public class PlayerController : MonoBehaviour
                 {
                     audio.PlayOneShot(laserJump);
                 }
+                pc.JumpTrigger();
             }
             
         }
