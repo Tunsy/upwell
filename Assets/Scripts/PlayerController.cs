@@ -257,9 +257,14 @@ public class PlayerController : MonoBehaviour
 
     bool phasingUp()
     {
-        return isPhasable && rb.velocity.y > 0  ;
+        return isPhasable && !groundState.IsGround() ;
     }
 
+    void counttest()
+    {
+        Debug.Log(1);
+    }
+ 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
@@ -268,6 +273,8 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log('2');
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
+            Invoke("counttest", (float) .5);
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>(), false);
         }
     }
 }
