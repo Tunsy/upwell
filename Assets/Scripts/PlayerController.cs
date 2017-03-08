@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private bool isFlying = false;
     private float verticalFlySpeed = 5;
     public bool isKnockedback;
+    public float wallClingTimer;
+    public float wallClingTime;
 
     public AudioClip jumpSound;
     public AudioClip laserJump;
@@ -20,7 +22,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource audio;
 
     private GroundState groundState;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public SpriteRenderer sprite;
 
     void Start()
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
         audio = GetComponent<AudioSource>();
         holdingJumpCheck = false;
         isKnockedback = false;
+        wallClingTimer = 0;
     }
 
     private Vector2 input;
@@ -82,7 +85,20 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             holdingJumpCheck = true;
-            rb.velocity = new Vector2((input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && (groundState.IsTouching() || groundState.IsJumpField())) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
+
+            // Jump
+            float xVel = (input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x;
+            float yVel = (holdingJumpCheck && (groundState.IsGround() || groundState.IsJumpField())) ? jump : rb.velocity.y;
+            rb.velocity = new Vector2(xVel, yVel);
+
+            if (groundState.IsTouching() && jumpSound != null)
+            {
+                audio.PlayOneShot(jumpSound);
+            }
+            else if (groundState.WallFieldJump())
+            {
+                audio.PlayOneShot(laserJump);
+            }
         }
         else
         {
@@ -162,42 +178,47 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(input.x, verticalFlySpeed);
         }
+
         // Player physics
         if (!isKnockedback )
         {
-            rb.AddForce(new Vector2(((input.x * speed) - rb.velocity.x) * (groundState.IsGround() ? accel : airAccel), 0)); // Accelerate the player.
-            //rb.velocity = new Vector2((input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x, (holdingJumpCheck && (groundState.IsTouching() || groundState.IsJumpField())) ? jump : rb.velocity.y); //Stop player if input.x is 0 (and grounded), jump if input.y is 1
+            float xVel;
 
-            if (holdingJumpCheck && (groundState.IsTouching() || groundState.IsJumpField()))
+            if (groundState.IsWallClinging())
             {
-                if (groundState.IsTouching() && jumpSound != null)
-                {
-                    audio.PlayOneShot(jumpSound);
-                }
-                else if (groundState.WallFieldJump())
-                {
-                    audio.PlayOneShot(laserJump);
-                }
+                wallClingTimer += Time.deltaTime;
+
+                if (wallClingTimer >= wallClingTime)
+                    xVel = ((input.x * speed) - rb.velocity.x) * (groundState.IsGround() ? accel : airAccel);
+                else
+                    xVel = 0;
+            }
+            else
+            {
+                xVel = ((input.x * speed) - rb.velocity.x) * (groundState.IsGround() ? accel : airAccel);
+                wallClingTimer = 0;
             }
 
+            rb.AddForce(new Vector2(xVel, 0)); // Accelerate the player.
+
             // Wall jumping
-            if (groundState.IsWall() && !groundState.IsGround() && holdingJumpCheck)
+            if (groundState.IsWallClinging() && holdingJumpCheck)
             {
                 if (jumpSound != null)
                 {
                     audio.PlayOneShot(jumpSound);
                 }
-                rb.velocity = new Vector2(-1 * groundState.WallDirection() * speed * 0.75f, rb.velocity.y); //Add force negative to wall direction (with speed reduction)
+                rb.velocity = new Vector2(-1 * groundState.WallDirection() * speed * .8f, jump); //Add force negative to wall direction (with speed reduction)
             }
 
             // Variable jump height
-            //if (input.y == 0)
-            //{
-            //    if (rb.velocity.y > shortJump)
-            //    {
-            //        rb.velocity = new Vector2(rb.velocity.x, shortJump);
-            //    }
-            //}
+            if (input.y == 0)
+            {
+                if (rb.velocity.y > shortJump)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, shortJump);
+                }
+            }
         }
     }
 

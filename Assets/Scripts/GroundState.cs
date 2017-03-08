@@ -12,7 +12,8 @@ public class GroundState : MonoBehaviour
     private bool enableJumpField;
     public int facing;
     private float skinWidth;
-    public LayerMask platforms;
+    public LayerMask walls;
+    public LayerMask ground;
 
     public void Start()
     {
@@ -21,20 +22,19 @@ public class GroundState : MonoBehaviour
         height = player.GetComponent<Collider2D>().bounds.extents.y + 0.2f;
         length = 0.03f;
         skinWidth = 0.25f;
-        //platforms = LayerMask.NameToLayer("Wall");
     }
 
     // Returns whether or not player is touching wall.
     public bool IsWall()
     {
         //TODO: IMPLEMENT A BETTER SOLUTION
-        bool leftMid = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y), -Vector2.right, length, platforms);
-        bool leftTop = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y + height - skinWidth), -Vector2.right, length, platforms);
-        bool leftBottom = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y - height + skinWidth), -Vector2.right, length, platforms);
+        bool leftMid = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y), -Vector2.right, length, walls);
+        bool leftTop = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y + height - skinWidth), -Vector2.right, length, walls);
+        bool leftBottom = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y - height + skinWidth), -Vector2.right, length, walls);
 
-        bool rightMid = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y), Vector2.right, length, platforms);
-        bool rightTop = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y + height - skinWidth), Vector2.right, length, platforms);
-        bool rightBottom = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y - height + skinWidth), Vector2.right, length, platforms);
+        bool rightMid = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y), Vector2.right, length, walls);
+        bool rightTop = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y + height - skinWidth), Vector2.right, length, walls);
+        bool rightBottom = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y - height + skinWidth), Vector2.right, length, walls);
 
         if (leftMid || leftTop || leftBottom || rightMid || rightTop || rightBottom)
             return true;
@@ -42,12 +42,17 @@ public class GroundState : MonoBehaviour
             return false;
     }
 
+    public bool IsWallClinging()
+    {
+        return (IsWall() && !IsGround()); 
+    }
+
     // Returns whether or not player is touching ground.
     public bool IsGround()
     {
-        bool bottom1 = Physics2D.Raycast(new Vector2(player.transform.position.x, player.transform.position.y - height), -Vector2.up, length, platforms);
-        bool bottom2 = Physics2D.Raycast(new Vector2(player.transform.position.x + (width - 0.2f), player.transform.position.y - height), -Vector2.up, length, platforms);
-        bool bottom3 = Physics2D.Raycast(new Vector2(player.transform.position.x - (width - 0.2f), player.transform.position.y - height), -Vector2.up, length, platforms);
+        bool bottom1 = Physics2D.Raycast(new Vector2(player.transform.position.x, player.transform.position.y - height), -Vector2.up, length, ground);
+        bool bottom2 = Physics2D.Raycast(new Vector2(player.transform.position.x + (width - 0.2f), player.transform.position.y - height), -Vector2.up, length, ground);
+        bool bottom3 = Physics2D.Raycast(new Vector2(player.transform.position.x - (width - 0.2f), player.transform.position.y - height), -Vector2.up, length, ground);
         if (bottom1 || bottom2 || bottom3)
             return true;
         else
@@ -66,13 +71,13 @@ public class GroundState : MonoBehaviour
     // Returns direction of wall.
     public int WallDirection()
     {
-        bool leftMid = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y), -Vector2.right, length, platforms);
-        bool leftTop = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y + height), -Vector2.right, length, platforms);
-        bool leftBottom = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y - height), -Vector2.right, length, platforms);
+        bool leftMid = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y), -Vector2.right, length, walls);
+        bool leftTop = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y + height), -Vector2.right, length, walls);
+        bool leftBottom = Physics2D.Raycast(new Vector2(player.transform.position.x - width, player.transform.position.y - height), -Vector2.right, length, walls);
 
-        bool rightMid = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y), Vector2.right, length, platforms);
-        bool rightTop = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y + height), Vector2.right, length, platforms);
-        bool rightBottom = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y - height), Vector2.right, length, platforms);
+        bool rightMid = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y), Vector2.right, length, walls);
+        bool rightTop = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y + height), Vector2.right, length, walls);
+        bool rightBottom = Physics2D.Raycast(new Vector2(player.transform.position.x + width, player.transform.position.y - height), Vector2.right, length, walls);
 
         if (leftMid || leftTop || leftBottom)
             return -1;

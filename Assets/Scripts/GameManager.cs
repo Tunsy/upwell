@@ -23,6 +23,31 @@ public class GameManager : MonoBehaviour
     //    }
     //}
 
+    //member variables
+    private float time = START_TIME;
+    private float score = 0;
+    private GameObject player;
+    private UIManager uiManager;
+    private int current_level = START_LEVEL;
+    private bool is_alive = DEFAULT_ALIVE_STATE;
+    private float time_interval = STARTING_INTERVAL;
+
+    //change this to name of the scene you are running on currently, 
+    public string mainscene = "gametest";
+    public GameObject canvas;
+    //public GameObject gameOverScreen;
+    //public GameObject pauseScreen;
+    //public GameObject gameActiveScreen;
+
+
+    //static variables
+    private static float START_TIME = 0;
+    private static int START_LEVEL = 1;
+    private static bool DEFAULT_ALIVE_STATE = true;
+    private static float STARTING_INTERVAL = 1;
+    private static int TIME_SCORE_COEFFICIENT = 1;
+    private static int PICKUP_SCORE_COEFFICIENT = 4;
+
     // Use this for initialization
     void Awake()
     {
@@ -79,30 +104,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    //member variables
-    private float time = START_TIME;
-    private float score = 0;
-    private GameObject player;
-    private UIManager uiManager;
-    private int current_level = START_LEVEL;
-    private bool is_alive = DEFAULT_ALIVE_STATE;
-    private float time_interval = STARTING_INTERVAL;
 
-    //change this to name of the scene you are running on currently, 
-    public string mainscene = "gametest";
-    public GameObject canvas;
-    //public GameObject gameOverScreen;
-    //public GameObject pauseScreen;
-    //public GameObject gameActiveScreen;
-
-   
-    //static variables
-    private static float START_TIME = 0;
-    private static int START_LEVEL = 1;
-    private static bool DEFAULT_ALIVE_STATE = true;
-    private static float STARTING_INTERVAL = 1;
-    private static int TIME_SCORE_COEFFICIENT = 1;
-    private static int PICKUP_SCORE_COEFFICIENT = 4;
     
 
 
