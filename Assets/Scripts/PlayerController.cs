@@ -257,14 +257,16 @@ public class PlayerController : MonoBehaviour
 
     bool phasingUp()
     {
-        return rb.velocity.y > 0 && isPhasable;
+        return isPhasable && rb.velocity.y > 0  ;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         Debug.Log(collision.gameObject.layer.ToString());
         if(phasingUp() && collision.gameObject.layer.ToString() != "9")
         {
+            Debug.Log('2');
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
         }
     }
