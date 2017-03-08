@@ -87,30 +87,34 @@ public class PlayerController : MonoBehaviour
             holdingJumpCheck = true;
 
             // Jump
-            float xVel = (input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x;
-            float yVel = (holdingJumpCheck && (groundState.IsGround() || groundState.IsJumpField())) ? jump : rb.velocity.y;
-
-            // Wall jumping
-            if (groundState.IsWallClinging() && holdingJumpCheck)
+            if (!isKnockedback)
             {
-                if (jumpSound != null)
+                float xVel = (input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x;
+                float yVel = (holdingJumpCheck && (groundState.IsGround() || groundState.IsJumpField())) ? jump : rb.velocity.y;
+
+                // Wall jumping
+                if (groundState.IsWallClinging() && holdingJumpCheck)
+                {
+                    if (jumpSound != null)
+                    {
+                        audio.PlayOneShot(jumpSound);
+                    }
+                    xVel = -1 * groundState.WallDirection() * speed * .8f; ; //Add force negative to wall direction (with speed reduction)
+                    yVel = jump;
+                }
+
+                rb.velocity = new Vector2(xVel, yVel);
+
+                if (groundState.IsTouching() && jumpSound != null)
                 {
                     audio.PlayOneShot(jumpSound);
                 }
-                xVel = -1 * groundState.WallDirection() * speed * .8f; ; //Add force negative to wall direction (with speed reduction)
-                yVel = jump;
+                else if (groundState.WallFieldJump())
+                {
+                    audio.PlayOneShot(laserJump);
+                }
             }
-
-            rb.velocity = new Vector2(xVel, yVel);
-
-            if (groundState.IsTouching() && jumpSound != null)
-            {
-                audio.PlayOneShot(jumpSound);
-            }
-            else if (groundState.WallFieldJump())
-            {
-                audio.PlayOneShot(laserJump);
-            }
+            
         }
         else
         {
@@ -192,7 +196,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Player physics
-        if (!isKnockedback )
+        if (!isKnockedback && !isFlying)
         {
             float xVel;
 
