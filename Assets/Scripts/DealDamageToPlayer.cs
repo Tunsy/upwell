@@ -25,7 +25,8 @@ public class DealDamageToPlayer : MonoBehaviour {
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
 
-            collision.gameObject.GetComponent<PlayerController>().Knockback(this);
+            if(GetComponent<BasicEnemy>() == null)
+                collision.gameObject.GetComponent<PlayerController>().Knockback(this);
         }
     }
 }

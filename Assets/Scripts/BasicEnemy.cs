@@ -6,36 +6,57 @@ public class BasicEnemy : MonoBehaviour {
     public float speed;
     public float interval;
     private float timer;
-    public SpriteRenderer sprite;
+    private float pauseTimer;
+    private bool isPaused;
 
+    private float width; 
+    private float height;
+
+    public SpriteRenderer sprite;
     private Rigidbody2D rb;
+    private Collider2D collider;
 
     void Start()
     {
-        switchfunction();
+        SwitchDirection();
+        height = collider.bounds.extents.y;
+        width = collider.bounds.extents.x;
         timer = 0;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Collider2D collider = collision.collider;
-        if (collider.name == "Player")
-        {
-            
+        if (collision.gameObject.tag == "Player") {
+            Vector3 player = collision.contacts[0].point;
+
+            if (player.y >= transform.position.y + height)
+            {
+                PlayerController pc = collision.gameObject.GetComponent<PlayerController>();
+                pc.rb.velocity = new Vector2(pc.rb.velocity.x, pc.jump);
+                Death();
+            }
+            else
+            {
+                collision.gameObject.GetComponent<PlayerController>().Knockback(GetComponent<DealDamageToPlayer>());
+            }
         }
+    }
+
+    void Death()
+    {
+        Destroy(gameObject);
     }
 
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > interval)
+        if (timer > interval && !isPaused)
         {
-            switchfunction();
-            timer = 0;
+            StartCoroutine("PauseMovement");
         }
     }
 
-    void switchfunction()
+    void SwitchDirection()
     {
         int n = Random.Range(0, 5);
         switch (n)
@@ -57,5 +78,15 @@ public class BasicEnemy : MonoBehaviour {
                 sprite.flipX = true;
                 break;
         }
+    }
+
+    public IEnumerator PauseMovement()
+    {
+        isPaused = true;
+        float pauseTime = Random.Range(1, 4);
+        yield return new WaitForSeconds(pauseTime);
+        timer = 0;
+        isPaused = false;
+        SwitchDirection();
     }
 }

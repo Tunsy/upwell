@@ -90,34 +90,7 @@ public class PlayerController : MonoBehaviour
             holdingJumpCheck = true;
 
             // Jump
-            if (!isKnockedback)
-            {
-                float xVel = (input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x;
-                float yVel = (holdingJumpCheck && (groundState.IsGround() || groundState.IsJumpField())) ? jump : rb.velocity.y;
-
-                // Wall jumping
-                if (groundState.IsWallClinging() && holdingJumpCheck)
-                {
-                    if (jumpSound != null)
-                    {
-                        audio.PlayOneShot(jumpSound);
-                    }
-                    xVel = -1 * groundState.WallDirection() * speed * .8f; ; //Add force negative to wall direction (with speed reduction)
-                    yVel = jump;
-                }
-
-                rb.velocity = new Vector2(xVel, yVel);
-
-                if (groundState.IsTouching() && jumpSound != null)
-                {
-                    audio.PlayOneShot(jumpSound);
-                }
-                else if (groundState.WallFieldJump())
-                {
-                    audio.PlayOneShot(laserJump);
-                }
-                pc.JumpTrigger();
-            }
+            Jump();
             
         }
         else
@@ -191,6 +164,38 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Jump()
+    {
+        if (!isKnockedback)
+        {
+            float xVel = (input.x == 0 && groundState.IsGround()) ? 0 : rb.velocity.x;
+            float yVel = (holdingJumpCheck && (groundState.IsGround() || groundState.IsJumpField())) ? jump : rb.velocity.y;
+
+            // Wall jumping
+            if (groundState.IsWallClinging() && holdingJumpCheck)
+            {
+                if (jumpSound != null)
+                {
+                    audio.PlayOneShot(jumpSound);
+                }
+                xVel = -1 * groundState.WallDirection() * speed * .8f; ; //Add force negative to wall direction (with speed reduction)
+                yVel = jump;
+            }
+
+            rb.velocity = new Vector2(xVel, yVel);
+
+            if (groundState.IsTouching() && jumpSound != null)
+            {
+                audio.PlayOneShot(jumpSound);
+            }
+            else if (groundState.WallFieldJump())
+            {
+                audio.PlayOneShot(laserJump);
+            }
+            pc.JumpTrigger();
+        }
+    }
+
     
     void FixedUpdate()
     {
@@ -220,8 +225,6 @@ public class PlayerController : MonoBehaviour
             }
 
             rb.AddForce(new Vector2(xVel, 0)); // Accelerate the player.
-
-
 
             // Variable jump height
             if (input.y == 0)
