@@ -44,6 +44,15 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (phasingUp())
+        {
+            //Physics2D.IgnoreLayerCollision(gameObject.layer,  );
+            gameObject.GetComponent<Collider2D>().isTrigger = true;
+        }
+        else
+        {
+            gameObject.GetComponent<Collider2D>().isTrigger = false;
+        }
         // Handle input
         if (!isInverted)
         {
@@ -254,30 +263,40 @@ public class PlayerController : MonoBehaviour
     {
         
         isPhasable = true;
-        isFlying = true;
+       // isFlying = true;
         Invoke("removeFlyPower", duration);
     }
 
     bool phasingUp()
     {
-        return isPhasable && !groundState.IsGround() ;
+        return isPhasable && !groundState.IsTouching() ;
     }
 
     void counttest()
     {
         Debug.Log(1);
     }
- 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private GameObject currentCol = null;
+   /* private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+
         Debug.Log(collision.gameObject.layer.ToString());
-        if(phasingUp() && collision.gameObject.layer.ToString() != "9")
+        if (phasingUp() && collision.gameObject.layer.ToString() != "9")
         {
             Debug.Log('2');
-            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
-            Invoke("counttest", (float) .5);
-            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>(), false);
+            gameObject.GetComponent<Collider2D>().enabled = false;
+            //Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
+
         }
-    }
+
+        else
+        {
+            gameObject.GetComponent<Collider2D>().enabled = true;
+            //Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>(), false);
+        }
+    } */
+
+
+   
 }
