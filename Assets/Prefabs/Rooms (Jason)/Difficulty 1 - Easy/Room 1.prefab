@@ -820,7 +820,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0f3b11530e470408bf7dcca06c9669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextRoomList: []
+  nextRoomList:
+  - {fileID: 114318912863293126, guid: 378d661735d1573439536fe09aaee225, type: 2}
+  - {fileID: 114618120104825322, guid: 3282bc2bc3edeaa43bc55df2f532a3f0, type: 2}
 --- !u!114 &114581984456245416
 MonoBehaviour:
   m_ObjectHideFlags: 1

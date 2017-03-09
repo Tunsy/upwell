@@ -15,6 +15,7 @@ public class PlatformGenerator : MonoBehaviour {
     public List<Spawnable> platformList;   //A list of a la carte platforms used for "sprinkling" between rooms
     public Spawnable transitionPlatform; //A platform used to transitioning from random sprinkling back to pre-defined rooms.
     public float verticalSpacing = 5f;  //A public float dictating how far to spread platforms from each other.
+    public int segmentsGenerated = 0;  // The number of rooms or sprinkles of platforms that have been generated thus far - used for level incrementation.
 
     /// <summary>
     /// A queue of all objects that have been spawned. Used for state tracking and destroy objects.
@@ -157,12 +158,14 @@ public class PlatformGenerator : MonoBehaviour {
     /// </summary>
     void _GenerateRoom()
     {
-        /* TODO : Determine if the level calculation for the game is correct */
+        // List of possible rooms to spawn is based on level difficulty
         List<Room> roomList = easyRoomList;
         if (GameManager.instance.getLevel() == 2)
-            roomList = intRoomList;
-        else if (GameManager.instance.getLevel() >= 3)
-            roomList = advRoomList;
+            //roomList = intRoomList;
+            roomList.AddRange(intRoomList);
+        if (GameManager.instance.getLevel() >= 3)
+            //roomList = advRoomList;
+            roomList.AddRange(advRoomList);
 
         Spawnable topObject = generatedObjects.Last();
         Room nextRoom = null;
@@ -222,6 +225,8 @@ public class PlatformGenerator : MonoBehaviour {
             {
                 _GenerateRoom();
             }
+
+            segmentsGenerated++;
         }
     }
 
