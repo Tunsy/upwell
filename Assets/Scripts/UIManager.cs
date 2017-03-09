@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour {
 
     public void ShowGameOverScreen(bool active=true)
     {
+        Time.timeScale = 0;
         gameOverScreen.SetActive(active);
     }
 
