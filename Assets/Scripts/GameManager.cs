@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        uiManager = GameObject.FindObjectOfType<UIManager>();
+        uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
         //gameOverScreen = GameObject.Find("GameOverScreen");
         //gameActiveScreen = GameObject.Find("Gamescreen");
         //gameOverScreen.SetActive(false);
