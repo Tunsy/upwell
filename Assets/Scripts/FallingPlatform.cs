@@ -15,7 +15,7 @@ public class FallingPlatform : MonoBehaviour {
     {
         while (fallTime > 0)
         {
-            rb.position = new Vector2(rb.position.x + (Random.insideUnitCircle.x * 0.05f), rb.position.y + (Random.insideUnitCircle.x * 0.075f));
+            rb.position = new Vector2(rb.position.x + (Random.insideUnitCircle.x * 0.05f), rb.position.y + (Random.insideUnitCircle.x * 0.06f));
             yield return new WaitForSeconds(0.0001f);
             fallTime -= Time.deltaTime;
         }
@@ -26,7 +26,7 @@ public class FallingPlatform : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D collision)
     {
         Collider2D collider = collision.collider;
-        if (collider.name == "Player")
+        if (collider.name == "Player" || collider.name == "Platform")
         {
             StartCoroutine(platformShake(fallTime));
         }
