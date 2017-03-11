@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4601073039129748}
   - component: {fileID: 212010457247340654}
   - component: {fileID: 114835934576119352}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ChainPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
