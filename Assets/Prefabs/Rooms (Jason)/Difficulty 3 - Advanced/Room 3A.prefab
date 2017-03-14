@@ -3489,7 +3489,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1949249302171648}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cc6685e8d542ee4e99b2aa9c7ef7624, type: 3}
   m_Name: 
@@ -3872,14 +3872,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1215129147138024}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40868630c09990041908e5fe54284647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 1608599943258588, guid: 053d6c20daa26b14a942964df2e145ef, type: 2}
-  shootInterval: 5
-  startOffset: 0
+  shootInterval: 3
+  startOffset: 2
   shootSound: {fileID: 8300000, guid: 8299d67767d47e745b5a0cba36f8bbca, type: 3}
 --- !u!114 &114482309001253370
 MonoBehaviour:
@@ -3900,14 +3900,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1949249302171648}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40868630c09990041908e5fe54284647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 1608599943258588, guid: 053d6c20daa26b14a942964df2e145ef, type: 2}
-  shootInterval: 5
-  startOffset: 0
+  shootInterval: 3
+  startOffset: 2
   shootSound: {fileID: 8300000, guid: 8299d67767d47e745b5a0cba36f8bbca, type: 3}
 --- !u!114 &114501155670885182
 MonoBehaviour:
@@ -4142,7 +4142,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1215129147138024}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cc6685e8d542ee4e99b2aa9c7ef7624, type: 3}
   m_Name: 
