@@ -8,6 +8,7 @@ public class Teleport : MonoBehaviour {
     private PlayerController player;
     public bool onEnterInvert; //always set BOTH the entrance door AND the destination door to true when inverting physics.
     private Transform spawnPoint;
+    public bool isCheckPoint = false; //set true on the teleporter that teleports to next area, NOT the exiting teleporter
 
     void Start()
     {
@@ -19,6 +20,10 @@ public class Teleport : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
+            if (isCheckPoint)
+            {
+                GameManager.instance.updateCurrentLevel();
+            }
             other.gameObject.transform.position = destination.transform.position;
             other.gameObject.transform.rotation = destination.transform.rotation;
             if (onEnterInvert)
@@ -33,6 +38,7 @@ public class Teleport : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
+            
             if (!onEnterInvert)
             {
                 playerSprite.flipY = false;

@@ -56,7 +56,7 @@ MonoBehaviour:
   chargeTime: 1
   focusLaser: {fileID: 1328673480981466, guid: 1b9edae002e65164d9adb90db56ce791, type: 2}
   timer: 0
-  fixedLocation: 0
+  fixedLocation: 1
 --- !u!212 &212470857931086068
 SpriteRenderer:
   m_ObjectHideFlags: 1

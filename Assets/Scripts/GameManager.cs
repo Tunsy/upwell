@@ -93,12 +93,12 @@ public class GameManager : MonoBehaviour
             {
                 score += Time.deltaTime * TIME_SCORE_COEFFICIENT;
                 update_time();
-                int lvl = updateCurrentLevel();
+               /* int lvl = updateCurrentLevel();
                 if(lvl != current_level)
                 {
                     current_level = lvl;
                     
-                }
+                }*/
             }
         }
 
@@ -121,10 +121,11 @@ public class GameManager : MonoBehaviour
     }
 
    
-     int updateCurrentLevel()
+     public void updateCurrentLevel()
     {
-       int  level =  (int)Mathf.Log((time + 1) * 10);
-        return level;
+        //int  level =  (int)Mathf.Log((time + 1) * 10);
+        Debug.Log("level");
+        current_level += 1;
     }
     
     public int getLevel()
