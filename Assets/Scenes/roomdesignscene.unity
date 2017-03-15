@@ -155,7 +155,7 @@ SpriteRenderer:
   m_Color: {r: 0.24264705, g: 0.3418863, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &1084354580
+--- !u!1001 &649495144
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -234,7 +234,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4130401333181978, guid: e72c429bc9adeb5429b124ddac1be4c3, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4130401333181978, guid: e72c429bc9adeb5429b124ddac1be4c3, type: 2}
       propertyPath: m_LocalScale.x
