@@ -12,8 +12,10 @@ public class FocusedLaserCannonAim : MonoBehaviour {
     public GameObject focusLaser;
     public float timer;
     public bool fixedLocation = true;
+    private GameObject player;
 	// Use this for initialization
 	void Start () {
+        player = GameObject.FindGameObjectWithTag("Player");
         Vector2 diff = -transform.position  + target.transform.position;
 
         float ang = Vector2.Angle(new Vector2(1,0), diff);
@@ -30,14 +32,17 @@ public class FocusedLaserCannonAim : MonoBehaviour {
     
 	
 	// Update is called once per frame
-	void Update () {
-        timer += Time.deltaTime;
-        if(timer >= chargeTime)
-        {
-            timer = 0;
-            shootStream();
+	void FixedUpdate () {
+       
+        if (Physics2D.Raycast((Vector2)transform.position, (Vector2)( player.transform.position - transform.position)).collider.tag == "Player"){
+            timer += Time.deltaTime;
+            if (timer >= chargeTime)
+            {
+                timer = 0;
+                shootStream();
+            }
+            
         }
-        
     }
 
     void shootStream()
