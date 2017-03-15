@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public SpriteRenderer sprite;
     private PlayerAnimationController pc;
+    private int defaultLayer;
 
     void Start()
     {
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
         holdingJumpCheck = false;
         isKnockedback = false;
         wallClingTimer = 0;
+        defaultLayer = gameObject.layer;
 
     }
 
@@ -46,12 +48,14 @@ public class PlayerController : MonoBehaviour
     {
         if (phasingUp())
         {
-            //Physics2D.IgnoreLayerCollision(gameObject.layer,  );
-            gameObject.GetComponent<Collider2D>().isTrigger = true;
+            Physics2D.IgnoreLayerCollision(defaultLayer, 8 );
+            //gameObject.GetComponent<Collider2D>().isTrigger = true;
+
         }
-        else
+        else if(isPhasable)
         {
-            gameObject.GetComponent<Collider2D>().isTrigger = false;
+            Physics2D.IgnoreLayerCollision(defaultLayer, 8, false);
+            //gameObject.GetComponent<Collider2D>().isTrigger = false;
         }
         // Handle input
         if (!isInverted)
@@ -256,6 +260,10 @@ public class PlayerController : MonoBehaviour
 
     void removeFlyPower()
     {
+
+        Physics2D.IgnoreLayerCollision(defaultLayer, 10, false);
+        Physics2D.IgnoreLayerCollision(defaultLayer, 11, false);
+        Physics2D.IgnoreLayerCollision(defaultLayer, 8, false);
         isPhasable = false;
         isFlying = false;
     }
@@ -263,7 +271,9 @@ public class PlayerController : MonoBehaviour
     {
         
         isPhasable = true;
-       // isFlying = true;
+        Physics2D.IgnoreLayerCollision(defaultLayer, 10);
+        Physics2D.IgnoreLayerCollision(defaultLayer, 11);
+        // isFlying = true;
         Invoke("removeFlyPower", duration);
     }
 
