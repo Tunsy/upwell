@@ -1,0 +1,3052 @@
+fileFormatVersion: 2
+guid: 42dbdd2e3cd767f49b47bfa788709a07
+timeCreated: 1489571089
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 32x32_mixed_Denzi050817_0
+    21300002: 32x32_mixed_Denzi050817_1
+    21300004: 32x32_mixed_Denzi050817_2
+    21300006: 32x32_mixed_Denzi050817_3
+    21300008: 32x32_mixed_Denzi050817_4
+    21300010: 32x32_mixed_Denzi050817_5
+    21300012: 32x32_mixed_Denzi050817_6
+    21300014: 32x32_mixed_Denzi050817_7
+    21300016: 32x32_mixed_Denzi050817_8
+    21300018: 32x32_mixed_Denzi050817_9
+    21300020: 32x32_mixed_Denzi050817_10
+    21300022: 32x32_mixed_Denzi050817_11
+    21300024: 32x32_mixed_Denzi050817_12
+    21300026: 32x32_mixed_Denzi050817_13
+    21300028: 32x32_mixed_Denzi050817_14
+    21300030: 32x32_mixed_Denzi050817_15
+    21300032: 32x32_mixed_Denzi050817_16
+    21300034: 32x32_mixed_Denzi050817_17
+    21300036: 32x32_mixed_Denzi050817_18
+    21300038: 32x32_mixed_Denzi050817_19
+    21300040: 32x32_mixed_Denzi050817_20
+    21300042: 32x32_mixed_Denzi050817_21
+    21300044: 32x32_mixed_Denzi050817_22
+    21300046: 32x32_mixed_Denzi050817_23
+    21300048: 32x32_mixed_Denzi050817_24
+    21300050: 32x32_mixed_Denzi050817_25
+    21300052: 32x32_mixed_Denzi050817_26
+    21300054: 32x32_mixed_Denzi050817_27
+    21300056: 32x32_mixed_Denzi050817_28
+    21300058: 32x32_mixed_Denzi050817_29
+    21300060: 32x32_mixed_Denzi050817_30
+    21300062: 32x32_mixed_Denzi050817_31
+    21300064: 32x32_mixed_Denzi050817_32
+    21300066: 32x32_mixed_Denzi050817_33
+    21300068: 32x32_mixed_Denzi050817_34
+    21300070: 32x32_mixed_Denzi050817_35
+    21300072: 32x32_mixed_Denzi050817_36
+    21300074: 32x32_mixed_Denzi050817_37
+    21300076: 32x32_mixed_Denzi050817_38
+    21300078: 32x32_mixed_Denzi050817_39
+    21300080: 32x32_mixed_Denzi050817_40
+    21300082: 32x32_mixed_Denzi050817_41
+    21300084: 32x32_mixed_Denzi050817_42
+    21300086: 32x32_mixed_Denzi050817_43
+    21300088: 32x32_mixed_Denzi050817_44
+    21300090: 32x32_mixed_Denzi050817_45
+    21300092: 32x32_mixed_Denzi050817_46
+    21300094: 32x32_mixed_Denzi050817_47
+    21300096: 32x32_mixed_Denzi050817_48
+    21300098: 32x32_mixed_Denzi050817_49
+    21300100: 32x32_mixed_Denzi050817_50
+    21300102: 32x32_mixed_Denzi050817_51
+    21300104: 32x32_mixed_Denzi050817_52
+    21300106: 32x32_mixed_Denzi050817_53
+    21300108: 32x32_mixed_Denzi050817_54
+    21300110: 32x32_mixed_Denzi050817_55
+    21300112: 32x32_mixed_Denzi050817_56
+    21300114: 32x32_mixed_Denzi050817_57
+    21300116: 32x32_mixed_Denzi050817_58
+    21300118: 32x32_mixed_Denzi050817_59
+    21300120: 32x32_mixed_Denzi050817_60
+    21300122: 32x32_mixed_Denzi050817_61
+    21300124: 32x32_mixed_Denzi050817_62
+    21300126: 32x32_mixed_Denzi050817_63
+    21300128: 32x32_mixed_Denzi050817_64
+    21300130: 32x32_mixed_Denzi050817_65
+    21300132: 32x32_mixed_Denzi050817_66
+    21300134: 32x32_mixed_Denzi050817_67
+    21300136: 32x32_mixed_Denzi050817_68
+    21300138: 32x32_mixed_Denzi050817_69
+    21300140: 32x32_mixed_Denzi050817_70
+    21300142: 32x32_mixed_Denzi050817_71
+    21300144: 32x32_mixed_Denzi050817_72
+    21300146: 32x32_mixed_Denzi050817_73
+    21300148: 32x32_mixed_Denzi050817_74
+    21300150: 32x32_mixed_Denzi050817_75
+    21300152: 32x32_mixed_Denzi050817_76
+    21300154: 32x32_mixed_Denzi050817_77
+    21300156: 32x32_mixed_Denzi050817_78
+    21300158: 32x32_mixed_Denzi050817_79
+    21300160: 32x32_mixed_Denzi050817_80
+    21300162: 32x32_mixed_Denzi050817_81
+    21300164: 32x32_mixed_Denzi050817_82
+    21300166: 32x32_mixed_Denzi050817_83
+    21300168: 32x32_mixed_Denzi050817_84
+    21300170: 32x32_mixed_Denzi050817_85
+    21300172: 32x32_mixed_Denzi050817_86
+    21300174: 32x32_mixed_Denzi050817_87
+    21300176: 32x32_mixed_Denzi050817_88
+    21300178: 32x32_mixed_Denzi050817_89
+    21300180: 32x32_mixed_Denzi050817_90
+    21300182: 32x32_mixed_Denzi050817_91
+    21300184: 32x32_mixed_Denzi050817_92
+    21300186: 32x32_mixed_Denzi050817_93
+    21300188: 32x32_mixed_Denzi050817_94
+    21300190: 32x32_mixed_Denzi050817_95
+    21300192: 32x32_mixed_Denzi050817_96
+    21300194: 32x32_mixed_Denzi050817_97
+    21300196: 32x32_mixed_Denzi050817_98
+    21300198: 32x32_mixed_Denzi050817_99
+    21300200: 32x32_mixed_Denzi050817_100
+    21300202: 32x32_mixed_Denzi050817_101
+    21300204: 32x32_mixed_Denzi050817_102
+    21300206: 32x32_mixed_Denzi050817_103
+    21300208: 32x32_mixed_Denzi050817_104
+    21300210: 32x32_mixed_Denzi050817_105
+    21300212: 32x32_mixed_Denzi050817_106
+    21300214: 32x32_mixed_Denzi050817_107
+    21300216: 32x32_mixed_Denzi050817_108
+    21300218: 32x32_mixed_Denzi050817_109
+    21300220: 32x32_mixed_Denzi050817_110
+    21300222: 32x32_mixed_Denzi050817_111
+    21300224: 32x32_mixed_Denzi050817_112
+    21300226: 32x32_mixed_Denzi050817_113
+    21300228: 32x32_mixed_Denzi050817_114
+    21300230: 32x32_mixed_Denzi050817_115
+    21300232: 32x32_mixed_Denzi050817_116
+    21300234: 32x32_mixed_Denzi050817_117
+    21300236: 32x32_mixed_Denzi050817_118
+    21300238: 32x32_mixed_Denzi050817_119
+    21300240: 32x32_mixed_Denzi050817_120
+    21300242: 32x32_mixed_Denzi050817_121
+    21300244: 32x32_mixed_Denzi050817_122
+    21300246: 32x32_mixed_Denzi050817_123
+    21300248: 32x32_mixed_Denzi050817_124
+    21300250: 32x32_mixed_Denzi050817_125
+    21300252: 32x32_mixed_Denzi050817_126
+    21300254: 32x32_mixed_Denzi050817_127
+    21300256: 32x32_mixed_Denzi050817_128
+    21300258: 32x32_mixed_Denzi050817_129
+    21300260: 32x32_mixed_Denzi050817_130
+    21300262: 32x32_mixed_Denzi050817_131
+    21300264: 32x32_mixed_Denzi050817_132
+    21300266: 32x32_mixed_Denzi050817_133
+    21300268: 32x32_mixed_Denzi050817_134
+    21300270: 32x32_mixed_Denzi050817_135
+    21300272: 32x32_mixed_Denzi050817_136
+    21300274: 32x32_mixed_Denzi050817_137
+    21300276: 32x32_mixed_Denzi050817_138
+    21300278: 32x32_mixed_Denzi050817_139
+    21300280: 32x32_mixed_Denzi050817_140
+    21300282: 32x32_mixed_Denzi050817_141
+    21300284: 32x32_mixed_Denzi050817_142
+    21300286: 32x32_mixed_Denzi050817_143
+    21300288: 32x32_mixed_Denzi050817_144
+    21300290: 32x32_mixed_Denzi050817_145
+    21300292: 32x32_mixed_Denzi050817_146
+    21300294: 32x32_mixed_Denzi050817_147
+    21300296: 32x32_mixed_Denzi050817_148
+    21300298: 32x32_mixed_Denzi050817_149
+    21300300: 32x32_mixed_Denzi050817_150
+    21300302: 32x32_mixed_Denzi050817_151
+    21300304: 32x32_mixed_Denzi050817_152
+    21300306: 32x32_mixed_Denzi050817_153
+    21300308: 32x32_mixed_Denzi050817_154
+    21300310: 32x32_mixed_Denzi050817_155
+    21300312: 32x32_mixed_Denzi050817_156
+    21300314: 32x32_mixed_Denzi050817_157
+    21300316: 32x32_mixed_Denzi050817_158
+    21300318: 32x32_mixed_Denzi050817_159
+    21300320: 32x32_mixed_Denzi050817_160
+    21300322: 32x32_mixed_Denzi050817_161
+    21300324: 32x32_mixed_Denzi050817_162
+    21300326: 32x32_mixed_Denzi050817_163
+    21300328: 32x32_mixed_Denzi050817_164
+    21300330: 32x32_mixed_Denzi050817_165
+    21300332: 32x32_mixed_Denzi050817_166
+    21300334: 32x32_mixed_Denzi050817_167
+    21300336: 32x32_mixed_Denzi050817_168
+    21300338: 32x32_mixed_Denzi050817_169
+    21300340: 32x32_mixed_Denzi050817_170
+    21300342: 32x32_mixed_Denzi050817_171
+    21300344: 32x32_mixed_Denzi050817_172
+    21300346: 32x32_mixed_Denzi050817_173
+    21300348: 32x32_mixed_Denzi050817_174
+    21300350: 32x32_mixed_Denzi050817_175
+    21300352: 32x32_mixed_Denzi050817_176
+    21300354: 32x32_mixed_Denzi050817_177
+    21300356: 32x32_mixed_Denzi050817_178
+    21300358: 32x32_mixed_Denzi050817_179
+    21300360: 32x32_mixed_Denzi050817_180
+    21300362: 32x32_mixed_Denzi050817_181
+    21300364: 32x32_mixed_Denzi050817_182
+    21300366: 32x32_mixed_Denzi050817_183
+    21300368: 32x32_mixed_Denzi050817_184
+    21300370: 32x32_mixed_Denzi050817_185
+    21300372: 32x32_mixed_Denzi050817_186
+    21300374: 32x32_mixed_Denzi050817_187
+    21300376: 32x32_mixed_Denzi050817_188
+    21300378: 32x32_mixed_Denzi050817_189
+    21300380: 32x32_mixed_Denzi050817_190
+    21300382: 32x32_mixed_Denzi050817_191
+    21300384: 32x32_mixed_Denzi050817_192
+    21300386: 32x32_mixed_Denzi050817_193
+    21300388: 32x32_mixed_Denzi050817_194
+    21300390: 32x32_mixed_Denzi050817_195
+    21300392: 32x32_mixed_Denzi050817_196
+    21300394: 32x32_mixed_Denzi050817_197
+    21300396: 32x32_mixed_Denzi050817_198
+    21300398: 32x32_mixed_Denzi050817_199
+    21300400: 32x32_mixed_Denzi050817_200
+    21300402: 32x32_mixed_Denzi050817_201
+    21300404: 32x32_mixed_Denzi050817_202
+    21300406: 32x32_mixed_Denzi050817_203
+    21300408: 32x32_mixed_Denzi050817_204
+    21300410: 32x32_mixed_Denzi050817_205
+    21300412: 32x32_mixed_Denzi050817_206
+    21300414: 32x32_mixed_Denzi050817_207
+    21300416: 32x32_mixed_Denzi050817_208
+    21300418: 32x32_mixed_Denzi050817_209
+    21300420: 32x32_mixed_Denzi050817_210
+    21300422: 32x32_mixed_Denzi050817_211
+    21300424: 32x32_mixed_Denzi050817_212
+    21300426: 32x32_mixed_Denzi050817_213
+    21300428: 32x32_mixed_Denzi050817_214
+    21300430: 32x32_mixed_Denzi050817_215
+    21300432: 32x32_mixed_Denzi050817_216
+    21300434: 32x32_mixed_Denzi050817_217
+    21300436: 32x32_mixed_Denzi050817_218
+    21300438: 32x32_mixed_Denzi050817_219
+    21300440: 32x32_mixed_Denzi050817_220
+    21300442: 32x32_mixed_Denzi050817_221
+    21300444: 32x32_mixed_Denzi050817_222
+    21300446: 32x32_mixed_Denzi050817_223
+    21300448: 32x32_mixed_Denzi050817_224
+    21300450: 32x32_mixed_Denzi050817_225
+    21300452: 32x32_mixed_Denzi050817_226
+    21300454: 32x32_mixed_Denzi050817_227
+    21300456: 32x32_mixed_Denzi050817_228
+    21300458: 32x32_mixed_Denzi050817_229
+    21300460: 32x32_mixed_Denzi050817_230
+    21300462: 32x32_mixed_Denzi050817_231
+    21300464: 32x32_mixed_Denzi050817_232
+    21300466: 32x32_mixed_Denzi050817_233
+    21300468: 32x32_mixed_Denzi050817_234
+    21300470: 32x32_mixed_Denzi050817_235
+    21300472: 32x32_mixed_Denzi050817_236
+    21300474: 32x32_mixed_Denzi050817_237
+    21300476: 32x32_mixed_Denzi050817_238
+    21300478: 32x32_mixed_Denzi050817_239
+    21300480: 32x32_mixed_Denzi050817_240
+    21300482: 32x32_mixed_Denzi050817_241
+    21300484: 32x32_mixed_Denzi050817_242
+    21300486: 32x32_mixed_Denzi050817_243
+    21300488: 32x32_mixed_Denzi050817_244
+    21300490: 32x32_mixed_Denzi050817_245
+    21300492: 32x32_mixed_Denzi050817_246
+    21300494: 32x32_mixed_Denzi050817_247
+    21300496: 32x32_mixed_Denzi050817_248
+    21300498: 32x32_mixed_Denzi050817_249
+    21300500: 32x32_mixed_Denzi050817_250
+    21300502: 32x32_mixed_Denzi050817_251
+    21300504: 32x32_mixed_Denzi050817_252
+    21300506: 32x32_mixed_Denzi050817_253
+    21300508: 32x32_mixed_Denzi050817_254
+    21300510: 32x32_mixed_Denzi050817_255
+    21300512: 32x32_mixed_Denzi050817_256
+    21300514: 32x32_mixed_Denzi050817_257
+    21300516: 32x32_mixed_Denzi050817_258
+    21300518: 32x32_mixed_Denzi050817_259
+    21300520: 32x32_mixed_Denzi050817_260
+    21300522: 32x32_mixed_Denzi050817_261
+    21300524: 32x32_mixed_Denzi050817_262
+    21300526: 32x32_mixed_Denzi050817_263
+    21300528: 32x32_mixed_Denzi050817_264
+    21300530: 32x32_mixed_Denzi050817_265
+    21300532: 32x32_mixed_Denzi050817_266
+    21300534: 32x32_mixed_Denzi050817_267
+    21300536: 32x32_mixed_Denzi050817_268
+    21300538: 32x32_mixed_Denzi050817_269
+    21300540: 32x32_mixed_Denzi050817_270
+    21300542: 32x32_mixed_Denzi050817_271
+    21300544: 32x32_mixed_Denzi050817_272
+    21300546: 32x32_mixed_Denzi050817_273
+    21300548: 32x32_mixed_Denzi050817_274
+    21300550: 32x32_mixed_Denzi050817_275
+    21300552: 32x32_mixed_Denzi050817_276
+    21300554: 32x32_mixed_Denzi050817_277
+    21300556: 32x32_mixed_Denzi050817_278
+    21300558: 32x32_mixed_Denzi050817_279
+    21300560: 32x32_mixed_Denzi050817_280
+    21300562: 32x32_mixed_Denzi050817_281
+    21300564: 32x32_mixed_Denzi050817_282
+    21300566: 32x32_mixed_Denzi050817_283
+    21300568: 32x32_mixed_Denzi050817_284
+    21300570: 32x32_mixed_Denzi050817_285
+    21300572: 32x32_mixed_Denzi050817_286
+    21300574: 32x32_mixed_Denzi050817_287
+    21300576: enemiestiles2_0
+    21300578: enemiestiles2_1
+    21300580: enemiestiles2_2
+    21300582: enemiestiles2_3
+    21300584: enemiestiles2_4
+    21300586: enemiestiles2_5
+    21300588: enemiestiles2_6
+    21300590: enemiestiles2_7
+    21300592: enemiestiles2_8
+    21300594: enemiestiles2_9
+    21300596: enemiestiles2_10
+    21300598: enemiestiles2_11
+    21300600: enemiestiles2_12
+    21300602: enemiestiles2_13
+    21300604: enemiestiles2_14
+    21300606: enemiestiles2_15
+    21300608: enemiestiles2_16
+    21300610: enemiestiles2_17
+    21300612: enemiestiles2_18
+    21300614: enemiestiles2_19
+    21300616: enemiestiles2_20
+    21300618: enemiestiles2_21
+    21300620: enemiestiles2_22
+    21300622: enemiestiles2_23
+    21300624: enemiestiles2_24
+    21300626: enemiestiles2_25
+    21300628: enemiestiles2_26
+    21300630: enemiestiles2_27
+    21300632: enemiestiles2_28
+    21300634: enemiestiles2_29
+    21300636: enemiestiles2_30
+    21300638: enemiestiles2_31
+    21300640: enemiestiles2_32
+    21300642: enemiestiles2_33
+    21300644: enemiestiles2_34
+    21300646: enemiestiles2_35
+    21300648: enemiestiles2_36
+    21300650: enemiestiles2_37
+    21300652: enemiestiles2_38
+    21300654: enemiestiles2_39
+    21300656: enemiestiles2_40
+    21300658: enemiestiles2_41
+    21300660: enemiestiles2_42
+    21300662: enemiestiles2_43
+    21300664: enemiestiles2_44
+    21300666: enemiestiles2_45
+    21300668: enemiestiles2_46
+    21300670: enemiestiles2_47
+    21300672: enemiestiles2_48
+    21300674: enemiestiles2_49
+    21300676: enemiestiles2_50
+    21300678: enemiestiles2_51
+    21300680: enemiestiles2_52
+    21300682: enemiestiles2_53
+    21300684: enemiestiles2_54
+    21300686: enemiestiles2_55
+    21300688: enemiestiles2_56
+    21300690: enemiestiles2_57
+    21300692: enemiestiles2_58
+    21300694: enemiestiles2_59
+    21300696: enemiestiles2_60
+    21300698: enemiestiles2_61
+    21300700: enemiestiles2_62
+    21300702: enemiestiles2_63
+    21300704: enemiestiles2_64
+    21300706: enemiestiles2_65
+    21300708: enemiestiles2_66
+    21300710: enemiestiles2_67
+    21300712: enemiestiles2_68
+    21300714: enemiestiles2_69
+    21300716: enemiestiles2_70
+    21300718: enemiestiles2_71
+    21300720: enemiestiles2_72
+    21300722: enemiestiles2_73
+    21300724: enemiestiles2_74
+    21300726: enemiestiles2_75
+    21300728: enemiestiles2_76
+    21300730: enemiestiles2_77
+    21300732: enemiestiles2_78
+    21300734: enemiestiles2_79
+    21300736: enemiestiles2_80
+    21300738: enemiestiles2_81
+    21300740: enemiestiles2_82
+    21300742: enemiestiles2_83
+    21300744: enemiestiles2_84
+    21300746: enemiestiles2_85
+    21300748: enemiestiles2_86
+    21300750: enemiestiles2_87
+    21300752: enemiestiles2_88
+    21300754: enemiestiles2_89
+    21300756: enemiestiles2_90
+    21300758: enemiestiles2_91
+    21300760: enemiestiles2_92
+    21300762: enemiestiles2_93
+    21300764: enemiestiles2_94
+    21300766: enemiestiles2_95
+    21300768: enemiestiles2_96
+    21300770: enemiestiles2_97
+    21300772: enemiestiles2_98
+    21300774: enemiestiles2_99
+    21300776: enemiestiles2_100
+    21300778: enemiestiles2_101
+    21300780: enemiestiles2_102
+    21300782: enemiestiles2_103
+    21300784: enemiestiles2_104
+    21300786: enemiestiles2_105
+    21300788: enemiestiles2_106
+    21300790: enemiestiles2_107
+    21300792: enemiestiles2_108
+    21300794: enemiestiles2_109
+    21300796: enemiestiles2_110
+    21300798: enemiestiles2_111
+    21300800: enemiestiles2_112
+    21300802: enemiestiles2_113
+    21300804: enemiestiles2_114
+    21300806: enemiestiles2_115
+    21300808: enemiestiles2_116
+    21300810: enemiestiles2_117
+    21300812: enemiestiles2_118
+    21300814: enemiestiles2_119
+    21300816: enemiestiles2_120
+    21300818: enemiestiles2_121
+    21300820: enemiestiles2_122
+    21300822: enemiestiles2_123
+    21300824: enemiestiles2_124
+    21300826: enemiestiles2_125
+    21300828: enemiestiles2_126
+    21300830: enemiestiles2_127
+    21300832: enemiestiles2_128
+    21300834: enemiestiles2_129
+    21300836: enemiestiles2_130
+    21300838: enemiestiles2_131
+    21300840: enemiestiles2_132
+    21300842: enemiestiles2_133
+    21300844: enemiestiles2_134
+    21300846: enemiestiles2_135
+    21300848: enemiestiles2_136
+    21300850: enemiestiles2_137
+    21300852: enemiestiles2_138
+    21300854: enemiestiles2_139
+    21300856: enemiestiles2_140
+    21300858: enemiestiles2_141
+    21300860: enemiestiles2_142
+    21300862: enemiestiles2_143
+    21300864: enemiestiles2_144
+    21300866: enemiestiles2_145
+    21300868: enemiestiles2_146
+    21300870: enemiestiles2_147
+    21300872: enemiestiles2_148
+    21300874: enemiestiles2_149
+    21300876: enemiestiles2_150
+    21300878: enemiestiles2_151
+    21300880: enemiestiles2_152
+    21300882: enemiestiles2_153
+    21300884: enemiestiles2_154
+    21300886: enemiestiles2_155
+    21300888: enemiestiles2_156
+    21300890: enemiestiles2_157
+    21300892: enemiestiles2_158
+    21300894: enemiestiles2_159
+    21300896: enemiestiles2_160
+    21300898: enemiestiles2_161
+    21300900: enemiestiles2_162
+    21300902: enemiestiles2_163
+    21300904: enemiestiles2_164
+    21300906: enemiestiles2_165
+    21300908: enemiestiles2_166
+    21300910: enemiestiles2_167
+    21300912: enemiestiles2_168
+    21300914: enemiestiles2_169
+    21300916: enemiestiles2_170
+    21300918: enemiestiles2_171
+    21300920: enemiestiles2_172
+    21300922: enemiestiles2_173
+    21300924: enemiestiles2_174
+    21300926: enemiestiles2_175
+    21300928: enemiestiles2_176
+    21300930: enemiestiles2_177
+    21300932: enemiestiles2_178
+    21300934: enemiestiles2_179
+    21300936: enemiestiles2_180
+    21300938: enemiestiles2_181
+    21300940: enemiestiles2_182
+    21300942: enemiestiles2_183
+    21300944: enemiestiles2_184
+    21300946: enemiestiles2_185
+    21300948: enemiestiles2_186
+    21300950: enemiestiles2_187
+    21300952: enemiestiles2_188
+    21300954: enemiestiles2_189
+    21300956: enemiestiles2_190
+    21300958: enemiestiles2_191
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: enemiestiles2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_17
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_19
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_21
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_22
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_23
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 253
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_33
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_34
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_35
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_36
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_37
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_38
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_39
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_40
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_41
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_42
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_43
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_44
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_45
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_46
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_47
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 221
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_52
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_55
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_57
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_58
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_59
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_60
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_61
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_62
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_63
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_64
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_65
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_66
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_67
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_68
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_69
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_70
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_71
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 189
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_73
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_74
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_75
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_76
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_77
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_78
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_79
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_80
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_81
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_82
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_83
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_84
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_85
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_86
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_87
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_88
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_89
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_90
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_91
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_92
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_93
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_94
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_95
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_97
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_98
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_99
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_100
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_101
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_102
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_103
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_104
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_105
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_106
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_107
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_108
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_109
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_110
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_111
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_112
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_113
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_114
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_115
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_116
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_117
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_118
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_119
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_121
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_122
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_123
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_124
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_125
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_126
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_127
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_128
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_129
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_130
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_131
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_132
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_133
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_134
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_135
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_136
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_137
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_138
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_139
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_140
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_141
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_142
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_143
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 93
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_145
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_146
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_147
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_148
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_149
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_150
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_151
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_152
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_153
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_154
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_155
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_156
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_157
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_158
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_159
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_160
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_161
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_162
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_163
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_164
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_165
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_166
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_167
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 61
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_169
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_170
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_171
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_172
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_173
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_174
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_175
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_176
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_177
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_178
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_179
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_180
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_181
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_182
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_183
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_184
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_185
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_186
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_187
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_188
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_189
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_190
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemiestiles2_191
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 29
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
