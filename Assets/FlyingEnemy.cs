@@ -4,22 +4,37 @@ using UnityEngine;
 
 public class FlyingEnemy : MonoBehaviour {
 
-    public int x;
-    public int y;
+    private float width;
+    private float height;
+    private Collider2D collider;
 
-    void Update()
+    void Start()
     {
-        if (x == 0)
+        height = collider.bounds.extents.y;
+        width = collider.bounds.extents.x;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
         {
-            transform.position = new Vector3(transform.position.x, Mathf.PingPong(Time.time, y));
+            Vector3 player = collision.contacts[0].point;
+
+            if (player.y >= transform.position.y + height)
+            {
+                PlayerController pc = collision.gameObject.GetComponent<PlayerController>();
+                pc.rb.velocity = new Vector2(pc.rb.velocity.x, pc.jump);
+                Death();
+            }
+            else
+            {
+                collision.gameObject.GetComponent<PlayerController>().Knockback(GetComponent<DealDamageToPlayer>());
+            }
         }
-        else if(y == 0)
-        {
-            transform.position = new Vector3(Mathf.PingPong(Time.time, x), transform.position.y);
-        }
-        else
-        {
-            transform.position = new Vector3(Mathf.PingPong(Time.time, x), Mathf.PingPong(Time.time, y));
-        }
+    }
+
+    void Death()
+    {
+        Destroy(gameObject);
     }
 }
