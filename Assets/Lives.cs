@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Score : MonoBehaviour {
+public class Lives : MonoBehaviour {
 
-    private int score;
+    public int score;
     public Text text;
 
-    void Start ()
+    void Start()
     {
         text = this.GetComponent<Text>();
     }
 
-	void Update ()
+    void Update()
     {
         score = GameManager.instance.getPlayerScore();
-        text.text = "Score:" + score;
+        text.text = "" + score;
     }
-
 }

@@ -6,10 +6,11 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
 [System.Serializable]
-public class HighScoreScript : MonoBehaviour {
+public class BestTimeScript : MonoBehaviour {
 
-    private int score;
-    private static int highscore;
+    public GameObject GameOverScreen;
+    private int time;
+    private static int besttime;
     public Text text;
 
     void Start()
@@ -20,13 +21,21 @@ public class HighScoreScript : MonoBehaviour {
 
     void Update()
     {
-        score = GameManager.instance.getPlayerScore();
-        if (score > highscore)
+        time = (int)GameManager.instance.timeElapsed();
+        if (GameOverScreen.activeInHierarchy)
         {
-            highscore = score;
+            Changetime();
+        }
+    }
+
+    void Changetime()
+    {
+        if (time < besttime)
+        {
+            besttime = time;
             Save();
         }
-        text.text = "High Score: " + highscore;
+        text.text = "Best Time: " + besttime;
     }
 
     public static void Save()
@@ -34,8 +43,8 @@ public class HighScoreScript : MonoBehaviour {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/savedGames.gd");
 
-        HighScoreData data = new HighScoreData();
-        data.highscore = highscore;
+        BestTimeData data = new BestTimeData();
+        data.besttime = besttime;
 
         bf.Serialize(file, data);
         file.Close();
@@ -48,15 +57,15 @@ public class HighScoreScript : MonoBehaviour {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
 
-            HighScoreData data = (HighScoreData)bf.Deserialize(file);
+            BestTimeData data = (BestTimeData)bf.Deserialize(file);
             file.Close();
 
-            highscore = data.highscore;
+            besttime = data.besttime;
         }
     }
 }
 
-class HighScoreData
+class BestTimeData
 {
-    public int highscore;
+    public int besttime;
 }

@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     //member variables
     private float time = START_TIME;
     private float score = 0;
+    private int coin = 0;
     private GameObject player;
     private UIManager uiManager;
     private int current_level = START_LEVEL;
@@ -147,6 +148,7 @@ public class GameManager : MonoBehaviour
 
     public void updatePickupScore(int points)
     {
+        coin += 1;
         score += points * PICKUP_SCORE_COEFFICIENT;
     }
     //void methods and others, to be called from other scripts
