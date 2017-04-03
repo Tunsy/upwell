@@ -19,6 +19,7 @@ public class BasicEnemy : MonoBehaviour {
     void Start()
     {
         SwitchDirection();
+        collider = GetComponent<Collider2D>();
         height = collider.bounds.extents.y;
         width = collider.bounds.extents.x;
         timer = 0;
