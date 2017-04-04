@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private bool isFlying = false;
     private bool isPhasable = false;
     private float verticalFlySpeed = 5;
+    private float powerUpDuration;
     public bool isKnockedback;
     public float wallClingTimer;
     public float wallClingTime;
@@ -21,7 +23,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip laserJump;
     public AudioClip hurtSound;
     public AudioSource audio;
-
+    public Image powerupSlider;
     private GroundState groundState;
     public Rigidbody2D rb;
     public SpriteRenderer sprite;
@@ -46,16 +48,20 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        
         if (phasingUp())
         {
             Physics2D.IgnoreLayerCollision(defaultLayer, 8 );
             //gameObject.GetComponent<Collider2D>().isTrigger = true;
+            powerupSlider.fillAmount += Time.deltaTime / powerUpDuration;
+
 
         }
         else if(isPhasable)
         {
             Physics2D.IgnoreLayerCollision(defaultLayer, 8, false);
             //gameObject.GetComponent<Collider2D>().isTrigger = false;
+            powerupSlider.fillAmount += Time.deltaTime / powerUpDuration;
         }
         // Handle input
         if (!isInverted)
@@ -266,6 +272,7 @@ public class PlayerController : MonoBehaviour
         Physics2D.IgnoreLayerCollision(defaultLayer, 8, false);
         isPhasable = false;
         isFlying = false;
+        powerupSlider.fillAmount = 0f;
     }
     public void giveFlyPower(float duration)
     {
@@ -273,7 +280,10 @@ public class PlayerController : MonoBehaviour
         isPhasable = true;
         Physics2D.IgnoreLayerCollision(defaultLayer, 10);
         Physics2D.IgnoreLayerCollision(defaultLayer, 11);
-        // isFlying = true;
+        powerupSlider.fillAmount =0f;
+        powerUpDuration = duration;
+        isFlying = true;
+        
         Invoke("removeFlyPower", duration);
     }
 
