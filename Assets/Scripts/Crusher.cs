@@ -50,7 +50,8 @@ public class Crusher : MonoBehaviour
 
             if (playerBounds.y <= crusherBounds.y && playerBounds.x < crusherBounds.x + width / 2 && playerBounds.x > crusherBounds.x - width / 2)
             {
-                Destroy(collision.gameObject);
+                //Destroy(collision.gameObject);
+                GameManager.instance.killPlayer();
             }
         }
     }

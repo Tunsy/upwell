@@ -16,7 +16,8 @@ public class RocketScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
+            GameManager.instance.killPlayer();
             Destroy(this);
         }
         else
