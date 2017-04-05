@@ -105,6 +105,7 @@ public class GameManager : MonoBehaviour
             if (!isAlive())
             {
                 endGame();
+                Debug.Log("Checking");
             }
             else
             {
@@ -196,7 +197,7 @@ public class GameManager : MonoBehaviour
     public void endGame()
     {
         Debug.Log("game is over");
-        resetTimer();
+        //resetTimer();
         GameOverScreen();
         // SceneManager.LoadScene("TitleScreen");
     }
@@ -237,22 +238,12 @@ public class GameManager : MonoBehaviour
             is_alive = false;
     }
 
-    public void pauseScene()
-    {
-        SceneManager.LoadScene("PauseMenu");
-    }
-
     public void GameOverScreen()
     {
         uiManager.ShowGameOverScreen(true);
         uiManager.ShowGameActiveScreen(false);
         //gameOverScreen.SetActive(true);
         //gameActiveScreen.SetActive(false);
-    }
-
-    public void PauseScreen()
-    {
-
     }
 
     public void resumeMain()

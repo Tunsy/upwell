@@ -32,7 +32,7 @@ public class HighScoreScript : MonoBehaviour {
     public static void Save()
     {
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/savedGames.gd");
+        FileStream file = File.Create(Application.persistentDataPath + "/highscore.gd");
 
         HighScoreData data = new HighScoreData();
         data.highscore = highscore;
@@ -43,10 +43,10 @@ public class HighScoreScript : MonoBehaviour {
 
     public static void Load()
     {
-        if (File.Exists(Application.persistentDataPath + "/savedGames.gd"))
+        if (File.Exists(Application.persistentDataPath + "/highscore.gd"))
         {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
+            FileStream file = File.Open(Application.persistentDataPath + "/highscore.gd", FileMode.Open);
 
             HighScoreData data = (HighScoreData)bf.Deserialize(file);
             file.Close();
@@ -56,6 +56,7 @@ public class HighScoreScript : MonoBehaviour {
     }
 }
 
+[System.Serializable]
 class HighScoreData
 {
     public int highscore;

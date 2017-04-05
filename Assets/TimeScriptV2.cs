@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Coins : MonoBehaviour {
+public class TimeScriptV2 : MonoBehaviour {
 
-    public static int score;
+    public int score;
     public Text text;
 
     void Start()
@@ -15,7 +15,7 @@ public class Coins : MonoBehaviour {
 
     void Update()
     {
-        score = GameManager.instance.getcoinamount();
-        text.text = "" + score;
+        score = (int)GameManager.instance.timeElapsed();
+        text.text = "Time:" + score;
     }
 }

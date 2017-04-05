@@ -8,7 +8,7 @@ using System.IO;
 [System.Serializable]
 public class BestTimeScript : MonoBehaviour {
 
-    public GameObject GameOverScreen;
+    public GameObject LvlScreen;
     private int time;
     private static int besttime;
     public Text text;
@@ -22,7 +22,7 @@ public class BestTimeScript : MonoBehaviour {
     void Update()
     {
         time = (int)GameManager.instance.timeElapsed();
-        if (GameOverScreen.activeInHierarchy)
+        if (LvlScreen.activeInHierarchy)
         {
             Changetime();
         }
@@ -41,7 +41,7 @@ public class BestTimeScript : MonoBehaviour {
     public static void Save()
     {
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/savedGames.gd");
+        FileStream file = File.Create(Application.persistentDataPath + "/besttime.gd");
 
         BestTimeData data = new BestTimeData();
         data.besttime = besttime;
@@ -52,10 +52,10 @@ public class BestTimeScript : MonoBehaviour {
 
     public static void Load()
     {
-        if (File.Exists(Application.persistentDataPath + "/savedGames.gd"))
+        if (File.Exists(Application.persistentDataPath + "/besttime.gd"))
         {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
+            FileStream file = File.Open(Application.persistentDataPath + "/besttime.gd", FileMode.Open);
 
             BestTimeData data = (BestTimeData)bf.Deserialize(file);
             file.Close();
@@ -65,6 +65,7 @@ public class BestTimeScript : MonoBehaviour {
     }
 }
 
+[System.Serializable]
 class BestTimeData
 {
     public int besttime;
