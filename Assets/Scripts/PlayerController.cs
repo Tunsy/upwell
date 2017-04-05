@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         {
             Physics2D.IgnoreLayerCollision(defaultLayer, 8 );
             //gameObject.GetComponent<Collider2D>().isTrigger = true;
-            powerupSlider.fillAmount += Time.deltaTime / powerUpDuration;
+            powerupSlider.fillAmount -= Time.deltaTime / powerUpDuration;
 
 
         }
@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
         {
             Physics2D.IgnoreLayerCollision(defaultLayer, 8, false);
             //gameObject.GetComponent<Collider2D>().isTrigger = false;
-            powerupSlider.fillAmount += Time.deltaTime / powerUpDuration;
+            powerupSlider.fillAmount -= Time.deltaTime / powerUpDuration;
         }
         // Handle input
         if (!isInverted)
@@ -280,7 +280,7 @@ public class PlayerController : MonoBehaviour
         isPhasable = true;
         Physics2D.IgnoreLayerCollision(defaultLayer, 10);
         Physics2D.IgnoreLayerCollision(defaultLayer, 11);
-        powerupSlider.fillAmount =0f;
+        powerupSlider.fillAmount =1f;
         powerUpDuration = duration;
         isFlying = true;
         
