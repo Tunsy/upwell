@@ -81,8 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40868630c09990041908e5fe54284647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laser: {fileID: 1539070500428344, guid: b0b3e9cdbff1aa344b4b24df65a801ac, type: 2}
-  shootInterval: 10
+  laser: {fileID: 1576792137766558, guid: e15fdda478535db49885db5d09ea973c, type: 2}
+  shootInterval: 3
   startOffset: 0
   shootSound: {fileID: 8300000, guid: 8299d67767d47e745b5a0cba36f8bbca, type: 3}
 --- !u!212 &212333241022906560
