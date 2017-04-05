@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     private float time = START_TIME;
     private float score = 0;
     private int coin = 0;
+    private int lives = DEFAULT_LIVES;
     private GameObject player;
     private UIManager uiManager;
     private int current_level = START_LEVEL;
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
     private static float START_TIME = 0;
     private static int START_LEVEL = 1;
     private static bool DEFAULT_ALIVE_STATE = true;
+    private static int DEFAULT_LIVES = 3;
     private static float STARTING_INTERVAL = 1;
     private static int TIME_SCORE_COEFFICIENT = 1;
     private static int PICKUP_SCORE_COEFFICIENT = 4;
@@ -149,6 +151,13 @@ public class GameManager : MonoBehaviour
     public void updatePickupScore(int points)
     {
         coin += 1;
+
+        if (coin >= 100)
+        {
+            lives++;
+            coin -= 100;
+        }
+
         score += points * PICKUP_SCORE_COEFFICIENT;
     }
 
@@ -156,6 +165,12 @@ public class GameManager : MonoBehaviour
     {
         return coin;
     }
+
+    public int getLives()
+    {
+        return lives;
+    }
+
     //void methods and others, to be called from other scripts
     public void endGame()
     {
@@ -191,7 +206,13 @@ public class GameManager : MonoBehaviour
 
     public void killPlayer()
     {
-        is_alive = false;
+        if (lives >= 0)
+        {
+            lives--;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+            is_alive = false;
     }
 
     public void pauseScene()
