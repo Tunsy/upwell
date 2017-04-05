@@ -5,6 +5,7 @@ using UnityEngine;
 public class LavaMoveUp : MonoBehaviour
 {
     private PlayerController player;
+    private bool playerReady = false;
     public float upSpeed;
     public float maxDistance;
     public float catchUp; //speed to use if player and destroyer are too far apart
@@ -19,10 +20,14 @@ public class LavaMoveUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float currentUpSpeed = upSpeed * GameManager.instance.getLevel();
+        //Don't start moving until after the player presses a key
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 || Input.GetKeyDown(KeyCode.Space))
+        {
+            playerReady = true;
+        }
         //if(GameManager.instance.isAlive())
         //{
-        if (player != null)
+        if (player != null && playerReady)
         {
             Vector2 destroyerPos = transform.position;
             Vector2 playerPos = player.transform.position;
