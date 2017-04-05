@@ -11,16 +11,15 @@ public class BasePickupScript : pickupSuperclass {
             pickupSound = base.pickupSound;
         }
 
-        private void Start()
-        {
-            base.onStart();
-        }
+        
 
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            base.pickupTrigger(collision);
-        Destroy(gameObject);
-        }
+        
+
+    
+        public override void collisionSettings()
+    {
+        GameManager.instance.updatePickupScore(pickupscore);
+    }
 
 
 }

@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupscore: 5
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 970d6d9da7abd3541b53cf0df7a64ee8, type: 3}
 --- !u!212 &212332042836619116
 SpriteRenderer:
   m_ObjectHideFlags: 1

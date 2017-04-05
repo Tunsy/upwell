@@ -26,7 +26,7 @@ public class LaserCannon : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        Debug.Log(timer);
+        //Debug.Log(timer);
         if (timer > shootInterval)
         {
             Generate();
@@ -39,11 +39,11 @@ public class LaserCannon : MonoBehaviour
         if (GameManager.instance.isAlive())
         {
             GameObject shot = (GameObject)Instantiate(laser, spawnPoint.position, transform.rotation);
-            Debug.Log("Shoot!");
+            //Debug.Log("Shoot!");
             ShootSound();
             // Convert the angle of the player to the velocity of the bullet and shoot it forward
             Vector2 angle = Quaternion.AngleAxis(transform.rotation.eulerAngles.z, Vector3.forward) * Vector3.up;
-            Debug.Log("Angle" + angle + "speed" + shot.GetComponent<Projectile>().speed);
+            //Debug.Log("Angle" + angle + "speed" + shot.GetComponent<Projectile>().speed);
             shot.GetComponent<Rigidbody2D>().velocity = angle * shot.GetComponent<Projectile>().speed;
         }
     }
