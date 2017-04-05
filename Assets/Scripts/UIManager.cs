@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
-    public GameObject gameOverScreen, pauseScreen, gameActiveScreen;
+    public GameObject gameOverScreen, pauseScreen, gameActiveScreen, LvlSummary;
 
     public void ShowGameOverScreen(bool active=true)
     {
@@ -20,5 +20,11 @@ public class UIManager : MonoBehaviour {
     public void ShowPauseScreen(bool active = true)
     {
         pauseScreen.SetActive(active);
+    }
+
+    public void ShowLVLSummary (bool active = true)
+    {
+        Time.timeScale = 0;
+        LvlSummary.SetActive(active);
     }
 }

@@ -15,7 +15,7 @@ public class Lives : MonoBehaviour {
 
     void Update()
     {
-        score = GameManager.instance.getPlayerScore();
+        score = GameManager.instance.getLives();
         text.text = "" + score;
     }
 }

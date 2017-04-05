@@ -11359,9 +11359,19 @@ Prefab:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 114095683720308914, guid: 15f3dc3e0337b9941aef08ce47415e47,
+        type: 2}
+      propertyPath: LvlSummary
+      value: 
+      objectReference: {fileID: 1640980085}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15f3dc3e0337b9941aef08ce47415e47, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1640980085 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1072262654105060, guid: 15f3dc3e0337b9941aef08ce47415e47,
+    type: 2}
+  m_PrefabInternal: {fileID: 1640980084}
 --- !u!1 &1641947023
 GameObject:
   m_ObjectHideFlags: 0
