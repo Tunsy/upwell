@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Coins : MonoBehaviour {
 
-    public int score;
+    public static int score;
     public Text text;
 
     void Start()
@@ -15,7 +15,12 @@ public class Coins : MonoBehaviour {
 
     void Update()
     {
-        score = GameManager.instance.getPlayerScore();
+        score = GameManager.instance.getcoinamount();
         text.text = "" + score;
+
+        if(score == 100)
+        {
+            score = 0;
+        }
     }
 }

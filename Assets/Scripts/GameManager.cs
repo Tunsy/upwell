@@ -151,6 +151,11 @@ public class GameManager : MonoBehaviour
         coin += 1;
         score += points * PICKUP_SCORE_COEFFICIENT;
     }
+
+    public int getcoinamount()
+    {
+        return coin;
+    }
     //void methods and others, to be called from other scripts
     public void endGame()
     {
