@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 114219657822806844}
   - component: {fileID: 251642523767008500}
   - component: {fileID: 114820770548022874}
-  - component: {fileID: 114154076053530312}
   m_Layer: 8
   m_Name: OnewayPlatform (1)
   m_TagString: Platform
@@ -674,9 +673,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
-  - {fileID: 21300000, guid: a7f6589d21b7a474a94983bfb654670e, type: 3}
-  - {fileID: 21300000, guid: 0de9edaf36dccb2419b9a2236011c49c, type: 3}
+  - {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300010, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300012, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   isForeground: 1
 --- !u!114 &114097076195688794
 MonoBehaviour:
@@ -690,9 +689,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
-  - {fileID: 21300000, guid: a7f6589d21b7a474a94983bfb654670e, type: 3}
-  - {fileID: 21300000, guid: 0de9edaf36dccb2419b9a2236011c49c, type: 3}
+  - {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300010, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300012, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   isForeground: 1
 --- !u!114 &114131736176416976
 MonoBehaviour:
@@ -705,19 +704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6abe4b2b0845f26469eb458bde98f995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114154076053530312
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1296933779319210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2cfe92c3f1585d4395da9ef6b243a52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites: []
-  isForeground: 0
 --- !u!114 &114159795003239816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -766,9 +752,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
-  - {fileID: 21300000, guid: a7f6589d21b7a474a94983bfb654670e, type: 3}
-  - {fileID: 21300000, guid: 0de9edaf36dccb2419b9a2236011c49c, type: 3}
+  - {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300010, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300012, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   isForeground: 1
 --- !u!114 &114449409804293732
 MonoBehaviour:
@@ -793,9 +779,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
-  - {fileID: 21300000, guid: a7f6589d21b7a474a94983bfb654670e, type: 3}
-  - {fileID: 21300000, guid: 0de9edaf36dccb2419b9a2236011c49c, type: 3}
+  - {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300010, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300012, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   isForeground: 1
 --- !u!114 &114486449020950078
 MonoBehaviour:
@@ -820,9 +806,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
-  - {fileID: 21300000, guid: a7f6589d21b7a474a94983bfb654670e, type: 3}
-  - {fileID: 21300000, guid: 0de9edaf36dccb2419b9a2236011c49c, type: 3}
+  - {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300010, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300012, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   isForeground: 1
 --- !u!114 &114522453402572906
 MonoBehaviour:
@@ -871,9 +857,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
-  - {fileID: 21300000, guid: a7f6589d21b7a474a94983bfb654670e, type: 3}
-  - {fileID: 21300000, guid: 0de9edaf36dccb2419b9a2236011c49c, type: 3}
+  - {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300010, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300012, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   isForeground: 1
 --- !u!114 &114628594541070288
 MonoBehaviour:
@@ -898,9 +884,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
-  - {fileID: 21300000, guid: a7f6589d21b7a474a94983bfb654670e, type: 3}
-  - {fileID: 21300000, guid: 0de9edaf36dccb2419b9a2236011c49c, type: 3}
+  - {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300010, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300012, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   isForeground: 1
 --- !u!114 &114688052219381516
 MonoBehaviour:
@@ -914,9 +900,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: a7f6589d21b7a474a94983bfb654670e, type: 3}
-  - {fileID: 21300000, guid: 0de9edaf36dccb2419b9a2236011c49c, type: 3}
-  - {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
+  - {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300010, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300012, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   isForeground: 1
 --- !u!114 &114693782255281468
 MonoBehaviour:
@@ -968,9 +954,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
-  - {fileID: 21300000, guid: a7f6589d21b7a474a94983bfb654670e, type: 3}
-  - {fileID: 21300000, guid: 0de9edaf36dccb2419b9a2236011c49c, type: 3}
+  - {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300010, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300012, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   isForeground: 1
 --- !u!114 &114946413519372614
 MonoBehaviour:
@@ -995,9 +981,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
-  - {fileID: 21300000, guid: a7f6589d21b7a474a94983bfb654670e, type: 3}
-  - {fileID: 21300000, guid: 0de9edaf36dccb2419b9a2236011c49c, type: 3}
+  - {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300010, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
+  - {fileID: 21300012, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   isForeground: 1
 --- !u!212 &212056300616427180
 SpriteRenderer:
@@ -1030,7 +1016,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1065,7 +1051,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1135,7 +1121,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1240,7 +1226,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1275,7 +1261,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1310,7 +1296,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1345,7 +1331,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1380,7 +1366,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1415,7 +1401,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1450,7 +1436,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9185f4120a8b734799069e6e7c7dccb, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
