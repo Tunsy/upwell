@@ -85,13 +85,13 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetAxis("Horizontal") < 0)
             {
-                input.x = Input.GetAxis("Horizontal");
+                input.x = -Input.GetAxis("Horizontal");
                 sprite.flipX = false;
                 groundState.facing = -1;
             }
             else if (Input.GetAxis("Horizontal") > 0)
             {
-                input.x = Input.GetAxis("Horizontal");
+                input.x = -Input.GetAxis("Horizontal");
                 sprite.flipX = true;
                 groundState.facing = 1;
             }
