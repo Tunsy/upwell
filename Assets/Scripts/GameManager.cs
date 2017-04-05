@@ -64,16 +64,30 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         
-        //DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(this.gameObject);
     }
 
     private void Start()
     {
         //canvas = GameObject.Find("Canvas");
-        StartGame();
+        //GrabUI();
+        uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        SceneManager.sceneLoaded += GrabUI;
     }
 
-    public void StartGame()
+    public void InitializeValues()
+    {
+        time = START_TIME;
+        score = 0;
+        coin = 0;
+        lives = DEFAULT_LIVES;
+        current_level = START_LEVEL;
+        is_alive = DEFAULT_ALIVE_STATE;
+        time_interval = STARTING_INTERVAL;
+        Time.timeScale = 1;
+    }
+
+    public void GrabUI(Scene scene, LoadSceneMode mode)
     {
         uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
         //gameOverScreen = GameObject.Find("GameOverScreen");
@@ -140,8 +154,15 @@ public class GameManager : MonoBehaviour
     {
         //return SceneManager.GetActiveScene().name == mainscene;
         //gameActiveScreen.SetActive(true);
-        uiManager.ShowGameActiveScreen(true);
-        return true;
+        if (SceneManager.GetActiveScene().name.Contains("level"))
+        {
+            uiManager.ShowGameActiveScreen(true);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     public int getPlayerScore()
     {
@@ -206,7 +227,8 @@ public class GameManager : MonoBehaviour
 
     public void killPlayer()
     {
-        if (lives >= 0)
+        Debug.Log(lives);
+        if (lives > 0)
         {
             lives--;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
