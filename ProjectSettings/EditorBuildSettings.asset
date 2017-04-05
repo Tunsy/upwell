@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/gametest.unity
   - enabled: 1
     path: Assets/Scenes/playtesting.unity
+  - enabled: 1
+    path: Assets/Scenes/level1.unity
