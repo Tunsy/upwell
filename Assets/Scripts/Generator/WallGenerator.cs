@@ -42,7 +42,10 @@ public class WallGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GenerateRoomIfRequired();
+        if (player != null)
+        {
+            GenerateRoomIfRequired();
+        }
     }
 
     void AddRoom(float farthestRoomEndY)

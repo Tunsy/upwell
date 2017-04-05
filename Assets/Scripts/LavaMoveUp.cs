@@ -22,6 +22,8 @@ public class LavaMoveUp : MonoBehaviour
         float currentUpSpeed = upSpeed * GameManager.instance.getLevel();
         //if(GameManager.instance.isAlive())
         //{
+        if (player != null)
+        {
             Vector2 destroyerPos = transform.position;
             Vector2 playerPos = player.transform.position;
             //Debug.Log(playerPos.y - destroyerPos.y);
@@ -34,7 +36,7 @@ public class LavaMoveUp : MonoBehaviour
             {
                 transform.position = new Vector2(transform.position.x, transform.position.y + (upSpeed * Time.deltaTime));
             }
-        //}
+        }
     }
 
     

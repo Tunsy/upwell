@@ -24,8 +24,11 @@ public class Teleport : MonoBehaviour {
             {
                 GameManager.instance.updateCurrentLevel();
             }
-            other.gameObject.transform.position = destination.transform.position;
-            other.gameObject.transform.rotation = destination.transform.rotation;
+            if (destination != null)
+            {
+                other.gameObject.transform.position = destination.transform.position;
+                other.gameObject.transform.rotation = destination.transform.rotation;
+            }
             if (onEnterInvert)
             {
                 playerSprite.flipY = true;
