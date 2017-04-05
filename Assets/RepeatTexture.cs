@@ -24,6 +24,7 @@ public class RepeatTexture : MonoBehaviour
         // Generate a child prefab of the sprite renderer
         GameObject childPrefab = new GameObject();
         SpriteRenderer childSprite = childPrefab.AddComponent<SpriteRenderer>();
+        childSprite.sprite = sprites[(int)Random.Range(0, sprites.Length)];
         if (isForeground)
             childSprite.sortingLayerName = "Tiles";
         else
@@ -33,15 +34,15 @@ public class RepeatTexture : MonoBehaviour
 
         // Loop through and spit out repeated tiles
         GameObject child;
-        for (int j = 0, m = (int)Mathf.Round(col.bounds.size.x/spriteSize.x); j <= m; j++){
+        for (int j = 0, m = (int)Mathf.Ceil(col.bounds.size.x/spriteSize.x); j < m; j++){
             for (int i = 0, l = (int)Mathf.Round(col.bounds.size.y/spriteSize.y); i < l; i++)
             {
                 child = Instantiate(childPrefab) as GameObject;
-                childSprite.sprite = sprites[Random.Range(0, sprites.Length)];
+                childSprite.sprite = sprites[(int)Random.Range(0, sprites.Length)];
+                childSprite.color = sprite.color;
                 child.transform.position = transform.position - (new Vector3(spriteSize.x * j, spriteSize.y * i, 0)
                     - new Vector3(0, transform.localScale.y == 1 ? 0 : (1 / 2f * sprite.bounds.size.y), 0)
                     - new Vector3(col.bounds.size.x / 2, col.bounds.size.y / 2, 0)
-                    - new Vector3(spriteSize.x, 0, 0)
                     + new Vector3(spriteSize.x/2, spriteSize.y/2, 0));
                 child.transform.parent = transform;
             }
