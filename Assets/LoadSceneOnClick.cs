@@ -11,9 +11,19 @@ public class LoadSceneOnClick : MonoBehaviour {
         SceneManager.LoadScene(sceneIndex);
     }
 
+    public void ReloadCurrentLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void LoadMainLevel()
     {
         GameManager.instance.InitializeValues();
-        SceneManager.LoadScene("testlevel1");
+        SceneManager.LoadScene("gametest");
     }
 }

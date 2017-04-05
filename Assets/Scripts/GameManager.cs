@@ -89,6 +89,7 @@ public class GameManager : MonoBehaviour
 
     public void GrabUI(Scene scene, LoadSceneMode mode)
     {
+        Time.timeScale = 1;
         uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
         //gameOverScreen = GameObject.Find("GameOverScreen");
         //gameActiveScreen = GameObject.Find("Gamescreen");
