@@ -12,8 +12,7 @@ public class ImageMover : MonoBehaviour {
 
 	void Update ()
     {
-        Coins coins = gameobject.GetComponent<Coins>();
-        x = coins.score;
+        x = Coins.score;
         if(x > limit)
         {
             transform.position = new Vector3(transform.position.x-8, transform.position.y);
