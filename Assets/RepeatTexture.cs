@@ -21,6 +21,8 @@ public class RepeatTexture : MonoBehaviour
         col = GetComponent<Collider2D>();
         Vector2 spriteSize = new Vector2(sprite.bounds.size.x / transform.localScale.x, sprite.bounds.size.y / transform.localScale.y);
 
+        if (sprites.Length == 0) return;
+
         // Generate a child prefab of the sprite renderer
         GameObject childPrefab = new GameObject();
         SpriteRenderer childSprite = childPrefab.AddComponent<SpriteRenderer>();
@@ -44,6 +46,7 @@ public class RepeatTexture : MonoBehaviour
                     - new Vector3(0, transform.localScale.y == 1 ? 0 : (1 / 2f * sprite.bounds.size.y), 0)
                     - new Vector3(col.bounds.size.x / 2, col.bounds.size.y / 2, 0)
                     + new Vector3(spriteSize.x/2, spriteSize.y/2, 0));
+                child.transform.rotation = (transform.rotation);
                 child.transform.parent = transform;
             }
         }
