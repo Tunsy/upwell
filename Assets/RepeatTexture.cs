@@ -48,6 +48,8 @@ public class RepeatTexture : MonoBehaviour
                     + new Vector3(spriteSize.x/2, spriteSize.y/2, 0));
                 child.transform.rotation = (transform.rotation);
                 child.transform.parent = transform;
+                child.gameObject.layer = gameObject.layer;
+                child.gameObject.tag = gameObject.tag;
             }
         }
 

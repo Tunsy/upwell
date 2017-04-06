@@ -1223,6 +1223,7 @@ MonoBehaviour:
   speed: 2.5
   interval: 0.33
   sprite: {fileID: 212338849910985472}
+  deathSound: {fileID: 8300000, guid: fe2599396317a974c9de7614d3505ee4, type: 3}
 --- !u!114 &114907158782875254
 MonoBehaviour:
   m_ObjectHideFlags: 1
