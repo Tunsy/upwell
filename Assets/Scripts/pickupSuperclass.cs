@@ -16,7 +16,7 @@ public abstract class pickupSuperclass : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("t");
+
         if (collision.gameObject.tag == tag)
         {
 
