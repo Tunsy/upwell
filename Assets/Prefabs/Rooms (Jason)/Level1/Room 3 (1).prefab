@@ -849,7 +849,6 @@ GameObject:
   - component: {fileID: 61728977403171394}
   - component: {fileID: 114870828989190744}
   - component: {fileID: 114488553156673952}
-  - component: {fileID: 114885368522669592}
   m_Layer: 0
   m_Name: Basic Enemy
   m_TagString: Untagged
@@ -2142,7 +2141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1441631396784978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 101.5, z: 0}
+  m_LocalPosition: {x: -0.3, y: 29.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4632307146606302}
@@ -4162,6 +4161,7 @@ MonoBehaviour:
   speed: 2.5
   interval: 0.33
   sprite: {fileID: 212551415983377886}
+  deathSound: {fileID: 8300000, guid: fe2599396317a974c9de7614d3505ee4, type: 3}
 --- !u!114 &114502771682889748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4503,17 +4503,6 @@ MonoBehaviour:
   verticalKnockPower: 6
   horizontalKnockPower: 6
   damage: 0
---- !u!114 &114885368522669592
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1559371297088534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114900438519911354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4667,7 +4656,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300308, guid: 144dd7d694458dc44924aed460e4f173, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5221095, g: 0.080882356, b: 0.64705884, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!212 &212054018078303814
@@ -5157,7 +5146,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300308, guid: 144dd7d694458dc44924aed460e4f173, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5221095, g: 0.080882356, b: 0.64705884, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!212 &212385946715902486
@@ -5646,7 +5635,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300340, guid: 144dd7d694458dc44924aed460e4f173, type: 3}
+  m_Sprite: {fileID: 21300040, guid: 4a79b52da4d9c504eac55e0134599cd6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
