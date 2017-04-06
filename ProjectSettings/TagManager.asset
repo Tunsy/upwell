@@ -57,3 +57,6 @@ TagManager:
   - name: Player
     uniqueID: 2382913819
     locked: 0
+  - name: Destroyer
+    uniqueID: 1372362163
+    locked: 0

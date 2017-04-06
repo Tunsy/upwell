@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class breakableCounter : MonoBehaviour {
     public int durability;
+    public AudioClip breakSound;
 
 
     private void Start()
@@ -19,6 +20,8 @@ public class breakableCounter : MonoBehaviour {
             {
                 Destroy(gameObject);
             }
+            if(breakSound)
+            AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
         }
     }
    

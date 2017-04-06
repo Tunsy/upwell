@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a86bc856999f74f82184da07a757c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upSpeed: 0.65
+  upSpeed: 1
   maxDistance: 20
   catchUp: 6
 --- !u!212 &212030735711437660

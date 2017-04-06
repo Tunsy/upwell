@@ -15,6 +15,7 @@ public class BasicEnemy : MonoBehaviour {
     public SpriteRenderer sprite;
     private Rigidbody2D rb;
     private Collider2D collider;
+    public AudioClip deathSound;
 
     void Start()
     {
@@ -48,6 +49,8 @@ public class BasicEnemy : MonoBehaviour {
 
     void Death()
     {
+        if (deathSound)
+            AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position);
         Destroy(gameObject);
     }
 
