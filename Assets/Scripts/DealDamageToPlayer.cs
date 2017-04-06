@@ -14,7 +14,7 @@ public class DealDamageToPlayer : MonoBehaviour {
         if(collision.tag == "Player")
         {
             PlayerController player = collision.GetComponent<PlayerController>();
-
+            Debug.Log(this.gameObject.ToString());
             collision.GetComponent<PlayerController>().Knockback(this);
         }
     }
