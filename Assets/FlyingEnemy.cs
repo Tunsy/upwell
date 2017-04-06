@@ -18,9 +18,12 @@ public class FlyingEnemy : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            Vector3 player = collision.contacts[0].point;
+            //Vector3 player = collision.contacts[0].point;
+            Vector3 player = collision.transform.position;
 
-            if (player.y >= transform.position.y + height)
+            //if (player.y >= transform.position.y + height)
+            //{
+            if (player.y > transform.position.y + height)
             {
                 PlayerController pc = collision.gameObject.GetComponent<PlayerController>();
                 pc.rb.velocity = new Vector2(pc.rb.velocity.x, pc.jump);

@@ -902,8 +902,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 1339602132332086}
-  pauseScreen: {fileID: 1098998329812418}
   gameActiveScreen: {fileID: 1383900545686494}
+  LvlSummary: {fileID: 0}
 --- !u!114 &114140665240949912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1235,8 +1235,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114958729493424974}
-        m_MethodName: LoadByIndex
-        m_Mode: 3
+        m_MethodName: ReloadCurrentLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1358,7 +1358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6a2a55338a3d14d80387a4063acaaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverScreen: {fileID: 0}
+  LvlScreen: {fileID: 0}
   text: {fileID: 114676645847137182}
 --- !u!114 &114528713949751866
 MonoBehaviour:
@@ -1427,8 +1427,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114050098239563888}
-        m_MethodName: LoadByIndex
-        m_Mode: 3
+        m_MethodName: LoadNextLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1841,7 +1841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6a2a55338a3d14d80387a4063acaaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverScreen: {fileID: 0}
+  LvlScreen: {fileID: 1072262654105060}
   text: {fileID: 114845674765228766}
 --- !u!114 &114778332833504432
 MonoBehaviour:
@@ -2134,7 +2134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d49272adc2f2294f9bd0df8dd00b1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   text: {fileID: 0}
 --- !u!114 &114958729493424974
 MonoBehaviour:
