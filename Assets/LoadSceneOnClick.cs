@@ -11,8 +11,9 @@ public class LoadSceneOnClick : MonoBehaviour {
         SceneManager.LoadScene(sceneIndex);
     }
 
-    public void ReloadCurrentLevel()
+    public void RetryLevel()
     {
+        GameManager.instance.InitializeValues();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

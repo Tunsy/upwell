@@ -81,7 +81,6 @@ public class GameManager : MonoBehaviour
         score = 0;
         coin = 0;
         lives = DEFAULT_LIVES;
-        current_level = START_LEVEL;
         is_alive = DEFAULT_ALIVE_STATE;
         time_interval = STARTING_INTERVAL;
         Time.timeScale = 1;
