@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private bool isInverted = false;
     private bool isFlying = false;
     private bool isPhasable = false;
+    private bool remdash = true;
     private float verticalFlySpeed = 5;
     private float powerUpDuration;
     public bool isKnockedback;
@@ -29,6 +30,8 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer sprite;
     private PlayerAnimationController pc;
     private int defaultLayer;
+    public int dashdistance;
+    private float dashtimer = 2;
 
     void Start()
     {
@@ -41,14 +44,13 @@ public class PlayerController : MonoBehaviour
         isKnockedback = false;
         wallClingTimer = 0;
         defaultLayer = gameObject.layer;
-
     }
 
     private Vector2 input;
 
     void Update()
     {
-        
+        dashtimer -= 1;
         /*if (phasingUp())
         {
             Physics2D.IgnoreLayerCollision(defaultLayer, 8 );
@@ -116,6 +118,32 @@ public class PlayerController : MonoBehaviour
         else
         {
             holdingJumpCheck = false;
+        }
+
+        if (groundState.IsTouching())
+        {
+            if (dashtimer == 0)
+            {
+                remdash = true;
+                dashtimer = 5;
+            }
+        }
+
+        //Dash
+        if(Input.GetKey(KeyCode.S))
+        {
+            if (remdash == true)
+            {
+                if (sprite.flipX == false)
+                {
+                    transform.position = new Vector2(transform.position.x + dashdistance, transform.position.y);
+                }
+                else
+                {
+                    transform.position = new Vector2(transform.position.x - dashdistance, transform.position.y);
+                }
+                remdash = false;
+            }
         }
 
         // Reverse player if going different direction
