@@ -49,17 +49,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
-        if (phasingUp())
+        /*if (phasingUp())
         {
             Physics2D.IgnoreLayerCollision(defaultLayer, 8 );
             //gameObject.GetComponent<Collider2D>().isTrigger = true;
             powerupSlider.fillAmount -= Time.deltaTime / powerUpDuration;
 
 
-        }
-        else if(isPhasable)
+        } */
+        if(isPhasable)
         {
-            Physics2D.IgnoreLayerCollision(defaultLayer, 8, false);
+            //Physics2D.IgnoreLayerCollision(defaultLayer, 8, false);
             //gameObject.GetComponent<Collider2D>().isTrigger = false;
             powerupSlider.fillAmount -= Time.deltaTime / powerUpDuration;
         }
@@ -278,6 +278,7 @@ public class PlayerController : MonoBehaviour
     {
         
         isPhasable = true;
+        Physics2D.IgnoreLayerCollision(defaultLayer, 8);
         Physics2D.IgnoreLayerCollision(defaultLayer, 10);
         Physics2D.IgnoreLayerCollision(defaultLayer, 11);
         powerupSlider.fillAmount =1f;
