@@ -33,7 +33,8 @@ public class GameManager : MonoBehaviour
     private int current_level = START_LEVEL;
     private bool is_alive = DEFAULT_ALIVE_STATE;
     private float time_interval = STARTING_INTERVAL;
-
+    private int coin_counter = 0;
+    private int end_level_score = 0;
     //change this to name of the scene you are running on currently, 
     public string mainscene = "gametest";
     public GameObject canvas;
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour
     private static float STARTING_INTERVAL = 1;
     private static int TIME_SCORE_COEFFICIENT = 1;
     private static int PICKUP_SCORE_COEFFICIENT = 4;
+    
 
     // Use this for initialization
     void Awake()
@@ -84,6 +86,7 @@ public class GameManager : MonoBehaviour
         is_alive = DEFAULT_ALIVE_STATE;
         time_interval = STARTING_INTERVAL;
         Time.timeScale = 1;
+        end_level_score = 0;
     }
 
     public void GrabUI(Scene scene, LoadSceneMode mode)
@@ -109,7 +112,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                score += Time.deltaTime * TIME_SCORE_COEFFICIENT;
+               // score += Time.deltaTime * TIME_SCORE_COEFFICIENT;
                 update_time();
                /* int lvl = updateCurrentLevel();
                 if(lvl != current_level)
@@ -138,6 +141,11 @@ public class GameManager : MonoBehaviour
         return this.time;
     }
 
+    private void resetAllCounters()
+    {
+        coin_counter = 0;
+        time = 0;
+    }
    
      public void updateCurrentLevel()
     {
@@ -167,22 +175,36 @@ public class GameManager : MonoBehaviour
     }
     public int getPlayerScore()
     {
-        return (int)score;
+        return coin_counter;
+    }
+
+    public int endLevelScore()
+    {
+        return end_level_score;
+    }
+
+    public void setEndLevelScore()
+    {
+        end_level_score = (int) (coin_counter + TIME_SCORE_COEFFICIENT / time);
     }
 
     public void updatePickupScore(int points)
     {
-        coin += 1;
+        //coins += 1;
 
-        if (coin >= 100)
+        /*if (coins >= 100)
         {
             lives++;
-            coin -= 100;
-        }
+            coins -= 100;
+        } */
 
-        score += points * PICKUP_SCORE_COEFFICIENT;
+        coin_counter += points * PICKUP_SCORE_COEFFICIENT;
     }
 
+    public int coinScore()
+    {
+        return coin_counter;
+    }
     public int getcoinamount()
     {
         return coin;
@@ -197,6 +219,7 @@ public class GameManager : MonoBehaviour
     public void endGame()
     {
         Debug.Log("game is over");
+        resetAllCounters();
         //resetTimer();
         GameOverScreen();
         // SceneManager.LoadScene("TitleScreen");
