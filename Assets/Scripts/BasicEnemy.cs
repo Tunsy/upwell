@@ -70,19 +70,19 @@ public class BasicEnemy : MonoBehaviour {
         {
             case 0:
                 this.GetComponent<Rigidbody2D>().velocity = new Vector2(-20, 0).normalized * speed;
-                sprite.flipX = false;
+                sprite.flipX = true;
                 break;
             case 1:
                 this.GetComponent<Rigidbody2D>().velocity = new Vector2(-20, 0).normalized * speed;
-                sprite.flipX = false;
+                sprite.flipX = true;
                 break;
             case 2:
                 this.GetComponent<Rigidbody2D>().velocity = new Vector2(20, 0).normalized * speed;
-                sprite.flipX = true;
+                sprite.flipX = false;
                 break;
             case 3:
                 this.GetComponent<Rigidbody2D>().velocity = new Vector2(20, 0).normalized * speed;
-                sprite.flipX = true;
+                sprite.flipX = false;
                 break;
         }
     }
