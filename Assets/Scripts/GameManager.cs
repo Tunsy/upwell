@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     private float time_interval = STARTING_INTERVAL;
     private int coin_counter = 0;
     private int end_level_score = 0;
+    private Dictionary<string, int[]> level_awards;
     //change this to name of the scene you are running on currently, 
     public string mainscene = "gametest";
     public GameObject canvas;
@@ -51,7 +52,7 @@ public class GameManager : MonoBehaviour
     private static float STARTING_INTERVAL = 1;
     private static int TIME_SCORE_COEFFICIENT = 1;
     private static int PICKUP_SCORE_COEFFICIENT = 4;
-    
+    private static string level_award_path = "level_award.txt";
 
     // Use this for initialization
     void Awake()
@@ -67,22 +68,48 @@ public class GameManager : MonoBehaviour
         }
         
         DontDestroyOnLoad(this.gameObject);
+
+
     }
 
+    private void read_scores()
+    {
+        int counter = 0;
+        string line;
+        System.IO.StreamReader file =
+          new System.IO.StreamReader(level_award_path);
+        while ((line = file.ReadLine()) != null)
+        {
+            string[] line_info = line.Split(':');
+            int[] scores = new int[4];
+            for (int i = 1; i < line_info.Length; i++)
+            {
+                scores[i - 1] = int.Parse(line_info[i]);
+            }
+            level_awards.Add(line_info[0], scores);
+            counter++;
+        }
+
+        file.Close();
+        Debug.Log(level_awards);
+    }
     private void Start()
     {
         //canvas = GameObject.Find("Canvas");
         //GrabUI();
+
+        read_scores();
         uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
         SceneManager.sceneLoaded += GrabUI;
     }
 
     public void InitializeValues()
     {
+        
         time = START_TIME;
         score = 0;
-        coin = 0;
-        lives = DEFAULT_LIVES;
+        coin_counter = 0;
+        lives = 0;
         is_alive = DEFAULT_ALIVE_STATE;
         time_interval = STARTING_INTERVAL;
         Time.timeScale = 1;
@@ -107,6 +134,7 @@ public class GameManager : MonoBehaviour
         {
             if (!isAlive())
             {
+                
                 endGame();
                 Debug.Log("Checking");
             }
@@ -141,11 +169,6 @@ public class GameManager : MonoBehaviour
         return this.time;
     }
 
-    private void resetAllCounters()
-    {
-        coin_counter = 0;
-        time = 0;
-    }
    
      public void updateCurrentLevel()
     {
@@ -180,13 +203,10 @@ public class GameManager : MonoBehaviour
 
     public int endLevelScore()
     {
-        return end_level_score;
+        return (int)(coin_counter + TIME_SCORE_COEFFICIENT / time);
     }
 
-    public void setEndLevelScore()
-    {
-        end_level_score = (int) (coin_counter + TIME_SCORE_COEFFICIENT / time);
-    }
+   
 
     public void updatePickupScore(int points)
     {
@@ -219,9 +239,12 @@ public class GameManager : MonoBehaviour
     public void endGame()
     {
         Debug.Log("game is over");
-        resetAllCounters();
+
         //resetTimer();
+        
         GameOverScreen();
+        InitializeValues();
+        
         // SceneManager.LoadScene("TitleScreen");
     }
     public void update_time()
@@ -251,18 +274,14 @@ public class GameManager : MonoBehaviour
 
     public void killPlayer()
     {
-        Debug.Log(lives);
-        if (lives > 0)
-        {
-            lives--;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        else
-            is_alive = false;
+        
+        
+        is_alive = false;
     }
 
     public void GameOverScreen()
     {
+       
         uiManager.ShowGameOverScreen(true);
         uiManager.ShowGameActiveScreen(false);
         //gameOverScreen.SetActive(true);

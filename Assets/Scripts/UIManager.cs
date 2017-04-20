@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour {
 
     public void ShowLVLSummary (bool active = true)
     {
+        
         Time.timeScale = 0;
         LvlSummary.SetActive(active);
     }
