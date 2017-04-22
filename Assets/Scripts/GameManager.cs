@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     private float time_interval = STARTING_INTERVAL;
     private int coin_counter = 0;
     private int end_level_score = 0;
-    private Dictionary<string, int[]> level_awards;
+    private Dictionary<string, int[]> level_awards = new Dictionary<string, int[]>();
     //change this to name of the scene you are running on currently, 
     public string mainscene = "gametest";
     public GameObject canvas;
@@ -74,10 +74,9 @@ public class GameManager : MonoBehaviour
 
     private void read_scores()
     {
-        int counter = 0;
+      
         string line;
-        System.IO.StreamReader file =
-          new System.IO.StreamReader(level_award_path);
+        System.IO.StreamReader file = new System.IO.StreamReader(level_award_path);
         while ((line = file.ReadLine()) != null)
         {
             string[] line_info = line.Split(':');
@@ -87,11 +86,11 @@ public class GameManager : MonoBehaviour
                 scores[i - 1] = int.Parse(line_info[i]);
             }
             level_awards.Add(line_info[0], scores);
-            counter++;
+            
         }
 
         file.Close();
-        Debug.Log(level_awards);
+        
     }
     private void Start()
     {
