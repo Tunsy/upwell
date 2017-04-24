@@ -13,10 +13,10 @@ public class LevelSelectManager : MonoBehaviour {
         foreach (Transform child in transform)
         {
             if (level_awards.ContainsKey(child.name)){
-                child.GetComponentInChildren<Text>().text = child.name;
+                child.GetComponentInChildren<Text>().text = child.name + "high score " + PlayerPrefs.GetInt(child.name, 0);
                 foreach (int score in level_awards[child.name])
                 {
-                    child.GetComponentInChildren<Text>().text = child.name += " " + score.ToString() + ", ";
+                    child.GetComponentInChildren<Text>().text  += " " + score.ToString() + ", ";
                 }
             }
         }
@@ -35,7 +35,7 @@ public class LevelSelectManager : MonoBehaviour {
         while ((line = file.ReadLine()) != null)
         {
             string[] line_info = line.Split(':');
-            int[] scores = new int[4];
+            int[] scores = new int[3];
             for (int i = 1; i < line_info.Length; i++)
             {
                 scores[i - 1] = int.Parse(line_info[i]);

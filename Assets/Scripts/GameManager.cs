@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     //member variables
     private float time = START_TIME;
-    private float score = 0;
+    private float score = 1;
     private int coin = 0;
     private int lives = DEFAULT_LIVES;
     private GameObject player;
@@ -72,32 +72,13 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void read_scores()
-    {
-      
-        string line;
-        System.IO.StreamReader file = new System.IO.StreamReader(level_award_path);
-        while ((line = file.ReadLine()) != null)
-        {
-            string[] line_info = line.Split(':');
-            int[] scores = new int[4];
-            for (int i = 1; i < line_info.Length; i++)
-            {
-                scores[i - 1] = int.Parse(line_info[i]);
-            }
-            level_awards.Add(line_info[0], scores);
-            
-        }
-
-        file.Close();
-        
-    }
+ 
     private void Start()
     {
         //canvas = GameObject.Find("Canvas");
         //GrabUI();
 
-        read_scores();
+       
         uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
         SceneManager.sceneLoaded += GrabUI;
     }
@@ -195,9 +176,9 @@ public class GameManager : MonoBehaviour
             return false;
         }
     }
-    public int getPlayerScore()
+   public int getPlayerScore()
     {
-        return coin_counter;
+        return endLevelScore();
     }
 
     public int endLevelScore()
@@ -218,15 +199,14 @@ public class GameManager : MonoBehaviour
         } */
 
         coin_counter += points * PICKUP_SCORE_COEFFICIENT;
+        //delete later
+        
     }
 
-    public int coinScore()
-    {
-        return coin_counter;
-    }
+   
     public int getcoinamount()
     {
-        return coin;
+        return coin_counter;
     }
 
     public int getLives()
@@ -242,13 +222,13 @@ public class GameManager : MonoBehaviour
         //resetTimer();
         
         GameOverScreen();
-        InitializeValues();
+        
         
         // SceneManager.LoadScene("TitleScreen");
     }
     public void update_time()
     {
-        if (isAlive())
+        if (isAlive() )
         {
             time += Time.deltaTime;
         }
@@ -290,5 +270,16 @@ public class GameManager : MonoBehaviour
     public void resumeMain()
     {
         SceneManager.LoadScene(mainscene);
+    }
+
+    public void setHighScore()
+    {
+       
+        Debug.Log(time);
+        Debug.Log(endLevelScore());
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, endLevelScore());
+        
+
+        Debug.Log(time);
     }
 }

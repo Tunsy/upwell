@@ -1,2 +1,2 @@
-testlevel1:10:20:30:0
-level2:20:40:60:0
+testlevel1:10:20:30
+level2:20:40:60

@@ -10,8 +10,11 @@ public class NextLevelDoor : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+
             Time.timeScale = 0;
+            GameManager.instance.setHighScore();
             LevelSummaryUI.SetActive(true);
+           
         }
     }
 }
