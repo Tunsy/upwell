@@ -439,6 +439,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114367151962443446, guid: d0722c9488982f7409412eb9e0d8fb5a,
+        type: 2}
+      propertyPath: PauseScreen
+      value: 
+      objectReference: {fileID: 1485758848}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0722c9488982f7409412eb9e0d8fb5a, type: 2}
   m_IsPrefabParent: 0
@@ -2064,7 +2069,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2189,7 +2194,6 @@ MonoBehaviour:
   powerupSlider: {fileID: 876582049}
   rb: {fileID: 0}
   sprite: {fileID: 699831843}
-  dashdistance: 4
 --- !u!61 &699831845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3854,6 +3858,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65f0963f1eec3744b974ea64bc9c4f65, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1485758848 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1098998329812418, guid: 15f3dc3e0337b9941aef08ce47415e47,
+    type: 2}
+  m_PrefabInternal: {fileID: 1640980084}
 --- !u!1001 &1525526418
 Prefab:
   m_ObjectHideFlags: 0

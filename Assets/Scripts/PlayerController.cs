@@ -30,8 +30,8 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer sprite;
     private PlayerAnimationController pc;
     private int defaultLayer;
-    public int dashdistance;
     private float dashtimer = 2;
+    private bool touchedground = true;
 
     void Start()
     {
@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        dashtimer -= 1;
         /*if (phasingUp())
         {
             Physics2D.IgnoreLayerCollision(defaultLayer, 8 );
@@ -59,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
 
         } */
-        if(isPhasable)
+        if (isPhasable)
         {
             //Physics2D.IgnoreLayerCollision(defaultLayer, 8, false);
             //gameObject.GetComponent<Collider2D>().isTrigger = false;
@@ -122,11 +121,19 @@ public class PlayerController : MonoBehaviour
 
         if (groundState.IsTouching())
         {
-            if (dashtimer == 0)
+            touchedground = true;
+            dashtimer -= Time.deltaTime;
+            if (dashtimer <= 0)
             {
                 remdash = true;
-                dashtimer = 5;
+                dashtimer += 2;
             }
+        }
+
+        if(!groundState.IsTouching() && touchedground == true)
+        {
+            remdash = true;
+            dashtimer = 2 + Time.deltaTime;
         }
 
         //Dash
@@ -136,13 +143,14 @@ public class PlayerController : MonoBehaviour
             {
                 if (sprite.flipX == false)
                 {
-                    transform.position = new Vector2(transform.position.x + dashdistance, transform.position.y);
+                    this.GetComponent<Rigidbody2D>().AddForce(transform.right * 1500);
                 }
                 else
                 {
-                    transform.position = new Vector2(transform.position.x - dashdistance, transform.position.y);
+                    this.GetComponent<Rigidbody2D>().AddForce(-transform.right * 1500);
                 }
                 remdash = false;
+                touchedground = false;
             }
         }
 
