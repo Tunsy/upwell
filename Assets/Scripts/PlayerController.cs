@@ -143,11 +143,11 @@ public class PlayerController : MonoBehaviour
             {
                 if (sprite.flipX == false)
                 {
-                    this.GetComponent<Rigidbody2D>().AddForce(transform.right * 1500);
+                    this.GetComponent<Rigidbody2D>().AddForce(transform.right * 750);
                 }
                 else
                 {
-                    this.GetComponent<Rigidbody2D>().AddForce(-transform.right * 1500);
+                    this.GetComponent<Rigidbody2D>().AddForce(-transform.right * 750);
                 }
                 remdash = false;
                 touchedground = false;
