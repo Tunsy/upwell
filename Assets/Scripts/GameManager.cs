@@ -269,6 +269,8 @@ public class GameManager : MonoBehaviour
 
     public void setHighScores()
     {
+        if (!ScoreManager.instance.isLevel(SceneManager.GetActiveScene().name))
+            return;
        
         Debug.Log(time);
         string timeKey = SceneManager.GetActiveScene().name + "time";

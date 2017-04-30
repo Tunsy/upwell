@@ -85,6 +85,8 @@ public class ScoreManager : MonoBehaviour {
 
     public void setStars(string level) //takes a specific level name, and sets the stars for level and total star count using PlayerPrefs
     {
+        if (!isLevel(level))
+            return;
         string stars = level + "stars";
         PlayerPrefs.SetInt(stars, 0);
         PlayerPrefs.SetInt("total_stars", PlayerPrefs.GetInt("total_stars") - PlayerPrefs.GetInt(stars));
