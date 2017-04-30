@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     private bool is_alive = DEFAULT_ALIVE_STATE;
     private float time_interval = STARTING_INTERVAL;
     private int coin_counter = 0;
-    private int end_level_score = 0;
+
     private Dictionary<string, int[]> level_awards = new Dictionary<string, int[]>();
     //change this to name of the scene you are running on currently, 
     public string mainscene = "gametest";
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     private static float STARTING_INTERVAL = 1;
     private static int TIME_SCORE_COEFFICIENT = 1;
     private static int PICKUP_SCORE_COEFFICIENT = 4;
-    private static string level_award_path = "level_award.txt";
+  
 
     // Use this for initialization
     void Awake()
@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
         is_alive = DEFAULT_ALIVE_STATE;
         time_interval = STARTING_INTERVAL;
         Time.timeScale = 1;
-        end_level_score = 0;
+       
     }
 
     public void GrabUI(Scene scene, LoadSceneMode mode)
@@ -178,12 +178,7 @@ public class GameManager : MonoBehaviour
     }
    public int getPlayerScore()
     {
-        return endLevelScore();
-    }
-
-    public int endLevelScore()
-    {
-        return (int)(coin_counter + TIME_SCORE_COEFFICIENT / time);
+        return coin_counter;
     }
 
    
@@ -272,14 +267,23 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(mainscene);
     }
 
-    public void setHighScore()
+    public void setHighScores()
     {
        
         Debug.Log(time);
-        Debug.Log(endLevelScore());
-        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, endLevelScore());
-        
+        string timeKey = SceneManager.GetActiveScene().name + "time";
+        if (time < PlayerPrefs.GetInt(timeKey)) 
+            PlayerPrefs.SetInt(timeKey, coin_counter);
+        string coinKey = SceneManager.GetActiveScene().name + "coin";
+        if (coin_counter > PlayerPrefs.GetInt(coinKey))
+            PlayerPrefs.SetInt(coinKey, coin_counter);
+            
 
         Debug.Log(time);
+    }
+
+    public void setStars()
+    {
+        ScoreManager.instance.setStars(SceneManager.GetActiveScene().name);
     }
 }
