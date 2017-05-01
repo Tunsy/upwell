@@ -27,7 +27,7 @@ public class LevelSelectManager : MonoBehaviour {
         {
             if (level_awards.ContainsKey(child.name) && ScoreManager.instance.meetsReq(child.name)){
                 child.gameObject.SetActive(true);
-                child.GetComponentInChildren<Text>().text = child.name + "high score " + PlayerPrefs.GetInt(child.name, 0);
+                child.GetComponentInChildren<Text>().text = child.name + "player stars: " + ScoreManager.instance.starsForLevel(child.name);
                 foreach (int score in level_awards[child.name])
                 {
                     child.GetComponentInChildren<Text>().text  += " " + score.ToString() + ", ";

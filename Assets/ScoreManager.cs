@@ -72,18 +72,21 @@ public class ScoreManager : MonoBehaviour {
             return PlayerPrefs.GetInt("total_stars", 0) >= stars;
         return PlayerPrefs.GetInt(unlock + "stars") > 0;
     }
-
+    
+    //gets the score needed to achieve a certain number of stars for the given level
     public int StarTimeScore(string level, int stars=1)
     {
         return level_awards[level][stars - 1];
     }
+
+   
 
     public int StarCoinScore(string level, int stars = 1)
     {
         return level_awards[level][stars + 2];
     }
 
-    public void setStars(string level) //takes a specific level name, and sets the stars for level and total star count using PlayerPrefs
+    public void setStars(string level) //takes a specific level name, and sets the stars for level and total star count using PlayerPrefs based on the time and coin high score of the game
     {
         if (!isLevel(level))
             return;
@@ -113,5 +116,15 @@ public class ScoreManager : MonoBehaviour {
     public int coinHighScore(string level)
     {
         return PlayerPrefs.GetInt(level + "coin",0);
+    }
+
+    public int starsForLevel(string level)
+    {
+        return PlayerPrefs.GetInt(level + "stars");
+    }
+
+    public int totalStars()
+    {
+        return PlayerPrefs.GetInt("total_stars");
     }
 }
