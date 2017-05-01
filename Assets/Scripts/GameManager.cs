@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     private bool is_alive = DEFAULT_ALIVE_STATE;
     private float time_interval = STARTING_INTERVAL;
     private int coin_counter = 0;
+    private bool can_dash = false;
 
     private Dictionary<string, int[]> level_awards = new Dictionary<string, int[]>();
     //change this to name of the scene you are running on currently, 
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
     private static float STARTING_INTERVAL = 1;
     private static int TIME_SCORE_COEFFICIENT = 1;
     private static int PICKUP_SCORE_COEFFICIENT = 4;
+    
   
 
     // Use this for initialization
@@ -85,7 +87,7 @@ public class GameManager : MonoBehaviour
 
     public void InitializeValues()
     {
-        
+        can_dash = false;
         time = START_TIME;
         score = 0;
         coin_counter = 0;
@@ -161,6 +163,17 @@ public class GameManager : MonoBehaviour
     {
         return current_level;
     }
+
+    public void giveDash()
+    {
+        can_dash = true;
+    }
+
+    public bool canDash()
+    {
+        return can_dash;
+    }
+    
 
     public bool gameRunning()
     {
