@@ -77,9 +77,9 @@ public class CameraFollow : MonoBehaviour {
             {
                 focusArea.Update(playerCollider.bounds);
 
-                Vector2 focusPosition = focusArea.center + Vector2.up * verticalOffset;
-                focusPosition.y = Mathf.SmoothDamp(this.transform.position.y, focusPosition.y, ref smoothVelocityY, verticalSmoothTime);
-                this.transform.position = (Vector3)focusPosition + Vector3.forward * -10;
+                float focusPositionY = focusArea.center.y + verticalOffset;
+                focusPositionY = Mathf.SmoothDamp(this.transform.position.y, focusPositionY, ref smoothVelocityY, verticalSmoothTime);
+                this.transform.position = new Vector3(transform.position.x, focusPositionY, -10);
             }
         }
     }
