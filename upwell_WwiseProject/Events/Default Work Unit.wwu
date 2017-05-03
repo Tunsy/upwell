@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{98359B2A-77C7-4FBE-B9AC-2A4DE047335B}" SchemaVersion="75">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{98359B2A-77C7-4FBE-B9AC-2A4DE047335B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{98359B2A-77C7-4FBE-B9AC-2A4DE047335B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="PlayerJump" ID="{3408DBD2-0896-4187-9516-76E66CDB2726}">
+					<ChildrenList>
+						<Action Name="Play" ID="{0699EEB0-F564-41E7-8019-366830A011BE}" ShortID="228170121" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{0E711FFF-C413-4B74-99A6-5D2214900019}" Global="false">
+									<ObjectRef Name="Jump" ID="{23D4D42C-EDF6-486E-A745-103C105332D2}" WorkUnitID="{6A4252F4-C43F-4018-9E6B-A3FB0EED5D75}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

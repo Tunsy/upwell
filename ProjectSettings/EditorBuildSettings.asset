@@ -7,19 +7,31 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
+    guid: 6c9ca94725934634ca23bf4b58a2ddfb
   - enabled: 0
     path: Assets/Scenes/mainscene.unity
+    guid: fa0a8fa6b9cfe324cb27c62b64f76a6d
   - enabled: 0
     path: Assets/Scenes/PauseMenu.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/gametest.unity
+    guid: 826c27067b1a5f14196bbba1490daf92
   - enabled: 0
     path: Assets/Scenes/playtesting.unity
+    guid: 23deeaa9fcaf68549a9ed52ab468f5f5
   - enabled: 0
     path: Assets/Scenes/level1.unity
+    guid: c7fda912409ab37488ceb751221b8650
   - enabled: 1
     path: Assets/Scenes/testlevel1.unity
+    guid: 808d73666abfbed459a60740174efa87
   - enabled: 1
     path: Assets/Scenes/testlevel2.unity
+    guid: 543d9582f3023e84ba1eee72a15455e2
   - enabled: 1
     path: Assets/Scenes/testlevel3.unity
+    guid: 9d359717e14587645b2ef14013e4c971
+  - enabled: 1
+    path: Assets/Scenes/stage_select.unity
+    guid: c13f2d815eec2ff44a4d1831eb0105e0
