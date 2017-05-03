@@ -9,19 +9,20 @@ public class BestTimeScript : MonoBehaviour {
 
     private int time;
     public Text text;
-    public GameObject manager;
+    public ScoreManager manager;
     string level;
 
     void Start()
     {
         text = this.GetComponent<Text>();
         Scene scene = SceneManager.GetActiveScene();
+        manager = FindObjectOfType<ScoreManager>();
         level = scene.name;
     }
 
     void Update()
     {
-        time = manager.GetComponent<ScoreManager>().timeHighScore(level);
+        time = manager.timeHighScore(level);
         text.text = "Best Time: " + time;
     }
 }

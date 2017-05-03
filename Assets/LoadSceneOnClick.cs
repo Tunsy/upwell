@@ -27,6 +27,12 @@ public class LoadSceneOnClick : MonoBehaviour {
     public void LoadMainLevel()
     {
         GameManager.instance.InitializeValues();
-        SceneManager.LoadScene("testlevel1");
+        SceneManager.LoadScene("Level 1-1");
+    }
+
+    public void LoadLevelSelect()
+    {
+        GameManager.instance.InitializeValues();
+        SceneManager.LoadScene("stage_select");
     }
 }

@@ -900,7 +900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 0}
   gameActiveScreen: {fileID: 1383900545686494}
-  LvlSummary: {fileID: 0}
+  LvlSummary: {fileID: 1339602132332086}
 --- !u!114 &114124614662608634
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,6 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	4008126242	PlayerJump			\Default Work Unit\PlayerJump	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	1052998157	Jump	C:\Users\Riley\Documents\My Games\upwell\upwell_WwiseProject\.cache\Mac\SFX\JumpSound1_6D910876.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump		26810
-

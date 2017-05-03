@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     //}
 
     //member variables
-    private float time = START_TIME;
+    public float time = START_TIME;
     private float score = 1;
     private int coin = 0;
     private int lives = DEFAULT_LIVES;
@@ -114,6 +114,7 @@ public class GameManager : MonoBehaviour
        //Debug.Log(SceneManager.GetActiveScene().name);
        if(gameRunning())
         {
+
             if (!isAlive())
             {
                 
@@ -179,7 +180,7 @@ public class GameManager : MonoBehaviour
     {
         //return SceneManager.GetActiveScene().name == mainscene;
         //gameActiveScreen.SetActive(true);
-        if (SceneManager.GetActiveScene().name.Contains("level"))
+        if (SceneManager.GetActiveScene().name.Contains("Level"))
         {
             uiManager.ShowGameActiveScreen(true);
             return true;
