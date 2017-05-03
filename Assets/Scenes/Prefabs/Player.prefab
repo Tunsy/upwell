@@ -45,8 +45,9 @@ GameObject:
   - component: {fileID: 20595843311265278}
   - component: {fileID: 92122133294694068}
   - component: {fileID: 124104271742166328}
-  - component: {fileID: 81509901713239844}
   - component: {fileID: 114676072576145540}
+  - component: {fileID: 114469618977095518}
+  - component: {fileID: 114658001339170228}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -61,7 +62,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1120387558888490}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.14431572, y: -8.883754, z: 0}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4226140904044612}
@@ -75,7 +76,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1211228227092208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.21358657, y: -1.6525724, z: -12.328125}
+  m_LocalPosition: {x: 0.33, y: 2.25, z: -12.328125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4130401333181978}
@@ -149,13 +150,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1.54}
---- !u!81 &81509901713239844
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1211228227092208}
-  m_Enabled: 1
 --- !u!82 &82685394522011312
 AudioSource:
   m_ObjectHideFlags: 1
@@ -274,7 +268,7 @@ MonoBehaviour:
   speed: 15
   accel: 5
   airAccel: 2
-  jump: 13
+  jump: 14
   shortJump: 5
   isKnockedback: 0
   wallClingTimer: 0
@@ -283,8 +277,37 @@ MonoBehaviour:
   laserJump: {fileID: 8300000, guid: 4ed13e5e28df295499321024ed2de30a, type: 3}
   hurtSound: {fileID: 8300000, guid: aca00c3309f08f441a5d0eee93d2c76d, type: 3}
   audio: {fileID: 0}
+  powerupSlider: {fileID: 0}
   rb: {fileID: 0}
   sprite: {fileID: 212148601463133800}
+--- !u!114 &114469618977095518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211228227092208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b86db365b2f4f469b182eaf77bcbdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 114189780718156840}
+  focusAreaSize: {x: 50, y: 12.5}
+  verticalOffset: 1
+  verticalSmoothTime: 0.2
+  showFocusArea: 0
+--- !u!114 &114658001339170228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211228227092208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28d17561ae9e08b4f979abebe997aa34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listenerId: 0
 --- !u!114 &114676072576145540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -296,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94901377c93adb642abdd591d925bdac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuCanvas: {fileID: 0}
+  PauseScreen: {fileID: 0}
 --- !u!114 &114786184077471292
 MonoBehaviour:
   m_ObjectHideFlags: 1
