@@ -23,4 +23,5 @@ public class UIManager : MonoBehaviour {
         Time.timeScale = 0;
         LvlSummary.SetActive(active);
     }
+
 }

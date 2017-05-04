@@ -5,8 +5,8 @@ using UnityEngine;
 public class breakableCounter : MonoBehaviour {
     public int durability;
     public GameObject[] activatedPlatforms;
+    public GameObject[] deactivatedPlatforms;
     public AudioClip breakSound;
-    public bool spawnsObject;
 
     private void Start()
     {
@@ -30,20 +30,14 @@ public class breakableCounter : MonoBehaviour {
 
     private void ActivateEvent()
     {
-        if (spawnsObject)
-        {
             for (int i = 0; i < activatedPlatforms.Length; i++)
             {
                 activatedPlatforms[i].SetActive(true); ;
             }
-        }
-        else
-        {
-            for (int i = 0; i < activatedPlatforms.Length; i++)
+            for (int i = 0; i < deactivatedPlatforms.Length; i++)
             {
-                Destroy(activatedPlatforms[i]);
+                deactivatedPlatforms[i].SetActive(false);
             }
-        }
 
     }
    
