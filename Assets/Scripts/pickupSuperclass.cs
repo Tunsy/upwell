@@ -26,6 +26,7 @@ public abstract class pickupSuperclass : MonoBehaviour {
 
             collisionSettings();
         }
+        
 
         Destroy(gameObject);
     }
@@ -34,7 +35,7 @@ public abstract class pickupSuperclass : MonoBehaviour {
     
 
      abstract public void collisionSettings();
-   
+    
 
     
 }
