@@ -14,6 +14,7 @@ public class NextLevelDoor : MonoBehaviour {
             Time.timeScale = 0;
             GameManager.instance.setHighScores();
             GameManager.instance.setStars();
+            Debug.Log(ScoreManager.instance.timeHighScore("Level 1-1"));
             LevelSummaryUI.SetActive(true);
            
         }

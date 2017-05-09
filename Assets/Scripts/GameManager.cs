@@ -283,13 +283,12 @@ public class GameManager : MonoBehaviour
 
     public void setHighScores()
     {
-        if (!ScoreManager.instance.isLevel(SceneManager.GetActiveScene().name))
-            return;
+        
        
         Debug.Log(time);
         string timeKey = SceneManager.GetActiveScene().name + "time";
         if (time < PlayerPrefs.GetInt(timeKey)) 
-            PlayerPrefs.SetInt(timeKey, coin_counter);
+            PlayerPrefs.SetInt(timeKey, (int) time);
         string coinKey = SceneManager.GetActiveScene().name + "coin";
         if (coin_counter > PlayerPrefs.GetInt(coinKey))
             PlayerPrefs.SetInt(coinKey, coin_counter);

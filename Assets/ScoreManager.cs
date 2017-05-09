@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour {
     private Dictionary<string, string> levels_to_unlock = new Dictionary<string, string>();
 
     public static ScoreManager instance = new ScoreManager();
-
+    public const int MAX_TIME = 999999999;
 
     void Awake()
     {
@@ -26,6 +26,7 @@ public class ScoreManager : MonoBehaviour {
 
         DontDestroyOnLoad(this.gameObject);
         read_scores();
+       //scoreReset();
         
     }
 
@@ -38,6 +39,19 @@ public class ScoreManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void scoreReset()
+    {
+        PlayerPrefs.SetInt("total_stars", 0);
+        
+        string[] all = { "Level 1-1", "Level 1-2", "Level 1-3" };
+        foreach(string name in all)
+        {
+            PlayerPrefs.SetInt(name + "time", MAX_TIME);
+            PlayerPrefs.SetInt(name + "coin", 0);
+            PlayerPrefs.SetInt(name + "stars", 0);
+        }
+    }
 
    public void read_scores()
     {
@@ -91,12 +105,13 @@ public class ScoreManager : MonoBehaviour {
         if (!isLevel(level))
             return;
         string stars = level + "stars";
-        PlayerPrefs.SetInt(stars, 0);
+    
         PlayerPrefs.SetInt("total_stars", PlayerPrefs.GetInt("total_stars") - PlayerPrefs.GetInt(stars));
+        PlayerPrefs.SetInt(stars, 0);
         int t;
         int c; ;
-        for (t = 0; t < 3 && level_awards[level][t] <= PlayerPrefs.GetInt(level + "time") ; t++) ;
-        for (c = 0; c < 3 && level_awards[level][c + 3] >=  PlayerPrefs.GetInt(level + "coin") ; c++) ;
+        for (t = 0; t < 3 && level_awards[level][t] >= timeHighScore(level); t++) ;
+        for (c = 0; c < 3 && level_awards[level][c + 3] <=  coinHighScore(level); c++) ;
         PlayerPrefs.SetInt(stars, Mathf.Max(t, c));
         PlayerPrefs.SetInt("total_stars", PlayerPrefs.GetInt("total_stars") + PlayerPrefs.GetInt(stars));
     }
@@ -109,7 +124,7 @@ public class ScoreManager : MonoBehaviour {
     //returns the best time and coin score for a specific level name
     public int timeHighScore(string level)
     {
-        return PlayerPrefs.GetInt(level + "time",0);
+        return PlayerPrefs.GetInt(level + "time",MAX_TIME);
 
     }
 

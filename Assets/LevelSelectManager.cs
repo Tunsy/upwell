@@ -30,6 +30,8 @@ public class LevelSelectManager : MonoBehaviour {
                 child.GetComponentInChildren<Text>().text = child.name + "player stars: " + ScoreManager.instance.starsForLevel(child.name);
                 foreach (int score in level_awards[child.name])
                 {
+                    Debug.Log(ScoreManager.instance.timeHighScore(child.name));
+                    Debug.Log(ScoreManager.instance.coinHighScore(child.name));
                     child.GetComponentInChildren<Text>().text  += " " + score.ToString() + ", ";
                 }
             }
