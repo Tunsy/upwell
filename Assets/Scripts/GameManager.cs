@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour
     
     public float timeElapsed()
     {
-        return this.time;
+        return time;
     }
 
    

@@ -8,6 +8,7 @@ public class LoadSceneOnClick : MonoBehaviour {
 	
 	public void LoadByIndex (int sceneIndex)
     {
+        GameManager.instance.InitializeValues();
         SceneManager.LoadScene(sceneIndex);
     }
 
