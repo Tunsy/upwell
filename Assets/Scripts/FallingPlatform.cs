@@ -15,7 +15,7 @@ public class FallingPlatform : MonoBehaviour {
     {
         while (fallTime > 0)
         {
-            rb.position = new Vector2(rb.position.x + (Random.insideUnitCircle.x * 0.05f), rb.position.y + (Random.insideUnitCircle.x * 0.06f));
+            rb.position = new Vector2(rb.position.x + (Random.insideUnitCircle.x * 0.04f), rb.position.y + (Random.insideUnitCircle.x * 0.04f));
             yield return new WaitForSeconds(0.0001f);
             fallTime -= Time.deltaTime;
         }
