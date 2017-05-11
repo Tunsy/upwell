@@ -212,6 +212,11 @@ public class PlayerController : MonoBehaviour
         isInverted = setting;
     }
 
+    public bool CheckInvert()
+    {
+        return isInverted;
+    }
+
     public void Knockback(DealDamageToPlayer enemy)
     {
         if (isKnockedback == false && !phasingUp())

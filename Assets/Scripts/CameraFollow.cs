@@ -14,6 +14,19 @@ public class CameraFollow : MonoBehaviour {
 
     float smoothVelocityY;
 
+    public void FixedUpdate()
+    {
+        if (player.GetComponent<PlayerController>().CheckInvert())
+        {
+            //transform.eulerAngles = new Vector3(10, yRotation, 0);
+            this.transform.rotation = new Quaternion(0, 0, 180, 0);
+        }
+        else
+        {
+            this.transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
+    }
+
     struct FocusArea
     {
         public Vector2 center;

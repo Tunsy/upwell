@@ -31,7 +31,6 @@ public class Teleport : MonoBehaviour {
             }
             if (onEnterInvert)
             {
-                playerSprite.flipY = true;
                 player.GetComponent<PlayerController>().SetInvert(true);
             }
         }
@@ -44,7 +43,6 @@ public class Teleport : MonoBehaviour {
             
             if (!onEnterInvert)
             {
-                playerSprite.flipY = false;
                 player.GetComponent<PlayerController>().SetInvert(false);
             }
         }
