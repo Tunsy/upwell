@@ -14,11 +14,13 @@ public class PlayerController : MonoBehaviour
     private bool isFlying = false;
     private bool isPhasable = false;
     private bool remdash = true;
+    private bool shootable = true;
     private float verticalFlySpeed = 5;
     private float powerUpDuration;
     public bool isKnockedback;
     public float wallClingTimer;
     public float wallClingTime;
+    public GameObject bullit;
 
     public AudioClip jumpSound;
     public AudioClip laserJump;
@@ -31,7 +33,9 @@ public class PlayerController : MonoBehaviour
     private PlayerAnimationController pc;
     private int defaultLayer;
     private float dashtimer = 2;
+    private float shoottimer = 3;
     private bool touchedground = true;
+    private Transform spawnPoint;
 
     void Start()
     {
@@ -98,6 +102,32 @@ public class PlayerController : MonoBehaviour
             }
             else
                 input.x = 0;
+        }
+
+        //Shooting
+        spawnPoint = this.transform;
+        shoottimer -= Time.deltaTime;
+        if (shoottimer <= 0)
+        {
+            shootable = true;
+            shoottimer += 3;
+        }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            if(shootable == true)
+            {
+                shootable = false;
+                GameObject bullet = (GameObject)Instantiate(bullit, spawnPoint.position, transform.rotation);
+                if (sprite.flipX == false)
+                {
+                    bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(20,0);
+                }
+                else
+                {
+                    bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-20,0);
+                }
+            }
         }
 
         // HandleSprint()

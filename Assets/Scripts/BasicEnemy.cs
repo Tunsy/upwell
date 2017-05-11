@@ -16,6 +16,7 @@ public class BasicEnemy : MonoBehaviour {
     private Rigidbody2D rb;
     private Collider2D collider;
     public AudioClip deathSound;
+    public int Health = 1;
 
     void Start()
     {
@@ -44,6 +45,15 @@ public class BasicEnemy : MonoBehaviour {
             {
                 collision.gameObject.GetComponent<PlayerController>().Knockback(GetComponent<DealDamageToPlayer>());
             }
+        }
+    }
+    
+    public void Hit()
+    {
+        Health -= 1;
+        if(Health <= 0)
+        {
+            Death();
         }
     }
 

@@ -7,6 +7,7 @@ public class TimeScript : MonoBehaviour {
 
     public int score;
     public Text text;
+    public int x;
 
     void Start()
     {
@@ -16,6 +17,13 @@ public class TimeScript : MonoBehaviour {
     void Update()
     {
         score = (int) GameManager.instance.timeElapsed();
-        text.text = "" + score;
+        if (x == 1)
+        {
+            text.text = "" + score;
+        }
+        else
+        {
+            text.text = "Time:" + score;
+        }
     }
 }
