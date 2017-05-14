@@ -104,16 +104,18 @@ public class ScoreManager : MonoBehaviour {
     {
         if (!isLevel(level))
             return;
-        string stars = level + "stars";
+        string time_stars = level + "Timestars";
+        string coin_stars = level + "Coinstars";
     
-        PlayerPrefs.SetInt("total_stars", PlayerPrefs.GetInt("total_stars") - PlayerPrefs.GetInt(stars));
-        PlayerPrefs.SetInt(stars, 0);
+        PlayerPrefs.SetInt("total_stars", PlayerPrefs.GetInt("total_stars") - starsForLevel(level));
+        
         int t;
         int c; ;
         for (t = 0; t < 3 && level_awards[level][t] >= timeHighScore(level); t++) ;
         for (c = 0; c < 3 && level_awards[level][c + 3] <=  coinHighScore(level); c++) ;
-        PlayerPrefs.SetInt(stars, Mathf.Max(t, c));
-        PlayerPrefs.SetInt("total_stars", PlayerPrefs.GetInt("total_stars") + PlayerPrefs.GetInt(stars));
+        PlayerPrefs.SetInt(time_stars, t);
+        PlayerPrefs.SetInt(coin_stars, c);
+        PlayerPrefs.SetInt("total_stars", PlayerPrefs.GetInt("total_stars") + starsForLevel(level));
     }
 
     public bool isLevel(string level)
@@ -133,9 +135,19 @@ public class ScoreManager : MonoBehaviour {
         return PlayerPrefs.GetInt(level + "coin",0);
     }
 
+    public int coinStars(string level)
+    {
+        return PlayerPrefs.GetInt(level + "Coinstars");
+    }
+
+    public int timeStars(string level)
+    {
+        return PlayerPrefs.GetInt(level + "Timestars");
+    }
+
     public int starsForLevel(string level)
     {
-        return PlayerPrefs.GetInt(level + "stars");
+        return timeStars(level) + coinStars(level);
     }
 
     public int totalStars()

@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     private bool is_alive = DEFAULT_ALIVE_STATE;
     private float time_interval = STARTING_INTERVAL;
     private int coin_counter = 0;
-    private bool can_dash = false;
+    
 
     private Dictionary<string, int[]> level_awards = new Dictionary<string, int[]>();
     //change this to name of the scene you are running on currently, 
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
 
     public void InitializeValues()
     {
-        can_dash = false;
+     
         time = START_TIME;
         score = 0;
         coin_counter = 0;
@@ -167,12 +167,17 @@ public class GameManager : MonoBehaviour
 
     public void giveDash()
     {
-        can_dash = true;
+        PlayerPrefs.SetInt("dash", 1);
     }
 
     public bool canDash()
     {
-        return can_dash;
+        return PlayerPrefs.GetInt("dash") == 1;
+    }
+
+    public void removeDash()
+    {
+         PlayerPrefs.SetInt("dash", 0);
     }
     
 
