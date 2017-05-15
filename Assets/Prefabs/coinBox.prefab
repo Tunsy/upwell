@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4794850453435586}
   - component: {fileID: 212235880610197858}
-  - component: {fileID: 114733425666482522}
   - component: {fileID: 61531318321657022}
+  - component: {fileID: 114566231334425606}
   m_Layer: 0
   m_Name: coinBox
   m_TagString: Untagged
@@ -67,7 +67,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0666667, y: 1.0666667}
   m_EdgeRadius: 0
---- !u!114 &114733425666482522
+--- !u!114 &114566231334425606
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -75,12 +75,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1104498221400530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b09ac03a6dffca49bc1ef3fc8d6c08a, type: 3}
+  m_Script: {fileID: 11500000, guid: 94f12c165d9c6884ba2aafc33da6a0ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 250
-  coins: 3
-  coin: {fileID: 1307252281707590, guid: 270737411dfd2384c85b7b97353f0d8e, type: 2}
+  distance: 1000
+  amount: 3
+  item: {fileID: 1307252281707590, guid: 270737411dfd2384c85b7b97353f0d8e, type: 2}
 --- !u!212 &212235880610197858
 SpriteRenderer:
   m_ObjectHideFlags: 1

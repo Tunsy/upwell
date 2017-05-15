@@ -16,7 +16,7 @@ public class KinematicTrigger : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 8 || collision.gameObject.layer == 9)
+        if (collision.gameObject.layer == 8 || collision.gameObject.layer == 9 )
         {
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
             gameObject.GetComponent<CircleCollider2D>().isTrigger = true;
