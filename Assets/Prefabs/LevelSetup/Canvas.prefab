@@ -482,9 +482,7 @@ GameObject:
   - component: {fileID: 114434410193492894}
   - component: {fileID: 114929844603157570}
   - component: {fileID: 114053435631724588}
-  - component: {fileID: 114609310761719142}
   - component: {fileID: 114091445301965396}
-  - component: {fileID: 114423099208696746}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -991,7 +989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 1339602132332086}
   gameActiveScreen: {fileID: 1383900545686494}
-  LvlSummary: {fileID: 0}
+  LvlSummary: {fileID: 1339602132332086}
 --- !u!114 &114138375329819786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1483,20 +1481,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: -LVL Complete-
---- !u!114 &114423099208696746
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1513103840597286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a856ebd618ec1b4ab11971b9deb86a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOverScreen: {fileID: 1339602132332086}
-  gameActiveScreen: {fileID: 1383900545686494}
-  LvlSummary: {fileID: 0}
 --- !u!114 &114434410193492894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1640,6 +1624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 114804685158695066}
   manager: {fileID: 1513103840597286}
+  level: 
 --- !u!114 &114571642930787636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1654,17 +1639,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
---- !u!114 &114609310761719142
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1513103840597286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15d7c99968a04c44814bdeafbabe80f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114619831487612188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2350,6 +2324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 114676645847137182}
   manager: {fileID: 1513103840597286}
+  level: 
 --- !u!222 &222000974220117486
 CanvasRenderer:
   m_ObjectHideFlags: 1
