@@ -6,10 +6,10 @@ public class Bullit : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D hit)
     {
-        if(hit.gameObject.tag == "Enemy")
+        if(hit.gameObject.tag == "Enemy" || hit.gameObject.tag == "coinBox")
         {
             hit.gameObject.GetComponent<BasicEnemy>().Hit();
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
