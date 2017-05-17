@@ -9,20 +9,6 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance = new GameManager();
 
-    //copied this thing from forum
-    //public static GameManager Instance
-    //{
-    //    get
-    //    {
-    //        if (instance == null)
-    //        {
-    //            instance = new GameManager();
-    //        }
-
-    //        return instance;
-    //    }
-    //}
-
     //member variables
     public float time = START_TIME;
     private float score = 1;
@@ -34,15 +20,13 @@ public class GameManager : MonoBehaviour
     private bool is_alive = DEFAULT_ALIVE_STATE;
     private float time_interval = STARTING_INTERVAL;
     private int coin_counter = 0;
-    
+    private int deathCount;
+
 
     private Dictionary<string, int[]> level_awards = new Dictionary<string, int[]>();
     //change this to name of the scene you are running on currently, 
     public string mainscene = "gametest";
     public GameObject canvas;
-    //public GameObject gameOverScreen;
-    //public GameObject pauseScreen;
-    //public GameObject gameActiveScreen;
 
 
     //static variables
@@ -53,8 +37,8 @@ public class GameManager : MonoBehaviour
     private static float STARTING_INTERVAL = 1;
     private static int TIME_SCORE_COEFFICIENT = 1;
     private static int PICKUP_SCORE_COEFFICIENT = 4;
-    
-  
+
+
 
     // Use this for initialization
     void Awake()
@@ -62,32 +46,32 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            
+
         }
         else if (instance != this)
         {
             Destroy(this.gameObject);
         }
-        
+
         DontDestroyOnLoad(this.gameObject);
 
 
     }
 
- 
+
     private void Start()
     {
         //canvas = GameObject.Find("Canvas");
         //GrabUI();
 
-       
+
         uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
         SceneManager.sceneLoaded += GrabUI;
     }
 
     public void InitializeValues()
     {
-     
+    
         time = START_TIME;
         score = 0;
         coin_counter = 0;
@@ -95,71 +79,56 @@ public class GameManager : MonoBehaviour
         is_alive = DEFAULT_ALIVE_STATE;
         time_interval = STARTING_INTERVAL;
         Time.timeScale = 1;
-       
     }
 
     public void GrabUI(Scene scene, LoadSceneMode mode)
     {
         Time.timeScale = 1;
         uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
-        //gameOverScreen = GameObject.Find("GameOverScreen");
-        //gameActiveScreen = GameObject.Find("Gamescreen");
-        //gameOverScreen.SetActive(false);
-        //gameActiveScreen.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-       //Debug.Log(SceneManager.GetActiveScene().name);
-       if(gameRunning())
-        {
-
-            if (!isAlive())
-            {
-                
-                endGame();
-                Debug.Log("Checking");
-            }
-            else
-            {
-               // score += Time.deltaTime * TIME_SCORE_COEFFICIENT;
-                update_time();
-               /* int lvl = updateCurrentLevel();
-                if(lvl != current_level)
-                {
-                    current_level = lvl;
-                    
-                }*/
-            }
-        }
-
+        UpdateTime();
+        CheckAlive();
     }
 
-
-    
-
+    private void CheckAlive()
+    {
+        if (gameRunning())
+        {
+            if (!isAlive())
+            {
+                uiManager.ShowRetryScreen();
+                if (Input.anyKeyDown)
+                {
+                    GameManager.instance.InitializeValues();
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name); SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
+            }
+        }
+    }
 
     //return methods
-
     public bool isAlive()
     {
         return is_alive;
     }
-    
+
     public float timeElapsed()
     {
         return time;
     }
 
-   
-     public void updateCurrentLevel()
+
+    public void updateCurrentLevel()
     {
         //int  level =  (int)Mathf.Log((time + 1) * 10);
         Debug.Log("level");
         current_level += 1;
     }
-    
+
     public int getLevel()
     {
         return current_level;
@@ -177,9 +146,9 @@ public class GameManager : MonoBehaviour
 
     public void removeDash()
     {
-         PlayerPrefs.SetInt("dash", 0);
+        PlayerPrefs.SetInt("dash", 0);
     }
-    
+
 
     public bool gameRunning()
     {
@@ -195,12 +164,12 @@ public class GameManager : MonoBehaviour
             return false;
         }
     }
-   public int getPlayerScore()
+    public int getPlayerScore()
     {
         return coin_counter;
     }
 
-   
+
 
     public void updatePickupScore(int points)
     {
@@ -214,10 +183,10 @@ public class GameManager : MonoBehaviour
 
         coin_counter += points * PICKUP_SCORE_COEFFICIENT;
         //delete later
-        
+
     }
 
-   
+
     public int getcoinamount()
     {
         return coin_counter;
@@ -231,54 +200,42 @@ public class GameManager : MonoBehaviour
     //void methods and others, to be called from other scripts
     public void endGame()
     {
-        Debug.Log("game is over");
-
-        //resetTimer();
-        
         GameOverScreen();
-        
-        
-        // SceneManager.LoadScene("TitleScreen");
     }
-    public void update_time()
+
+    public void UpdateTime()
     {
-        if (isAlive() )
+        if (isAlive() && gameRunning())
         {
             time += Time.deltaTime;
         }
     }
 
-   /* public void updateLevel()
-    {
-        current_level += 1;
-        Debug.Log("starting level" + current_level.ToString());
-    }
-
-*/
     public void resetTimer()
     {
         time = 0;
-    } 
-/*
-    public void setNextInterval()
-    {
-        time_interval *= 2;
-    } */
+    }
 
     public void killPlayer()
     {
-        
-        
+        deathCount++;
         is_alive = false;
+    }
+
+    public float GetDeathCount()
+    {
+        return deathCount;
+    }
+
+    public void SetDeathCount(int death)
+    {
+        deathCount = death;
     }
 
     public void GameOverScreen()
     {
-       
         uiManager.ShowGameOverScreen(true);
         uiManager.ShowGameActiveScreen(false);
-        //gameOverScreen.SetActive(true);
-        //gameActiveScreen.SetActive(false);
     }
 
     public void resumeMain()
@@ -288,16 +245,16 @@ public class GameManager : MonoBehaviour
 
     public void setHighScores()
     {
-        
-       
+
+
         Debug.Log(time);
         string timeKey = SceneManager.GetActiveScene().name + "time";
-        if (time < PlayerPrefs.GetInt(timeKey)) 
-            PlayerPrefs.SetInt(timeKey, (int) time);
+        if (time < PlayerPrefs.GetInt(timeKey))
+            PlayerPrefs.SetInt(timeKey, (int)time);
         string coinKey = SceneManager.GetActiveScene().name + "coin";
         if (coin_counter > PlayerPrefs.GetInt(coinKey))
             PlayerPrefs.SetInt(coinKey, coin_counter);
-            
+
 
         Debug.Log(time);
     }

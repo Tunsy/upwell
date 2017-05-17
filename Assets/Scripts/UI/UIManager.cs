@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
-    public GameObject gameOverScreen, gameActiveScreen, LvlSummary;
+    public GameObject gameOverScreen, gameActiveScreen, LvlSummary, retry;
 
     public void ShowGameOverScreen(bool active=true)
     {
@@ -19,9 +19,13 @@ public class UIManager : MonoBehaviour {
 
     public void ShowLVLSummary (bool active = true)
     {
-        
         Time.timeScale = 0;
         LvlSummary.SetActive(active);
+    }
+
+    public void ShowRetryScreen(bool active = true)
+    {
+        retry.SetActive(active);
     }
 
 }

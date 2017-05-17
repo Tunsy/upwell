@@ -16,14 +16,17 @@ public class CameraFollow : MonoBehaviour {
 
     public void FixedUpdate()
     {
-        if (player.GetComponent<PlayerController>().CheckInvert())
+        if (GameManager.instance.isAlive())
         {
-            //transform.eulerAngles = new Vector3(10, yRotation, 0);
-            this.transform.rotation = new Quaternion(0, 0, 180, 0);
-        }
-        else
-        {
-            this.transform.rotation = new Quaternion(0, 0, 0, 0);
+            if (player.GetComponent<PlayerController>().CheckInvert())
+            {
+                //transform.eulerAngles = new Vector3(10, yRotation, 0);
+                this.transform.rotation = new Quaternion(0, 0, 180, 0);
+            }
+            else
+            {
+                this.transform.rotation = new Quaternion(0, 0, 0, 0);
+            }
         }
     }
 

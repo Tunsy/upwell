@@ -1567,7 +1567,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4130401333181978, guid: e72c429bc9adeb5429b124ddac1be4c3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.2
+      value: 3.6
       objectReference: {fileID: 0}
     - target: {fileID: 4130401333181978, guid: e72c429bc9adeb5429b124ddac1be4c3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1595,9 +1595,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114189780718156840, guid: e72c429bc9adeb5429b124ddac1be4c3,
         type: 2}
-      propertyPath: hurtSound
+      propertyPath: dashSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114189780718156840, guid: e72c429bc9adeb5429b124ddac1be4c3,
+        type: 2}
+      propertyPath: dashDistance
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114189780718156840, guid: e72c429bc9adeb5429b124ddac1be4c3,
+        type: 2}
+      propertyPath: dashSound
       value: 
-      objectReference: {fileID: 8300000, guid: 788508ee34807d64cb5c247814f10dd7, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e72c429bc9adeb5429b124ddac1be4c3, type: 2}
   m_IsPrefabParent: 0
@@ -1754,7 +1764,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!1 &1219533210 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1339602132332086, guid: 15f3dc3e0337b9941aef08ce47415e47,
+  m_PrefabParentObject: {fileID: 1116217975073544, guid: 15f3dc3e0337b9941aef08ce47415e47,
     type: 2}
   m_PrefabInternal: {fileID: 1219533209}
 --- !u!1001 &1233693807
@@ -2434,6 +2444,15 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 1289772489317422, guid: e63d86fe59bd5f149941e2e32debd9df, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114085622519885228, guid: e63d86fe59bd5f149941e2e32debd9df,
+        type: 2}
+      propertyPath: destroySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2496ac9f54a0895428d58f8b7d6945c7, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e63d86fe59bd5f149941e2e32debd9df, type: 2}
   m_IsPrefabParent: 0
@@ -3221,7 +3240,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 077a796b87e89bf409c4b6a20a4f7bf1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0

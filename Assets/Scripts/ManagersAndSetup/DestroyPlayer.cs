@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyPlayer : MonoBehaviour {
     private Collider2D hitbox;
+    public AudioClip destroySound;
 
     void Start()
     {
@@ -14,6 +15,11 @@ public class DestroyPlayer : MonoBehaviour {
     {
         if(other.gameObject.tag == "Player")
         {
+            if(destroySound != null)
+            {
+                AudioSource.PlayClipAtPoint(destroySound, Camera.main.transform.position);
+            }
+
             Destroy(other.gameObject);
             GameManager.instance.killPlayer();
         }
