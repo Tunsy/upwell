@@ -54,7 +54,7 @@ public class WallGenerator : MonoBehaviour
         float roomHeight = roomCol.size.y;
         float roomCenter = farthestRoomEndY + roomHeight * 0.5f;
         GameObject roomInstance = (GameObject)Instantiate(room);
-        roomInstance.transform.position = new Vector3(-2.4f, roomCenter, 0);
+        roomInstance.transform.position = new Vector3(transform.position.x, roomCenter, 0);
         currentRooms.Add(roomInstance);
     }
 

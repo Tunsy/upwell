@@ -21,7 +21,7 @@ public class BestTimeScript : MonoBehaviour {
 
     void Update()
     {
-        time = manager.GetComponent<ScoreManager>().timeHighScore(level);
+        time = ScoreManager.instance.timeHighScore(level);
         text.text = "Best: " + time;
     }
 }

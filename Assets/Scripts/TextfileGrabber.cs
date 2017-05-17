@@ -12,8 +12,9 @@ public class TextfileGrabber : MonoBehaviour
     public int x;
     int Counter = 0;
     private float timer = 1;
+    private int n = 100;
     public GameObject image;
-    private bool y = true;
+    public GameObject Conversation1;
     private bool z = true;
 
     void Start()
@@ -31,21 +32,24 @@ public class TextfileGrabber : MonoBehaviour
             text.text = dataLines[x].Substring(0, Counter);
             Counter += 1;
         }
-            else
-        {
-            y = false;
-        }
+    }
 
-        if (y == false)
+    public void function1(int var)
+    {
+        if(n > var)
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                image.SetActive(z);
-                z = !z;
-                timer += 1;
-            }   
-        }  
+            n = var;
+        }
+        if(n > 0)
+        {
+            x += 1;
+            Counter = 0;
+            n -= 1;
+        }
+        else
+        {
+            Conversation1.SetActive(false);
+        }
     }
 }
 

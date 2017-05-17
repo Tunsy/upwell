@@ -2196,11 +2196,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4282125579148626, guid: b76e88232242366499ac0796bbb1b95a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -14.632371
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4282125579148626, guid: b76e88232242366499ac0796bbb1b95a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 41.352493
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4282125579148626, guid: b76e88232242366499ac0796bbb1b95a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3402,11 +3402,6 @@ Prefab:
       propertyPath: m_Name
       value: BasicPickup (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 114363339514418298, guid: 65f0963f1eec3744b974ea64bc9c4f65,
-        type: 2}
-      propertyPath: pickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: cd5c3065e824ad7478c363133be20cf7, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65f0963f1eec3744b974ea64bc9c4f65, type: 2}
   m_IsPrefabParent: 0

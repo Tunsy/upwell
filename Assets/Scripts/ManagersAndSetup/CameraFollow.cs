@@ -92,7 +92,8 @@ public class CameraFollow : MonoBehaviour {
 
                 float focusPositionY = focusArea.center.y + verticalOffset;
                 focusPositionY = Mathf.SmoothDamp(this.transform.position.y, focusPositionY, ref smoothVelocityY, verticalSmoothTime);
-                this.transform.position = new Vector3(transform.position.x, focusPositionY, -10);
+                if(focusPositionY > transform.position.y)
+                    this.transform.position = new Vector3(transform.position.x, focusPositionY, -10);
             }
         }
     }

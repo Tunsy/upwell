@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public float wallClingTimer;
     public float wallClingTime;
     public GameObject bullit;
+    public GameObject placeholder;
 
     public AudioClip jumpSound;
     public AudioClip laserJump;
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour
     private PlayerAnimationController pc;
     private int defaultLayer;
     private float dashtimer = 2;
-    private float shoottimer = 3;
+    private float shoottimer = 1;
     private bool touchedground = true;
     private Transform spawnPoint;
 
@@ -110,7 +111,7 @@ public class PlayerController : MonoBehaviour
         if (shoottimer <= 0)
         {
             shootable = true;
-            shoottimer += 3;
+            shoottimer += 1;
         }
 
         if (Input.GetKeyDown(KeyCode.X))
@@ -149,7 +150,7 @@ public class PlayerController : MonoBehaviour
             holdingJumpCheck = false;
         }
 
-        if (groundState.IsTouching())
+        if (groundState.IsTouching() && placeholder!=null &&  placeholder.tag == "Platform")
         {
             touchedground = true;
             dashtimer -= Time.deltaTime;
@@ -160,7 +161,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(!groundState.IsTouching() && touchedground == true)
+        if(!groundState.IsTouching() && touchedground == true && placeholder != null && placeholder.tag == "Platform")
         {
             remdash = true;
             dashtimer = 2 + Time.deltaTime;
@@ -186,6 +187,11 @@ public class PlayerController : MonoBehaviour
 
         // Reverse player if going different direction
         //transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, (input.x == 0) ? transform.localEulerAngles.y : (input.x + 1) * 90, transform.localEulerAngles.z);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        placeholder = collision.gameObject;
     }
 
     // Sprint functionality

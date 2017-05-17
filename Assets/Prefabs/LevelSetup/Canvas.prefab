@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 114256095208608042}
   - component: {fileID: 95384438520397662}
   m_Layer: 5
-  m_Name: Next Level Button
+  m_Name: Level Select Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2189,6 +2189,7 @@ MonoBehaviour:
   text: {fileID: 114242944241657670}
   x: 0
   image: {fileID: 1906297438515866}
+  Conversation1: {fileID: 0}
 --- !u!114 &114901555794831688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2299,8 +2300,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114043745655665062}
-        m_MethodName: LoadByIndex
-        m_Mode: 3
+        m_MethodName: RetryLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

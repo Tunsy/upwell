@@ -22,7 +22,9 @@ public class LoadSceneOnClick : MonoBehaviour {
     {
         
         GameManager.instance.InitializeValues();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextLevel < SceneManager.sceneCountInBuildSettings)
+          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void LoadMainLevel()
