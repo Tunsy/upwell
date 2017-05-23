@@ -20,13 +20,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4130401333181978}
   - component: {fileID: 50643557224340486}
-  - component: {fileID: 61922277111441058}
   - component: {fileID: 114189780718156840}
   - component: {fileID: 212148601463133800}
   - component: {fileID: 114946815109623088}
   - component: {fileID: 95806177532008938}
   - component: {fileID: 114786184077471292}
   - component: {fileID: 82685394522011312}
+  - component: {fileID: 58225503583447456}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1120387558888490}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.11, y: 1, z: 0}
+  m_LocalPosition: {x: -0.7, y: 3.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -67,8 +67,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61922277111441058
-BoxCollider2D:
+--- !u!58 &58225503583447456
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -80,18 +80,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.85, y: 1.55}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.54}
-  m_EdgeRadius: 0
+  m_Radius: 0.63
 --- !u!82 &82685394522011312
 AudioSource:
   m_ObjectHideFlags: 1
@@ -208,6 +198,8 @@ MonoBehaviour:
   isKnockedback: 0
   wallClingTimer: 0
   wallClingTime: 0.3
+  bullit: {fileID: 0}
+  placeholder: {fileID: 0}
   jumpSound: {fileID: 8300000, guid: b186587830234a34683266d3e6b4255d, type: 3}
   laserJump: {fileID: 8300000, guid: 4ed13e5e28df295499321024ed2de30a, type: 3}
   hurtSound: {fileID: 8300000, guid: aca00c3309f08f441a5d0eee93d2c76d, type: 3}
