@@ -17,6 +17,7 @@ public class BestCoins : MonoBehaviour {
         manager = FindObjectOfType<ScoreManager>().gameObject;
         //Scene scene = SceneManager.GetActiveScene();
         //level = scene.name;
+        level = SceneManager.GetActiveScene().name;
     }
 
     void Update()
