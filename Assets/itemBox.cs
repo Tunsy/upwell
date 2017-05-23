@@ -8,6 +8,7 @@ public class itemBox : MonoBehaviour
     public int distance = 1000;
     public int amount = 3;
     public GameObject item;
+    private GameObject[] spawned;
     // Use this for initialization
     void Start()
     {
@@ -37,6 +38,7 @@ public class itemBox : MonoBehaviour
 
     private void OnDestroy()
     {
+        spawned = new GameObject[amount];
         for (int i = 0; i < amount; ++i)
         {
 
@@ -45,6 +47,26 @@ public class itemBox : MonoBehaviour
             float ang = Random.Range(0, Mathf.PI);
 
             c.GetComponent<Rigidbody2D>().AddForce(distance * new Vector2(Mathf.Cos(ang), Mathf.Sin(ang)));
+            //
+            spawned[i] = c;
+        }
+
+         foreach(GameObject c in spawned)
+         {
+            Physics2D.IgnoreCollision(c.GetComponent<Collider2D>(), GameObject.Find("Player").GetComponent<Collider2D>());
+             
+         }
+        Invoke("invoker", 1/5);
+      
+    }
+
+    void invoker()
+    {
+        foreach (GameObject c in spawned)
+        {
+
+
+            Physics2D.IgnoreCollision(c.GetComponent<Collider2D>(), GameObject.Find("Player").GetComponent<Collider2D>(), false);
         }
     }
 
