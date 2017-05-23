@@ -16,11 +16,13 @@ public class BestTimeScript : MonoBehaviour {
         text = this.GetComponent<Text>();
         //Scene scene = SceneManager.GetActiveScene();
         //level = scene.name;
+        level = SceneManager.GetActiveScene().name;
         Debug.Log(level);//scene.name);
     }
 
     void Update()
     {
+
         time = ScoreManager.instance.timeHighScore(level);
         text.text = "Best: " + time;
     }

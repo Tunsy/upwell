@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
             holdingJumpCheck = false;
         }
 
-        if (groundState.IsTouching() && placeholder!=null &&  placeholder.tag == "Platform")
+        if (groundState.IsTouching() && placeholder != null && placeholder.gameObject.layer.ToString() == "Platforms")
         {
             touchedground = true;
             dashtimer -= Time.deltaTime;
@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(!groundState.IsTouching() && touchedground == true && placeholder != null && placeholder.tag == "Platform")
+        if(!groundState.IsTouching() && touchedground == true && placeholder != null && placeholder.layer.ToString() == "Platforms")
         {
             remdash = true;
             dashtimer = 2 + Time.deltaTime;

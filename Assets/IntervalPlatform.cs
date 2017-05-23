@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class IntervalPlatform : MonoBehaviour {
-    public int timeInvisible;
-    public int timePhysical;
+    public float timeInvisible;
+    public float timePhysical;
     private Collider2D player;
 
 	// Use this for initialization

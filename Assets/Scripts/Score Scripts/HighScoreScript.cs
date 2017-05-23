@@ -8,14 +8,14 @@ using System.IO;
 [System.Serializable]
 public class HighScoreScript : MonoBehaviour {
 
-    private int score;
+    private int score = 0;
     private static int highscore;
     public Text text;
 
     void Start()
     {
         text = this.GetComponent<Text>();
-        Load();
+        //Load();
     }
 
     void Update()
@@ -24,7 +24,7 @@ public class HighScoreScript : MonoBehaviour {
         if (score > highscore)
         {
             highscore = score;
-            Save();
+            //Save();
         }
         text.text = "High Score: " + highscore;
     }
