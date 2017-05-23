@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
             shoottimer += 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetButtonDown("Fire1"))
         {
             if(shootable == true)
             {
@@ -132,12 +132,12 @@ public class PlayerController : MonoBehaviour
         }
 
         // HandleSprint()
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetButton("Jump"))
             input.y = 1;
         else
             input.y = 0;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
             holdingJumpCheck = true;
 
@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
             holdingJumpCheck = false;
         }
 
-        if (groundState.IsTouching() && placeholder!=null &&  placeholder.tag == "Platform")
+        if (groundState.IsTouching() && placeholder != null && placeholder.gameObject.layer.ToString() == "Platforms")
         {
             touchedground = true;
             dashtimer -= Time.deltaTime;
@@ -161,14 +161,14 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(!groundState.IsTouching() && touchedground == true && placeholder != null && placeholder.tag == "Platform")
+        if(!groundState.IsTouching() && touchedground == true && placeholder != null && placeholder.layer.ToString() == "Platforms")
         {
             remdash = true;
             dashtimer = 2 + Time.deltaTime;
         }
 
         //Dash
-        if(Input.GetKey(KeyCode.S))
+        if(Input.GetButton("Dash"))
         {
             if (remdash == true)
             {
