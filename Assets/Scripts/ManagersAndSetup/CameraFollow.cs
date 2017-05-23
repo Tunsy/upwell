@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour {
     public float verticalSmoothTime;
     public bool showFocusArea = false;
 
-    BoxCollider2D playerCollider;
+    Collider2D playerCollider;
     FocusArea focusArea;
 
     float smoothVelocityY;
@@ -78,7 +78,7 @@ public class CameraFollow : MonoBehaviour {
 
     void Awake()
     {
-        playerCollider = player.GetComponent<BoxCollider2D>();
+        playerCollider = player.GetComponent<Collider2D>();
     }
 
 	void Start () {
