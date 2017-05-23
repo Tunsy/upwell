@@ -198,7 +198,7 @@ MonoBehaviour:
   isKnockedback: 0
   wallClingTimer: 0
   wallClingTime: 0.3
-  bullit: {fileID: 0}
+  bullit: {fileID: 1032079895655806, guid: 7432d7506b057644298e7d1a8cbf862a, type: 2}
   placeholder: {fileID: 0}
   jumpSound: {fileID: 8300000, guid: b186587830234a34683266d3e6b4255d, type: 3}
   laserJump: {fileID: 8300000, guid: 4ed13e5e28df295499321024ed2de30a, type: 3}
