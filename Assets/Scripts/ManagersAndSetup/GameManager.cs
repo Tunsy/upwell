@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     //change this to name of the scene you are running on currently, 
     public string mainscene = "gametest";
     public GameObject canvas;
+    public bool isShaking;
 
 
     //static variables
@@ -64,7 +65,7 @@ public class GameManager : MonoBehaviour
         //canvas = GameObject.Find("Canvas");
         //GrabUI();
 
-
+        isShaking = false;
         uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
         SceneManager.sceneLoaded += GrabUI;
     }

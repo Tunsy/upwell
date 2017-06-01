@@ -16,6 +16,7 @@ public class DealDamageToPlayer : MonoBehaviour {
             PlayerController player = collision.GetComponent<PlayerController>();
             Debug.Log(this.gameObject.ToString());
             collision.GetComponent<PlayerController>().Knockback(this);
+            Camera.main.GetComponent<CameraShaking>().Shake(.1f, .2f);
         }
     }
 
@@ -27,6 +28,8 @@ public class DealDamageToPlayer : MonoBehaviour {
 
             if(GetComponent<BasicEnemy>() == null)
                 collision.gameObject.GetComponent<PlayerController>().Knockback(this);
+
+            Camera.main.GetComponent<CameraShaking>().Shake(.1f, .2f);
         }
     }
 }

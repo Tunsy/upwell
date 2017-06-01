@@ -8,6 +8,7 @@ public class CameraFollow : MonoBehaviour {
     public float verticalOffset;
     public float verticalSmoothTime;
     public bool showFocusArea = false;
+    public CameraShaking shake;
 
     Collider2D playerCollider;
     FocusArea focusArea;
@@ -16,7 +17,7 @@ public class CameraFollow : MonoBehaviour {
 
     public void FixedUpdate()
     {
-        if (GameManager.instance.isAlive())
+        if (GameManager.instance.isAlive() && shake.shakeTime <= 0)
         {
             if (player.GetComponent<PlayerController>().CheckInvert())
             {
@@ -83,7 +84,8 @@ public class CameraFollow : MonoBehaviour {
 
 	void Start () {
         focusArea = new FocusArea(playerCollider.bounds, focusAreaSize);
-	}
+        shake = GetComponent<CameraShaking>();
+    }
 
     void LateUpdate()
     {

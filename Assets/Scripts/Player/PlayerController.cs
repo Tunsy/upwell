@@ -235,6 +235,7 @@ public class PlayerController : MonoBehaviour
             int direction = -1 * groundState.WallDirection();
             direction = direction == 0f ? -1 * groundState.facing : direction;
             StartCoroutine(HandleKnockback(enemy.knockDuration, enemy.horizontalKnockPower, enemy.verticalKnockPower, direction));
+            Camera.main.GetComponent<CameraShaking>().Shake(.1f, .2f);
         }
     }
 
