@@ -50,7 +50,7 @@ public class LaserCannon : MonoBehaviour
 
     void ShootSound()
     {
-        if ((player.position - transform.position).magnitude <= 18)
+        if ((player.position - transform.position).magnitude <= 30)
         {
             if (shootSound != null)
             {

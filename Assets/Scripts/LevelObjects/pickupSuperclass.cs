@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class pickupSuperclass : MonoBehaviour {
+public abstract class pickupSuperclass : MonoBehaviour
+{
     public int pickupscore;
     private string tag = "Player";
     public AudioClip pickupSound;
-   public pickupSuperclass()
-    
+
+    public pickupSuperclass()
     {
         pickupscore = 5;
     }
 
-   
+
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -26,17 +27,17 @@ public abstract class pickupSuperclass : MonoBehaviour {
 
             collisionSettings();
         }
-        
+
 
         Destroy(gameObject);
     }
 
-    
-    
 
-     abstract public void collisionSettings();
-    
 
-    
+
+    abstract public void collisionSettings();
+
+
+
 }
 

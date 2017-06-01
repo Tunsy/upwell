@@ -43,16 +43,16 @@ public class Crusher : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            // Crush and kill the player
-            PlayerController player = GetComponent<PlayerController>();
-            Vector2 playerBounds = collision.bounds.center;
-            Vector2 crusherBounds = coll.bounds.center;
+            //// Crush and kill the player
+            //PlayerController player = GetComponent<PlayerController>();
+            //Vector2 playerBounds = collision.bounds.center;
+            //Vector2 crusherBounds = coll.bounds.center;
 
-            if (playerBounds.y <= crusherBounds.y && playerBounds.x < crusherBounds.x + width / 2 && playerBounds.x > crusherBounds.x - width / 2)
-            {
-                //Destroy(collision.gameObject);
-                GameManager.instance.killPlayer();
-            }
+            //if (playerBounds.y <= crusherBounds.y && playerBounds.x < crusherBounds.x + width / 2 && playerBounds.x > crusherBounds.x - width / 2)
+            //{
+            //    //Destroy(collision.gameObject);
+            //    GameManager.instance.killPlayer();
+            //}
         }
     }
 }
