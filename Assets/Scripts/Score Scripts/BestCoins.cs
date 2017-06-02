@@ -23,6 +23,6 @@ public class BestCoins : MonoBehaviour {
     void Update()
     {
         coins = manager.GetComponent<ScoreManager>().coinHighScore(level);
-        text.text = "Best: " + coins;
+        text.text = "Best Coins: " + coins;
     }
 }

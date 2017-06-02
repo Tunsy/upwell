@@ -15,7 +15,7 @@ public class HighScoreScript : MonoBehaviour {
     void Start()
     {
         text = this.GetComponent<Text>();
-        //Load();
+        Load();
     }
 
     void Update()
@@ -24,7 +24,7 @@ public class HighScoreScript : MonoBehaviour {
         if (score > highscore)
         {
             highscore = score;
-            //Save();
+            Save();
         }
         text.text = "High Score: " + highscore;
     }
