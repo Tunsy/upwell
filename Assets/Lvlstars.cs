@@ -35,6 +35,8 @@ public class Lvlstars : MonoBehaviour {
                     for (int i = 0; i < 9; i++)
                     {
                         coins += manager.GetComponent<ScoreManager>().coinStars(array[i]);
+                        Debug.Log("time" + array[i] + manager.GetComponent<ScoreManager>().StarTimeScore(array[i], 3));
+                        Debug.Log("coins" + array[i] + manager.GetComponent<ScoreManager>().StarCoinScore(array[i], 3));
                     }
                     initial = true;
                 }
