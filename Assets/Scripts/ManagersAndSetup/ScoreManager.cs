@@ -88,7 +88,7 @@ public class ScoreManager : MonoBehaviour {
     }
     
     //gets the score needed to achieve a certain number of stars for the given level
-    public int StarTimeScore(string level, int stars=1)
+    public int StarTimeScore(string level, int stars)
     {
         return level_awards[level][stars - 1];
     }
