@@ -11,6 +11,7 @@ TagManager:
   - DestroyerHitBox
   - Enemy
   - Box
+  - Bullit
   layers:
   - Default
   - TransparentFX
