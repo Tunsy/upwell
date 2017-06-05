@@ -20,6 +20,7 @@ public class Lvlstars : MonoBehaviour {
         text = this.GetComponent<Text>();
         //Scene scene = SceneManager.GetActiveScene();
         // level = scene.name;
+        manager = GameObject.Find("ScoreManager");
         array = new string[] { "Level 1-1", "Level 1-2", "Level 1-3", "Level 2-1", "Level 2-2", "Level 2-3", "Level 3-1", "Level 3-2", "Level 3-3" };
         initial = false;
     }
@@ -35,8 +36,8 @@ public class Lvlstars : MonoBehaviour {
                     for (int i = 0; i < 9; i++)
                     {
                         coins += manager.GetComponent<ScoreManager>().coinStars(array[i]);
-                        Debug.Log("time" + array[i] + manager.GetComponent<ScoreManager>().StarTimeScore(array[i], 3));
-                        Debug.Log("coins" + array[i] + manager.GetComponent<ScoreManager>().StarCoinScore(array[i], 3));
+                        //Debug.Log("time" + array[i] + manager.GetComponent<ScoreManager>().StarTimeScore(array[i], 3));
+                        //Debug.Log("coins" + array[i] + manager.GetComponent<ScoreManager>().StarCoinScore(array[i], 3));
                     }
                     initial = true;
                 }

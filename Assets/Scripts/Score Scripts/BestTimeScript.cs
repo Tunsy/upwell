@@ -18,6 +18,7 @@ public class BestTimeScript : MonoBehaviour {
         //level = scene.name;
         //level = SceneManager.GetActiveScene().name;
         Debug.Log(level);//scene.name);
+        manager = GameObject.Find("ScoreManager");
     }
 
     void Update()
