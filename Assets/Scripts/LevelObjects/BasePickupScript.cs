@@ -16,7 +16,7 @@ public class BasePickupScript : pickupSuperclass {
         
 
     
-        public override void collisionSettings()
+     public override void collisionSettings()
     {
         GameManager.instance.updatePickupScore(pickupscore);
     }

@@ -53,9 +53,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.3333334, y: 2.6666667}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.8, y: 1.65}
+  m_EdgeRadius: 0
 --- !u!114 &114204374748958966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,9 +79,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
-  playerSprite: {fileID: 0}
-  player: {fileID: 0}
   onEnterInvert: 0
+  isCheckPoint: 0
+  reverseSprite: {fileID: 0}
 --- !u!212 &212146255437109968
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -101,8 +112,13 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300354, guid: 144dd7d694458dc44924aed460e4f173, type: 3}
+  m_Sprite: {fileID: 21300218, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
   m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
