@@ -1253,25 +1253,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114095683720308914, guid: 15f3dc3e0337b9941aef08ce47415e47,
-        type: 2}
-      propertyPath: gameOverScreen
-      value: 
-      objectReference: {fileID: 1274798770}
-    - target: {fileID: 1513103840597286, guid: 15f3dc3e0337b9941aef08ce47415e47, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114503753831588866, guid: 15f3dc3e0337b9941aef08ce47415e47,
-        type: 2}
-      propertyPath: level
-      value: Level 1-2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114994015569863050, guid: 15f3dc3e0337b9941aef08ce47415e47,
-        type: 2}
-      propertyPath: level
-      value: Level 1-2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15f3dc3e0337b9941aef08ce47415e47, type: 2}
   m_IsPrefabParent: 0
@@ -1641,11 +1622,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e72c429bc9adeb5429b124ddac1be4c3, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1274798770 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1339602132332086, guid: 15f3dc3e0337b9941aef08ce47415e47,
-    type: 2}
-  m_PrefabInternal: {fileID: 842928026}
 --- !u!1001 &1277409112
 Prefab:
   m_ObjectHideFlags: 0
