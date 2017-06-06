@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1050869135466214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.4783, y: 11.434044, z: 2.328125}
+  m_LocalPosition: {x: 15.37092, y: -19.414364, z: 2.328125}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 4186080416291176}
@@ -103,9 +103,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.7}
+  m_EdgeRadius: 0
 --- !u!114 &114522838655543226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  explosionParticle: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
   exploder: {fileID: 1172218809203042, guid: a6593345c37d68e4684f266aff1ef71c, type: 2}
 --- !u!212 &212690791989921052
 SpriteRenderer:
@@ -149,8 +161,13 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300038, guid: 70c656cf06982284d857b036ea008c5e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.85294116, g: 0.15051901, b: 0.15051901, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
