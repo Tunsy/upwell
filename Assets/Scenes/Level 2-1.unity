@@ -1175,19 +1175,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_RootOrder
@@ -1196,6 +1196,10 @@ Prefab:
     - target: {fileID: 1635477908622944, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_Name
       value: WallSpikes (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
@@ -1350,7 +1354,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -17.96
+      value: -18.13
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1362,19 +1366,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_RootOrder
@@ -1383,6 +1387,10 @@ Prefab:
     - target: {fileID: 1635477908622944, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_Name
       value: WallSpikes (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
@@ -1570,7 +1578,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 18
+      value: 18.08
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1668,7 +1676,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.1963472
+      value: -2.97
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1700,7 +1708,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4466296819020768, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd9e67b8756b1bb46a4e44890d06b9c5, type: 2}
