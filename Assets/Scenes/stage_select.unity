@@ -6296,7 +6296,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 16}
+  m_AnchoredPosition: {x: 7.275958e-12, y: 16}
   m_SizeDelta: {x: 160, y: 116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &486175618
@@ -12052,6 +12052,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 876951668}
+  - component: {fileID: 876951669}
+  - component: {fileID: 876951672}
   m_Layer: 5
   m_Name: Locked
   m_TagString: Untagged
@@ -12081,6 +12083,29 @@ RectTransform:
   m_AnchoredPosition: {x: -287.89996, y: 6.800003}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &876951669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876951667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e655ac220e5149348b28aaaabb418041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  total: 0
+  manager: {fileID: 1450724190}
+  text: {fileID: 486175618}
+  mypanel1: {fileID: 2070684399}
+  mypanel2: {fileID: 637251621}
+  mypanel3: {fileID: 1364133052}
+--- !u!222 &876951672
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876951667}
 --- !u!1 &880931113
 GameObject:
   m_ObjectHideFlags: 0
@@ -19319,7 +19344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.8499486, y: 147.59996}
+  m_AnchoredPosition: {x: 3.849949, y: 147.59996}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1373315974
