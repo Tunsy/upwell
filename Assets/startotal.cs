@@ -14,6 +14,7 @@ public class startotal : MonoBehaviour {
     void Start()
     {
         text = this.GetComponent<Text>();
+        manager = GameObject.Find("ScoreManager");
         array = new string[] { "Level 1-1", "Level 1-2", "Level 1-3", "Level 2-1", "Level 2-2", "Level 2-3", "Level 3-1", "Level 3-2", "Level 3-3" };
         initial = false;
     }
