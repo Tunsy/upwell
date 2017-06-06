@@ -322,6 +322,12 @@ Prefab:
       propertyPath: destination
       value: 
       objectReference: {fileID: 2037348764}
+    - target: {fileID: 114204374748958966, guid: 9ad76c5c3fee87b43b8ff4c1d2eb7fb6,
+        type: 2}
+      propertyPath: reverseSprite
+      value: 
+      objectReference: {fileID: 21300216, guid: 23dbc9904158f2347b6b349ce778eed0,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ad76c5c3fee87b43b8ff4c1d2eb7fb6, type: 2}
   m_IsPrefabParent: 0
@@ -1272,6 +1278,12 @@ Prefab:
       propertyPath: onEnterInvert
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114204374748958966, guid: 9ad76c5c3fee87b43b8ff4c1d2eb7fb6,
+        type: 2}
+      propertyPath: reverseSprite
+      value: 
+      objectReference: {fileID: 21300216, guid: 23dbc9904158f2347b6b349ce778eed0,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ad76c5c3fee87b43b8ff4c1d2eb7fb6, type: 2}
   m_IsPrefabParent: 0
