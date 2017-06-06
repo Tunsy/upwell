@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private float dashtimer = 2;
     private float shoottimer = 1;
     private bool touchedground = true;
+    private bool touching = false;
     private Transform spawnPoint;
 
     void Start()
@@ -150,7 +151,7 @@ public class PlayerController : MonoBehaviour
             holdingJumpCheck = false;
         }
 
-        if (groundState.IsTouching() && placeholder != null && placeholder.gameObject.layer.ToString() == "Platforms")
+        if (groundState.IsTouching() && placeholder != null && touching == true /*placeholder.gameObject.layer.ToString() == "Platforms"*/)
         {
             touchedground = true;
             dashtimer -= Time.deltaTime;
@@ -161,7 +162,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(!groundState.IsTouching() && touchedground == true && placeholder != null && placeholder.layer.ToString() == "Platforms")
+        if(!groundState.IsTouching() && touchedground == true && placeholder != null && touching == true /*placeholder.layer.ToString() == "Platforms"*/)
         {
             remdash = true;
             dashtimer = 2 + Time.deltaTime;
@@ -189,9 +190,13 @@ public class PlayerController : MonoBehaviour
         //transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, (input.x == 0) ? transform.localEulerAngles.y : (input.x + 1) * 90, transform.localEulerAngles.z);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
-        placeholder = collision.gameObject;
+        if (collision.gameObject == placeholder)
+        {
+            touching = true;
+        }
+        //placeholder = collision.gameObject;
     }
 
     // Sprint functionality
