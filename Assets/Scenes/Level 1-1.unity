@@ -108,25 +108,6 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &39959361 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1138962024989526, guid: d0722c9488982f7409412eb9e0d8fb5a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1423844038}
---- !u!114 &39959368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 39959361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6909f1f69fed970438e3f8cfd54ec276, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shakeTime: 0
-  shakeAmount: 0
-  originalPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &39979859
 Prefab:
   m_ObjectHideFlags: 0
@@ -2296,11 +2277,6 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1274890352}
-    - target: {fileID: 114056223658481448, guid: d0722c9488982f7409412eb9e0d8fb5a,
-        type: 2}
-      propertyPath: showFocusArea
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0722c9488982f7409412eb9e0d8fb5a, type: 2}
   m_IsPrefabParent: 0

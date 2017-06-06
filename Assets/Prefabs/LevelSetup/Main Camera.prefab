@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 124614595465152534}
   - component: {fileID: 81550513912699110}
   - component: {fileID: 114056223658481448}
+  - component: {fileID: 114709402481779168}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -109,7 +110,22 @@ MonoBehaviour:
   focusAreaSize: {x: 50, y: 12.5}
   verticalOffset: 1
   verticalSmoothTime: 0.2
-  showFocusArea: 1
+  showFocusArea: 0
+  shake: {fileID: 0}
+--- !u!114 &114709402481779168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138962024989526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6909f1f69fed970438e3f8cfd54ec276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeTime: 0
+  shakeAmount: 0
+  originalPosition: {x: 0, y: 0, z: 0}
 --- !u!124 &124614595465152534
 Behaviour:
   m_ObjectHideFlags: 1

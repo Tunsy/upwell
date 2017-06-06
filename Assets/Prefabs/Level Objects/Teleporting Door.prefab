@@ -81,7 +81,7 @@ MonoBehaviour:
   destination: {fileID: 0}
   onEnterInvert: 0
   isCheckPoint: 0
-  reverseSprite: {fileID: 0}
+  reverseSprite: {fileID: 21300214, guid: 23dbc9904158f2347b6b349ce778eed0, type: 3}
 --- !u!212 &212146255437109968
 SpriteRenderer:
   m_ObjectHideFlags: 1
