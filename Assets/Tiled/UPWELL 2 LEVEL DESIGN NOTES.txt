@@ -1,0 +1,14 @@
+tiled, tiled2unity notes
+tiled maps 112x336
+wall template must be separate from platform template, to distinguish colliders from one another
+pixels per unit = 10
+SET COLLISION LAYERS TO PLATFORMS IN UNITY IN ORDER FOR TILES TO WORK
+set platform template at: -22, 135
+
+Level1: Hell, Easy (Difficulty 1 in Upwell 1)
+Level2: Well, Novice
+Level3: Earth, Intermediate (Difficulty 2 in Upwell 1)
+Level4: Space, Advanced (Difficulty 3 in Upwell 1)
+Level5: Heaven, Master
+
+Level 3-5 will have invisible walls towards end of each level---ADD BOX COLLIDERS IN UNITY TO AVOID PLAYER OUT OF BOUNDS
