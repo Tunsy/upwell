@@ -8,11 +8,15 @@ public class DealDamageToPlayer : MonoBehaviour {
     public float verticalKnockPower;
     public float horizontalKnockPower;
     public int damage;
+    public GameObject hitParticle;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
+            if (hitParticle)
+                Instantiate(hitParticle, transform.position, Quaternion.identity);
+
             PlayerController player = collision.GetComponent<PlayerController>();
             Debug.Log(this.gameObject.ToString());
             collision.GetComponent<PlayerController>().Knockback(this);
@@ -26,7 +30,10 @@ public class DealDamageToPlayer : MonoBehaviour {
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
 
-            if(GetComponent<BasicEnemy>() == null)
+            if(hitParticle)
+                Instantiate(hitParticle, transform.position, Quaternion.identity);
+
+            if (GetComponent<BasicEnemy>() == null)
                 collision.gameObject.GetComponent<PlayerController>().Knockback(this);
         }
     }
