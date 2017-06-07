@@ -6,6 +6,7 @@ using UnityEngine;
 public class HomingLaser : MonoBehaviour {
     private GameObject target;
     public float speed;
+    public GameObject explosionParticle;
 
     void OnTriggerEnter2D(Collider2D other)
     {

@@ -63,7 +63,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1019288974659946}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -16.651535, y: 41.63881, z: 2.328125}
+  m_LocalPosition: {x: -10.8, y: 6.7, z: 2.328125}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 4125074679189204}
@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 1608599943258588, guid: 053d6c20daa26b14a942964df2e145ef, type: 2}
+  shootSpeed: 0
   shootInterval: 5
   startOffset: 0
   shootSound: {fileID: 8300000, guid: 8299d67767d47e745b5a0cba36f8bbca, type: 3}

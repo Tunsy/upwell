@@ -12,6 +12,10 @@ public class Laser : Projectile
 
     public override void DestroySelf()
     {
+        if (explosionParticle)
+        {
+            Instantiate(explosionParticle, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
 }

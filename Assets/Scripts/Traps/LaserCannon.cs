@@ -5,6 +5,7 @@ using UnityEngine;
 public class LaserCannon : MonoBehaviour
 {
     public GameObject laser;
+    public float shootSpeed;
     private Transform spawnPoint;
     private GameObject shot;
     private Transform player;
@@ -44,7 +45,14 @@ public class LaserCannon : MonoBehaviour
             // Convert the angle of the player to the velocity of the bullet and shoot it forward
             Vector2 angle = Quaternion.AngleAxis(transform.rotation.eulerAngles.z, Vector3.forward) * Vector3.up;
             //Debug.Log("Angle" + angle + "speed" + shot.GetComponent<Projectile>().speed);
-            shot.GetComponent<Rigidbody2D>().velocity = angle * shot.GetComponent<Projectile>().speed;
+            if(shootSpeed == 0)
+            {
+                shot.GetComponent<Rigidbody2D>().velocity = angle * shot.GetComponent<Projectile>().speed;
+            }else
+            {
+                shot.GetComponent<Rigidbody2D>().velocity = angle * shootSpeed;
+            }
+
         }
     }
 
