@@ -9,9 +9,9 @@ public class TextfileGrabber : MonoBehaviour
 {
     public TextAsset filename;
     public Text text;
-    public int x;
+    public int startingLine;
     private int y;
-    public int var;
+    public int length;
     int Counter = 0;
     private float timer = 1;
     private int n = 100;
@@ -22,29 +22,36 @@ public class TextfileGrabber : MonoBehaviour
     void Start()
     {
         text = this.GetComponent<Text>();
-        y = x;
+        y = startingLine;
+    }
+
+    public void ChangeStart(int starting, int length)
+    {
+        startingLine = starting;
+        y = starting;
+        this.length = length;
     }
 
     void Update()
     {
         string[] dataLines = filename.text.Split(',');
-        int Length = dataLines[x].Length;
+        int Length = dataLines[startingLine].Length;
         if (Counter != Length + 1)
         {
             text.text = "";
-            text.text = dataLines[x].Substring(0, Counter);
+            text.text = dataLines[startingLine].Substring(0, Counter);
             Counter += 1;
         }
 
         if (Input.anyKeyDown)
         {
-            if (n > var)
+            if (n > length)
             {
-                n = var;
+                n = length;
             }
             if (n > 0)
             {
-                x += 1;
+                startingLine += 1;
                 Counter = 0;
                 n -= 1;
             }
@@ -52,7 +59,7 @@ public class TextfileGrabber : MonoBehaviour
             {
                 Time.timeScale = 1;
                 Conversation1.SetActive(false);
-                x = y;
+                startingLine = y;
                 n = 100;
                 Counter = 0;
             }
