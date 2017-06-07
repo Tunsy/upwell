@@ -6,24 +6,26 @@ using UnityEngine.UI;
 public class Conversation : MonoBehaviour {
 
     public GameObject conversation;
-    private TextfileGrabber grabber;
+    public GameObject grabber;
     public int startingX;
     public int linesNum;
 
     public void Start()
     {
-        grabber = FindObjectOfType<TextfileGrabber>();
+        //grabber = FindObjectOfType<TextfileGrabber>();
     }
 
     void OnTriggerEnter2D()
     {
         conversation.SetActive(true);
+        grabber.GetComponent<TextfileGrabber>().ChangeStart(startingX, linesNum);
         Time.timeScale = 0;
     }
     
     void OnMouseDown()
     {
         conversation.SetActive(true);
+        grabber.GetComponent<TextfileGrabber>().ChangeStart(startingX, linesNum);
         Time.timeScale = 0;
     }
 }
