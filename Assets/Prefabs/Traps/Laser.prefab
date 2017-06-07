@@ -36,9 +36,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4463020056678122}
   - component: {fileID: 50744966785814570}
-  - component: {fileID: 61036120141407096}
   - component: {fileID: 114070891748057602}
   - component: {fileID: 114208822205702412}
+  - component: {fileID: 61551902085208998}
   m_Layer: 10
   m_Name: Laser
   m_TagString: Laser
@@ -52,27 +52,27 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1608599943258588}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.880375, y: -19.890295, z: 2.328125}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.38185215, y: 7.3966293, z: 2.328125}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 4501379235895576}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!4 &4501379235895576
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1393387675075086}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4463020056678122}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50744966785814570
 Rigidbody2D:
   serializedVersion: 4
@@ -93,7 +93,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61036120141407096
+--- !u!61 &61551902085208998
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -116,7 +116,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0000002, y: 0.8}
+  m_Size: {x: 0.7, y: 0.85}
   m_EdgeRadius: 0
 --- !u!114 &114070891748057602
 MonoBehaviour:
@@ -143,10 +143,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dd8cdd09bb97243b66c372a33a538a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockDuration: 1.2
+  knockDuration: 2
   verticalKnockPower: 6
   horizontalKnockPower: 4
   damage: 0
+  hitParticle: {fileID: 0}
 --- !u!212 &212946714073883882
 SpriteRenderer:
   m_ObjectHideFlags: 1

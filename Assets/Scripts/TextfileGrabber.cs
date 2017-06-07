@@ -10,6 +10,8 @@ public class TextfileGrabber : MonoBehaviour
     public TextAsset filename;
     public Text text;
     public int x;
+    private int y;
+    public int var;
     int Counter = 0;
     private float timer = 1;
     private int n = 100;
@@ -20,6 +22,7 @@ public class TextfileGrabber : MonoBehaviour
     void Start()
     {
         text = this.GetComponent<Text>();
+        y = x;
     }
 
     void Update()
@@ -32,23 +35,27 @@ public class TextfileGrabber : MonoBehaviour
             text.text = dataLines[x].Substring(0, Counter);
             Counter += 1;
         }
-    }
 
-    public void function1(int var)
-    {
-        if(n > var)
+        if (Input.anyKeyDown)
         {
-            n = var;
-        }
-        if(n > 0)
-        {
-            x += 1;
-            Counter = 0;
-            n -= 1;
-        }
-        else
-        {
-            Conversation1.SetActive(false);
+            if (n > var)
+            {
+                n = var;
+            }
+            if (n > 0)
+            {
+                x += 1;
+                Counter = 0;
+                n -= 1;
+            }
+            else
+            {
+                Time.timeScale = 1;
+                Conversation1.SetActive(false);
+                x = y;
+                n = 100;
+                Counter = 0;
+            }
         }
     }
 }
