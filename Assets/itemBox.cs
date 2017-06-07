@@ -30,6 +30,12 @@ public class itemBox : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Bullit")
+            Destroy(gameObject);
+    }
+
     bool jumpedOn(Collision2D c)
     {
         return c.transform.position.y > transform.position.y && c.transform.position.x < localX + transform.position.x && c.transform.position.x > transform.position.x - localX;
