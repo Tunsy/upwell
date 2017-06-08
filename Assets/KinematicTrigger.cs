@@ -16,11 +16,12 @@ public class KinematicTrigger : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 8 )
+        if (collision.gameObject.layer == 8)
         {
-            gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
-        
             gameObject.GetComponent<CircleCollider2D>().isTrigger = true;
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+            //Instantiate(spawn, transform.position, Quaternion.identity);
+            Instantiate(spawn, transform.position, Quaternion.identity);
             Destroy(gameObject);
             
         }
@@ -30,6 +31,10 @@ public class KinematicTrigger : MonoBehaviour {
 
     private void OnDestroy()
     {
-        Instantiate(spawn, transform.position, Quaternion.identity);
+        
     }
+
+
+
+
 }

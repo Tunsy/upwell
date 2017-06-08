@@ -10,9 +10,11 @@ public class itemBox : MonoBehaviour
     public AudioClip breakSound;
     public GameObject item;
     private GameObject[] spawned;
+    GameObject player;
     // Use this for initialization
     void Start()
     {
+        player = GameObject.Find("Player");
         localX = transform.localScale.x;
     }
 
@@ -30,14 +32,14 @@ public class itemBox : MonoBehaviour
             {
                 AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
             }
-            Destroy(this.gameObject);
+            spawner();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Bullit")
-            Destroy(gameObject);
+            spawner();
     }
 
     bool jumpedOn(Collision2D c)
@@ -46,7 +48,7 @@ public class itemBox : MonoBehaviour
 
     }
 
-    private void OnDestroy()
+    private void spawner()
     {
         spawned = new GameObject[amount];
         for (int i = 0; i < amount; ++i)
@@ -63,10 +65,11 @@ public class itemBox : MonoBehaviour
 
          foreach(GameObject c in spawned)
          {
-            Physics2D.IgnoreCollision(c.GetComponent<Collider2D>(), GameObject.Find("Player").GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(c.GetComponent<Collider2D>(), player.GetComponent<Collider2D>());
              
          }
         Invoke("invoker", 1/5);
+        Destroy(gameObject);
       
     }
 
@@ -76,7 +79,7 @@ public class itemBox : MonoBehaviour
         {
 
 
-            Physics2D.IgnoreCollision(c.GetComponent<Collider2D>(), GameObject.Find("Player").GetComponent<Collider2D>(), false);
+            Physics2D.IgnoreCollision(c.GetComponent<Collider2D>(), player.GetComponent<Collider2D>(), false);
         }
     }
 
