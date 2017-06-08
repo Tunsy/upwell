@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58156897908845770}
   - component: {fileID: 50200415682243362}
   - component: {fileID: 114784800499505750}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: KinematicCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
