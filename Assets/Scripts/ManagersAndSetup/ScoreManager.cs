@@ -42,14 +42,16 @@ public class ScoreManager : MonoBehaviour {
 
     public void scoreReset()
     {
+        string[] keys = { "coin", "Coinstars", "Timestars" };
         PlayerPrefs.SetInt("total_stars", 0);
         
         string[] all = { "Level 1-1", "Level 1-2", "Level 1-3", "Level 2-1", "Level 2-2", "Level 2-3", "Level 3-1", "Level 3-2", "Level 3-3" };
         foreach(string name in all)
         {
             PlayerPrefs.SetInt(name + "time", MAX_TIME);
-            PlayerPrefs.SetInt(name + "coin", 0);
-            PlayerPrefs.SetInt(name + "stars", 0);
+            foreach (string key in keys)
+                PlayerPrefs.SetInt(name + key, 0);
+            
         }
     }
 
