@@ -1,2 +1,3 @@
 Hello Again!,This is number one,Number 2
-,Move with arrow keys, Jump with space bar
+,Move with arrow keys, Jump with space bar, You have to be quick!
+,HURRY!

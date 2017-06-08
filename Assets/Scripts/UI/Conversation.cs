@@ -3,29 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Conversation : MonoBehaviour {
-
+public class Conversation : MonoBehaviour
+{
     public GameObject conversation;
     public GameObject grabber;
+    private TextfileGrabber textGrabber;
     public int startingX;
     public int linesNum;
+    public bool alreadyActivated;
 
     public void Start()
     {
-        //grabber = FindObjectOfType<TextfileGrabber>();
+        textGrabber = grabber.GetComponent<TextfileGrabber>();
     }
 
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        conversation.SetActive(true);
-        grabber.GetComponent<TextfileGrabber>().ChangeStart(startingX, linesNum);
-        Time.timeScale = 0;
+        if (GameManager.instance.GetDeathCount() <= 0 && !alreadyActivated && collision.tag == "Player")
+        {
+            conversation.SetActive(true);
+            textGrabber.ChangeStart(startingX, linesNum);
+            Time.timeScale = 0;
+            alreadyActivated = true;
+        }
+
     }
-    
-    void OnMouseDown()
+
+    public void OnMouseDown()
     {
-        conversation.SetActive(true);
-        grabber.GetComponent<TextfileGrabber>().ChangeStart(startingX, linesNum);
-        Time.timeScale = 0;
+        if (GameManager.instance.GetDeathCount() <= 0 && !alreadyActivated)
+        {
+            conversation.SetActive(true);
+            textGrabber.ChangeStart(startingX, linesNum);
+            Time.timeScale = 0;
+            alreadyActivated = true;
+        }
     }
 }

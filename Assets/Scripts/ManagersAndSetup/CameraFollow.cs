@@ -77,12 +77,9 @@ public class CameraFollow : MonoBehaviour {
         }
     }
 
-    void Awake()
-    {
-        playerCollider = player.GetComponent<Collider2D>();
-    }
-
 	void Start () {
+        player = FindObjectOfType<PlayerController>();
+        playerCollider = player.GetComponent<Collider2D>();
         focusArea = new FocusArea(playerCollider.bounds, focusAreaSize);
         shake = GetComponent<CameraShaking>();
     }

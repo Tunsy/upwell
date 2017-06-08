@@ -16,8 +16,9 @@ public class TextfileGrabber : MonoBehaviour
     private float timer = 1;
     private int n = 100;
     public GameObject image;
-    public GameObject Conversation1;
+    public GameObject conversation;
     private bool z = true;
+    public bool alreadyActivated;
 
     void Start()
     {
@@ -58,10 +59,11 @@ public class TextfileGrabber : MonoBehaviour
             else
             {
                 Time.timeScale = 1;
-                Conversation1.SetActive(false);
+                conversation.SetActive(false);
                 startingLine = y;
                 n = 100;
                 Counter = 0;
+                alreadyActivated = true;
             }
         }
     }
