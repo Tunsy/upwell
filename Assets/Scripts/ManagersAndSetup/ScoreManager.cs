@@ -40,11 +40,11 @@ public class ScoreManager : MonoBehaviour {
 		
 	}
 
-    private void scoreReset()
+    public void scoreReset()
     {
         PlayerPrefs.SetInt("total_stars", 0);
         
-        string[] all = { "Level 1-1", "Level 1-2", "Level 1-3" };
+        string[] all = { "Level 1-1", "Level 1-2", "Level 1-3", "Level 2-1", "Level 2-2", "Level 2-3", "Level 3-1", "Level 3-2", "Level 3-3" };
         foreach(string name in all)
         {
             PlayerPrefs.SetInt(name + "time", MAX_TIME);
