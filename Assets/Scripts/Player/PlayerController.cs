@@ -222,8 +222,6 @@ public class PlayerController : MonoBehaviour
 
     public void SetInvert(bool setting)
     {
-        if (invertSound)
-            AudioSource.PlayClipAtPoint(invertSound, Camera.main.transform.position);
         isInverted = setting;
     }
 

@@ -11,21 +11,30 @@ public class NoFreezeText : MonoBehaviour
     private TextfileGrabber textGrabber;
     public int startingX;
     public int linesNum;
+    public bool alreadyActivated;
 
     public void Start()
     {
         textGrabber = grabber.GetComponent<TextfileGrabber>();
     }
 
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        conversation.SetActive(true);
-        textGrabber.ChangeStart(startingX, linesNum);
+        if (!alreadyActivated && collision.tag == "Player")
+        {
+            conversation.SetActive(true);
+            textGrabber.ChangeStart(startingX, linesNum);
+            alreadyActivated = true;
+        }
     }
 
     void OnMouseDown()
     {
-        conversation.SetActive(true);
-        textGrabber.ChangeStart(startingX, linesNum);
+        if (!alreadyActivated)
+        {
+            conversation.SetActive(true);
+            textGrabber.ChangeStart(startingX, linesNum);
+            alreadyActivated = true;
+        }
     }
 }

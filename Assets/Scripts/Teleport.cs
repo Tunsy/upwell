@@ -7,6 +7,7 @@ public class Teleport : MonoBehaviour {
     private SpriteRenderer playerSprite;
     private SpriteRenderer sr;
     private PlayerController player;
+    public AudioClip invertSound;
     public bool onEnterInvert; //always set BOTH the entrance door AND the destination door to true when inverting physics.
     private Transform spawnPoint;
     public bool isCheckPoint = false; //set true on the teleporter that teleports to next area, NOT the exiting teleporter
@@ -39,6 +40,8 @@ public class Teleport : MonoBehaviour {
             }
             if (onEnterInvert)
             {
+                if (invertSound)
+                    AudioSource.PlayClipAtPoint(invertSound, Camera.main.transform.position);
                 player.GetComponent<PlayerController>().SetInvert(true);
             }
         }

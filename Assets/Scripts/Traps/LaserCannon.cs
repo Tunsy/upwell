@@ -62,7 +62,7 @@ public class LaserCannon : MonoBehaviour
         {
             if (shootSound != null)
             {
-                AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
+                AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position, .25f);
             }
 
         }
