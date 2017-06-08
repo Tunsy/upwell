@@ -713,6 +713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &72150385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1166,6 +1168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &97820491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2465,6 +2469,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &172498665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2622,6 +2628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &174672304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5001,6 +5009,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &410165809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5299,6 +5309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &419727467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5524,6 +5536,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &438795960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5912,6 +5926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &454015523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6603,6 +6619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!95 &492037978
 Animator:
   serializedVersion: 3
@@ -7145,6 +7163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &547900715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7428,6 +7448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &561689063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9216,6 +9238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &658174418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9515,6 +9539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &661222715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10475,6 +10501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &711127936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11586,6 +11614,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &790191609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14246,6 +14276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &965986739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18596,6 +18628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &1262393655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19132,6 +19166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &1288976837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19498,6 +19534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &1318976789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20708,6 +20746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &1412829296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23528,6 +23568,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &1629820419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24115,6 +24157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &1675426732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24987,6 +25031,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &1710709586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26786,6 +26832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &1850023181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28337,6 +28385,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &1930099753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29851,6 +29901,115 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2002515202}
+--- !u!1 &2009246185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2009246187}
+  - component: {fileID: 2009246186}
+  m_Layer: 0
+  m_Name: Cyborg Ninja (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2009246186
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2009246185}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 44b952512f3e041449f4df2fce19343c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &2009246187
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2009246185}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2013267204
 GameObject:
   m_ObjectHideFlags: 0
@@ -31150,6 +31309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &2079279668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31883,6 +32044,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab4012ee2eb4c41bcc265ca7f36241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 800cba1e4bf499e4ba7560d392f129cb, type: 3}
+  enterSound: {fileID: 8300000, guid: dd6838fa490c3d147974b891e631cf77, type: 3}
 --- !u!114 &2145754813
 MonoBehaviour:
   m_ObjectHideFlags: 0

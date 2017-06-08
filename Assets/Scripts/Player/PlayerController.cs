@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip laserJump;
     public AudioClip hurtSound;
+    public AudioClip invertSound;
+
     public AudioSource audio;
     public Image powerupSlider;
     private GroundState groundState;
@@ -220,6 +222,8 @@ public class PlayerController : MonoBehaviour
 
     public void SetInvert(bool setting)
     {
+        if (invertSound)
+            AudioSource.PlayClipAtPoint(invertSound, Camera.main.transform.position);
         isInverted = setting;
     }
 
@@ -279,7 +283,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (jumpSound != null)
                 {
-                    audio.PlayOneShot(jumpSound);
+                    audio.PlayOneShot(jumpSound, .1f);
                 }
                 xVel = -1 * groundState.WallDirection() * speed * .8f; ; //Add force negative to wall direction (with speed reduction)
                 yVel = jump;
@@ -289,11 +293,11 @@ public class PlayerController : MonoBehaviour
 
             if (groundState.IsTouching() && jumpSound != null)
             {
-                audio.PlayOneShot(jumpSound);
+                audio.PlayOneShot(jumpSound, .1f);
             }
             else if (groundState.WallFieldJump())
             {
-                audio.PlayOneShot(laserJump);
+                audio.PlayOneShot(jumpSound, .1f);
             }
             pc.JumpTrigger();
         }

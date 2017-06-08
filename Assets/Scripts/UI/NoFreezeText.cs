@@ -8,25 +8,24 @@ public class NoFreezeText : MonoBehaviour
 
     public GameObject conversation;
     public GameObject grabber;
+    private TextfileGrabber textGrabber;
     public int startingX;
     public int linesNum;
 
     public void Start()
     {
-        //grabber = FindObjectOfType<TextfileGrabber>();
+        textGrabber = grabber.GetComponent<TextfileGrabber>();
     }
 
     void OnTriggerEnter2D()
     {
         conversation.SetActive(true);
-        grabber.GetComponent<TextfileGrabber>().ChangeStart(startingX, linesNum);
-        Time.timeScale = 0;
+        textGrabber.ChangeStart(startingX, linesNum);
     }
 
     void OnMouseDown()
     {
         conversation.SetActive(true);
-        grabber.GetComponent<TextfileGrabber>().ChangeStart(startingX, linesNum);
-        Time.timeScale = 0;
+        textGrabber.ChangeStart(startingX, linesNum);
     }
 }
