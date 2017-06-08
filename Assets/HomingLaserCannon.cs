@@ -26,7 +26,8 @@ public class HomingLaserCannon : MonoBehaviour {
     void FixedUpdate()
     {
 
-        if (Physics2D.Raycast((Vector2)transform.position, (Vector2)(player.transform.position - transform.position)).collider.tag == "Player")
+
+        if (Physics2D.Raycast((Vector2)transform.position, (Vector2)(player.transform.position - transform.position)).collider.tag == "Player" && (player.transform.position - transform.position).magnitude < 40)
         {
             timer += Time.deltaTime;
             if (timer >= chargeTime)
