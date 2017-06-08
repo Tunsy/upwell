@@ -25,6 +25,13 @@ public class BestTimeScript : MonoBehaviour {
     {
 
         time = ScoreManager.instance.timeHighScore(level);
-        text.text = "Best Time: " + time;
+        if (time > 99999)
+        {
+            text.text = "Best Time: 0";
+        }
+        else
+        {
+            text.text = "Best Time: " + time;
+        }
     }
 }
