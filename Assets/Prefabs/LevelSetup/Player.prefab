@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1120387558888490}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7, y: 3.6, z: 0}
+  m_LocalPosition: {x: 2.1, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -149,7 +149,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -200,9 +200,10 @@ MonoBehaviour:
   wallClingTime: 0.3
   bullit: {fileID: 1032079895655806, guid: 7432d7506b057644298e7d1a8cbf862a, type: 2}
   placeholder: {fileID: 0}
-  jumpSound: {fileID: 8300000, guid: b186587830234a34683266d3e6b4255d, type: 3}
+  jumpSound: {fileID: 8300000, guid: 7edf7baba1f5bc344aeeb0fbf17f4f9c, type: 3}
   laserJump: {fileID: 8300000, guid: 4ed13e5e28df295499321024ed2de30a, type: 3}
   hurtSound: {fileID: 8300000, guid: aca00c3309f08f441a5d0eee93d2c76d, type: 3}
+  invertSound: {fileID: 8300000, guid: 50c6f879e7579c148bbc447c04ef92b5, type: 3}
   audio: {fileID: 0}
   powerupSlider: {fileID: 0}
   rb: {fileID: 0}

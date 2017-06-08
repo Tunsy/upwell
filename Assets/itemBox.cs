@@ -7,6 +7,7 @@ public class itemBox : MonoBehaviour
     private float localX;
     public int distance = 1000;
     public int amount = 3;
+    public AudioClip breakSound;
     public GameObject item;
     private GameObject[] spawned;
     // Use this for initialization
@@ -24,10 +25,13 @@ public class itemBox : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.name == "Player" && (jumpedOn(collision)))
+        {
+            if (breakSound)
+            {
+                AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
+            }
             Destroy(this.gameObject);
-
-
-
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

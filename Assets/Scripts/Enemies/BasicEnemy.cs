@@ -59,8 +59,10 @@ public class BasicEnemy : MonoBehaviour {
 
     void Death()
     {
+        Camera.main.GetComponent<CameraShaking>().ShakeCamera(.1f, .2f);
         if (deathSound)
             AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position);
+
         Destroy(gameObject);
     }
 
